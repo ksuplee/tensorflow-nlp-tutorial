@@ -16,6 +16,7 @@ pip install nltk
 import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 from nltk.stem import WordNetLemmatizer
 
