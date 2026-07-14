@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">개체명 인식(NER)과 BIO 태깅</text>
+  <defs><marker id="bio8" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- output tags -->
+  <g font-size="14" text-anchor="middle" font-weight="700">
+    <rect x="70" y="90" width="130" height="40" rx="8" fill="#1e3a8a"/><text x="135" y="116" fill="#fff">B-PER</text>
+    <rect x="220" y="90" width="130" height="40" rx="8" fill="#2563eb"/><text x="285" y="116" fill="#fff">I-PER</text>
+    <rect x="370" y="90" width="130" height="40" rx="8" fill="#e2e8f0"/><text x="435" y="116" fill="#334155">O</text>
+    <rect x="520" y="90" width="130" height="40" rx="8" fill="#1e3a8a"/><text x="585" y="116" fill="#fff">B-LOC</text>
+    <rect x="670" y="90" width="130" height="40" rx="8" fill="#e2e8f0"/><text x="735" y="116" fill="#334155">O</text>
+    <rect x="820" y="90" width="130" height="40" rx="8" fill="#e2e8f0"/><text x="885" y="116" fill="#334155">O</text>
+  </g>
+  <!-- BiLSTM band -->
+  <rect x="70" y="165" width="880" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="510" y="200" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">양방향 LSTM (BiLSTM) — 앞·뒤 문맥을 함께 참고  (+ CRF 층으로 태그 제약 반영)</text>
+  <!-- input tokens -->
+  <g font-size="14" text-anchor="middle" fill="#1e3a8a">
+    <rect x="70" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="135" y="286">이순신</text>
+    <rect x="220" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="285" y="286">장군</text>
+    <rect x="370" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="435" y="286">은</text>
+    <rect x="520" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="585" y="286">서울</text>
+    <rect x="670" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="735" y="286">에서</text>
+    <rect x="820" y="260" width="130" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="885" y="286">싸웠다</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#bio8)">
+    <line x1="135" y1="260" x2="135" y2="228"/><line x1="285" y1="260" x2="285" y2="228"/><line x1="435" y1="260" x2="435" y2="228"/><line x1="585" y1="260" x2="585" y2="228"/><line x1="735" y1="260" x2="735" y2="228"/><line x1="885" y1="260" x2="885" y2="228"/>
+    <line x1="135" y1="163" x2="135" y2="132"/><line x1="285" y1="163" x2="285" y2="132"/><line x1="435" y1="163" x2="435" y2="132"/><line x1="585" y1="163" x2="585" y2="132"/><line x1="735" y1="163" x2="735" y2="132"/><line x1="885" y1="163" x2="885" y2="132"/>
+  </g>
+  <!-- BIO legend -->
+  <rect x="980" y="90" width="180" height="210" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1070" y="120" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">BIO 태깅</text>
+  <g font-size="14" fill="#334155">
+    <text x="1000" y="154"><tspan font-weight="700" fill="#1e3a8a">B</tspan>-egin: 개체 시작</text>
+    <text x="1000" y="186"><tspan font-weight="700" fill="#1e3a8a">I</tspan>-nside: 개체 내부</text>
+    <text x="1000" y="218"><tspan font-weight="700" fill="#1e3a8a">O</tspan>-utside: 개체 아님</text>
+    <text x="1000" y="256" font-size="12" fill="#64748b">PER 사람 · LOC 장소</text>
+    <text x="1000" y="278" font-size="12" fill="#64748b">ORG 조직 · MISC 기타</text>
+  </g>
+</svg>

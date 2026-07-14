@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · Word2Vec의 빈틈, 무엇으로 채울까?</text>
+  <defs><marker id="t7" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- problems -->
+  <rect x="60" y="80" width="360" height="240" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="240" y="110" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">Word2Vec의 한계</text>
+  <g font-size="14" fill="#334155">
+    <text x="84" y="146">· <tspan font-weight="700">전역 통계 미반영</tspan></text>
+    <text x="100" y="168" font-size="13" fill="#64748b">윈도우 내 주변만 고려</text>
+    <text x="84" y="200">· <tspan font-weight="700">OOV·형태학 미반영</tspan></text>
+    <text x="100" y="222" font-size="13" fill="#64748b">eat/eats/eaten을 따로 학습</text>
+    <text x="84" y="254">· <tspan font-weight="700">다의어 처리 불가</tspan></text>
+    <text x="100" y="276" font-size="13" fill="#64748b">"배"가 문맥 무관 한 벡터</text>
+  </g>
+  <!-- arrows -->
+  <line x1="430" y1="200" x2="500" y2="200" stroke="#2563eb" stroke-width="2.5" marker-end="url(#t7)"/>
+  <!-- solutions -->
+  <rect x="520" y="80" width="640" height="240" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="840" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">대응 방법 (이번 차시)</text>
+  <g font-size="14">
+    <rect x="544" y="130" width="290" height="52" rx="8" fill="#ffffff" stroke="#bfdbfe"/><text x="562" y="152" font-weight="700" fill="#1e3a8a">GloVe</text><text x="562" y="172" font-size="12" fill="#64748b">전역 동시등장 통계 + 예측 결합</text>
+    <rect x="850" y="130" width="290" height="52" rx="8" fill="#ffffff" stroke="#bfdbfe"/><text x="868" y="152" font-weight="700" fill="#1e3a8a">FastText</text><text x="868" y="172" font-size="12" fill="#64748b">부분단어(문자 n-gram) → OOV 강건</text>
+    <rect x="544" y="196" width="290" height="52" rx="8" fill="#ffffff" stroke="#bfdbfe"/><text x="562" y="218" font-weight="700" fill="#1e3a8a">ELMo·BERT</text><text x="562" y="238" font-size="12" fill="#64748b">문맥 고려 → 다의어 처리(10·11주)</text>
+    <rect x="850" y="196" width="290" height="52" rx="8" fill="#ffffff" stroke="#bfdbfe"/><text x="868" y="218" font-weight="700" fill="#1e3a8a">Doc2Vec</text><text x="868" y="238" font-size="12" fill="#64748b">문서 단위 임베딩</text>
+  </g>
+  <text x="840" y="288" font-size="13" fill="#64748b" text-anchor="middle">각 한계를 겨냥한 임베딩이 발전해 왔고, 문맥 임베딩이 트랜스포머로 이어진다</text>
+  <text x="600" y="360" font-size="13" fill="#94a3b8" text-anchor="middle">"eat, eats, eaten"을 어떻게 하나로 묶고, 문맥에 따라 뜻이 달라지는 단어를 어떻게 다룰까?</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 문장 전체가 아니라 '단어마다' 분류하려면?</text>
+  <!-- sentence-level vs token-level -->
+  <rect x="60" y="80" width="520" height="220" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="320" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">문장 단위 분류 (지금까지)</text>
+  <text x="86" y="150" font-size="14" fill="#334155">문장 하나 → 레이블 하나</text>
+  <text x="86" y="180" font-size="13" fill="#64748b">다 대 일(many-to-one)</text>
+  <rect x="86" y="200" width="420" height="34" rx="6" fill="#dbeafe"/><text x="296" y="222" font-size="13" fill="#1e3a8a" text-anchor="middle">"이 영화 최고" → 긍정</text>
+  <text x="320" y="270" font-size="13" fill="#64748b" text-anchor="middle">감성·스팸 분류</text>
+  <rect x="620" y="80" width="520" height="220" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="880" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">토큰 단위 태깅 (이번 차시)</text>
+  <text x="646" y="150" font-size="14" fill="#334155">단어마다 → 레이블 하나씩</text>
+  <text x="646" y="180" font-size="13" fill="#64748b">다 대 다(many-to-many) · 시퀀스 라벨링</text>
+  <rect x="646" y="200" width="420" height="34" rx="6" fill="#dbeafe"/><text x="856" y="222" font-size="12" fill="#1e3a8a" text-anchor="middle">"이순신 장군은" → PER PER O</text>
+  <text x="880" y="270" font-size="13" fill="#64748b" text-anchor="middle">개체명 인식·품사 태깅</text>
+  <text x="600" y="326" font-size="13" fill="#94a3b8" text-anchor="middle">통계(SVM·나이브베이즈)·CNN·RNN(양방향 LSTM)·CRF·BERT 등으로 구현</text>
+</svg>

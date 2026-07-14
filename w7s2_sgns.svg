@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">SGNS: Skip-gram with Negative Sampling</text>
+  <defs><marker id="s7" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <text x="600" y="72" font-size="14" fill="#64748b" text-anchor="middle">V개 클래스 소프트맥스(무거움) → 이웃 여부를 맞히는 이진 분류(가벼움)로 전환</text>
+  <!-- positive sample -->
+  <rect x="60" y="100" width="500" height="110" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="310" y="128" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">긍정 샘플 (실제 이웃) → 레이블 1</text>
+  <rect x="90" y="145" width="120" height="40" rx="8" fill="#1e3a8a"/><text x="150" y="171" font-size="13" fill="#fff" text-anchor="middle">중심: sat</text>
+  <rect x="240" y="145" width="120" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="300" y="171" font-size="13" fill="#1e3a8a" text-anchor="middle">주변: cat</text>
+  <text x="400" y="171" font-size="14" fill="#16a34a">→ 내적 클수록 1</text>
+  <!-- negative sample -->
+  <rect x="60" y="230" width="500" height="110" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="310" y="258" font-size="15" font-weight="700" fill="#64748b" text-anchor="middle">부정 샘플 (무작위 단어) → 레이블 0</text>
+  <rect x="90" y="275" width="120" height="40" rx="8" fill="#1e3a8a"/><text x="150" y="301" font-size="13" fill="#fff" text-anchor="middle">중심: sat</text>
+  <rect x="240" y="275" width="120" height="40" rx="8" fill="#e2e8f0"/><text x="300" y="301" font-size="13" fill="#334155" text-anchor="middle">랜덤: apple</text>
+  <text x="400" y="301" font-size="14" fill="#ef4444">→ 내적 작을수록 0</text>
+  <!-- right mechanism -->
+  <rect x="620" y="100" width="540" height="240" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="890" y="130" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">학습 메커니즘</text>
+  <rect x="660" y="160" width="150" height="44" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="735" y="187" font-size="13" fill="#1e3a8a" text-anchor="middle">중심 벡터</text>
+  <rect x="660" y="230" width="150" height="44" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="735" y="257" font-size="13" fill="#1e3a8a" text-anchor="middle">주변/랜덤 벡터</text>
+  <rect x="870" y="195" width="110" height="44" rx="8" fill="#2563eb"/><text x="925" y="222" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">내적 · σ</text>
+  <rect x="1030" y="195" width="100" height="44" rx="8" fill="#1e3a8a"/><text x="1080" y="222" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">0 / 1</text>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#s7)"><line x1="810" y1="182" x2="866" y2="210"/><line x1="810" y1="252" x2="866" y2="224"/><line x1="980" y1="217" x2="1026" y2="217"/></g>
+  <text x="890" y="300" font-size="13" fill="#64748b" text-anchor="middle">예측 오차를 역전파해 두 임베딩을 갱신</text>
+  <text x="890" y="322" font-size="12" fill="#94a3b8" text-anchor="middle">전체 어휘가 아닌 소수의 부정 샘플만 계산 → 매우 효율적</text>
+</svg>
