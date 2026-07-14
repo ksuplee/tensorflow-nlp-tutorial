@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 모르거나 틀리게 답하는 LLM, 어떻게 믿을까?</text>
+  <defs><marker id="r14" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- LLM alone -->
+  <rect x="60" y="90" width="520" height="200" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="320" y="118" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">LLM 단독</text>
+  <rect x="86" y="140" width="330" height="34" rx="6" fill="#fff" stroke="#fecaca"/><text x="100" y="162" font-size="13" fill="#334155">Q: "우리 회사 최신 환불 규정은?"</text>
+  <rect x="86" y="200" width="440" height="34" rx="6" fill="#fee2e2"/><text x="100" y="222" font-size="13" fill="#b91c1c">A: 그럴듯하지만 <tspan font-weight="700">틀린 답(환각)</tspan> 또는 "모름"</text>
+  <text x="320" y="266" font-size="12" fill="#94a3b8" text-anchor="middle">학습 시점 이후·사내 문서는 알 수 없음</text>
+  <!-- LLM + retrieval -->
+  <rect x="620" y="90" width="520" height="200" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="880" y="118" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">LLM + 검색 (RAG)</text>
+  <rect x="646" y="140" width="150" height="34" rx="6" fill="#fff" stroke="#bfdbfe"/><text x="721" y="162" font-size="12" fill="#334155" text-anchor="middle">질문</text>
+  <rect x="820" y="140" width="150" height="34" rx="6" fill="#2563eb"/><text x="895" y="162" font-size="12" fill="#fff" text-anchor="middle">관련 문서 검색</text>
+  <rect x="994" y="140" width="120" height="34" rx="6" fill="#1e3a8a"/><text x="1054" y="162" font-size="12" fill="#fff" text-anchor="middle">근거+질문</text>
+  <line x1="796" y1="157" x2="816" y2="157" stroke="#2563eb" stroke-width="2" marker-end="url(#r14)"/>
+  <line x1="970" y1="157" x2="990" y2="157" stroke="#2563eb" stroke-width="2" marker-end="url(#r14)"/>
+  <rect x="646" y="200" width="468" height="34" rx="6" fill="#dcfce7"/><text x="660" y="222" font-size="13" fill="#166534">A: 검색한 <tspan font-weight="700">근거에 기반한 정확한 답 + 출처</tspan></text>
+  <text x="880" y="266" font-size="12" fill="#64748b" text-anchor="middle">재학습 없이 최신·전문 문서를 반영</text>
+  <text x="600" y="326" font-size="14" fill="#334155" text-anchor="middle">모델의 지식에만 의존하지 말고, 질문에 맞는 문서를 찾아 근거로 넣어주면 어떨까?</text>
+</svg>

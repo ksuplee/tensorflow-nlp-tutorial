@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · LLM을 코드로 불러 자동화하려면?</text>
+  <defs><marker id="a12" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- messages -->
+  <rect x="60" y="110" width="300" height="130" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="210" y="138" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">메시지 입력</text>
+  <rect x="82" y="152" width="256" height="34" rx="6" fill="#dbeafe"/><text x="98" y="174" font-size="12" fill="#1e3a8a">system: "너는 분류 전문가다"</text>
+  <rect x="82" y="194" width="256" height="34" rx="6" fill="#eff6ff" stroke="#bfdbfe"/><text x="98" y="216" font-size="12" fill="#334155">user: "이 리뷰의 감성은?"</text>
+  <!-- model -->
+  <line x1="360" y1="175" x2="416" y2="175" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a12)"/>
+  <rect x="430" y="130" width="200" height="90" rx="12" fill="#1e3a8a"/>
+  <text x="530" y="165" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">LLM API</text>
+  <text x="530" y="190" font-size="12" fill="#dbeafe" text-anchor="middle">chat.completions</text>
+  <!-- knobs -->
+  <rect x="430" y="234" width="200" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="530" y="256" font-size="12" fill="#334155" text-anchor="middle">temperature 0 ←→ 1</text>
+  <text x="530" y="278" font-size="11" fill="#64748b" text-anchor="middle">결정적 ←→ 창의적 · max_tokens</text>
+  <!-- response -->
+  <line x1="630" y1="175" x2="686" y2="175" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a12)"/>
+  <rect x="700" y="130" width="240" height="90" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="820" y="165" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">응답</text>
+  <text x="820" y="190" font-size="12" fill="#64748b" text-anchor="middle">"긍정" (또는 JSON)</text>
+  <!-- app -->
+  <line x1="940" y1="175" x2="996" y2="175" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a12)"/>
+  <rect x="1010" y="130" width="150" height="90" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1085" y="165" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">내 프로그램</text>
+  <text x="1085" y="190" font-size="12" fill="#64748b" text-anchor="middle">파싱·자동화</text>
+  <text x="600" y="322" font-size="14" fill="#334155" text-anchor="middle">system/user 메시지 + 파라미터로 호출하고, 결과를 JSON으로 받아 프로그램과 연동한다</text>
+</svg>

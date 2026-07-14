@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">질의응답(QA)의 두 방식</text>
+  <defs><marker id="q1" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#2563eb"/></marker></defs>
+  <!-- 추출형 -->
+  <rect x="40" y="70" width="550" height="340" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="40" y="70" width="550" height="46" rx="14" fill="#2563eb"/>
+  <text x="315" y="100" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">추출형 (Extractive) QA</text>
+  <text x="65" y="146" font-size="14" fill="#64748b">지문에서 정답 구간(span)을 찾아 추출 · MRC</text>
+  <rect x="65" y="162" width="500" height="70" rx="8" fill="#fff" stroke="#cbd5e1"/>
+  <text x="80" y="188" font-size="14" fill="#334155">지문: "세종대왕은 1443년에 훈민정음을</text>
+  <text x="80" y="212" font-size="14" fill="#334155">창제하였다."</text>
+  <text x="80" y="262" font-size="14" fill="#334155">질문: 훈민정음은 언제 창제되었나?</text>
+  <path d="M315 275 L315 300" stroke="#2563eb" stroke-width="2.5" marker-end="url(#q1)"/>
+  <rect x="180" y="308" width="270" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="315" y="336" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">답: "1443년" (지문 내 구간)</text>
+  <text x="315" y="388" font-size="13" fill="#64748b" text-anchor="middle">근거가 지문에 있어 검증 쉬움 · 정답이 지문에 있어야 함</text>
+  <!-- 생성형 -->
+  <rect x="610" y="70" width="550" height="340" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="610" y="70" width="550" height="46" rx="14" fill="#1e3a8a"/>
+  <text x="885" y="100" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">생성형 (Generative) QA</text>
+  <text x="635" y="146" font-size="14" fill="#64748b">모델이 답을 문장으로 생성 · LLM</text>
+  <rect x="635" y="162" width="500" height="70" rx="8" fill="#fff" stroke="#cbd5e1"/>
+  <text x="650" y="188" font-size="14" fill="#334155">질문: 훈민정음 창제의 의의를</text>
+  <text x="650" y="212" font-size="14" fill="#334155">설명해줘.</text>
+  <text x="650" y="262" font-size="13" fill="#64748b">(필요 시 외부 지식 결합 → RAG, 14주차)</text>
+  <path d="M885 275 L885 300" stroke="#2563eb" stroke-width="2.5" marker-end="url(#q1)"/>
+  <rect x="700" y="308" width="370" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="885" y="336" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">답: "백성이 쉽게 글을 …" (생성)</text>
+  <text x="885" y="388" font-size="13" fill="#64748b" text-anchor="middle">유연하고 자연스러움 · 환각 위험(검증 필요)</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 긴 문서를 다 읽지 않고, 원하는 정보만 골라낼 수 있을까?</text>
+  <defs><marker id="ie13" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- document -->
+  <rect x="60" y="90" width="320" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="220" y="118" font-size="14" font-weight="700" fill="#64748b" text-anchor="middle">비정형 텍스트(문서)</text>
+  <g font-size="12" fill="#334155">
+    <text x="84" y="150">세종대왕은 1443년에</text>
+    <text x="84" y="174">훈민정음을 창제하였다.</text>
+    <text x="84" y="198">그는 조선의 제4대 왕으로</text>
+    <text x="84" y="222">여러 과학 기구를 …</text>
+    <text x="84" y="258" font-size="11" fill="#94a3b8">(길고 구조가 없음)</text>
+  </g>
+  <!-- extraction -->
+  <line x1="380" y1="150" x2="440" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ie13)"/>
+  <rect x="460" y="100" width="320" height="100" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="620" y="128" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">정보 추출</text>
+  <text x="482" y="156" font-size="13" fill="#334155">개체: 세종대왕(PER), 1443년(DATE)</text>
+  <text x="482" y="180" font-size="13" fill="#334155">관계: (세종대왕, 창제, 훈민정음)</text>
+  <!-- QA -->
+  <line x1="380" y1="230" x2="440" y2="230" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ie13)"/>
+  <rect x="460" y="210" width="320" height="80" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="620" y="236" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">질의응답(QA)</text>
+  <text x="482" y="262" font-size="13" fill="#334155">"훈민정음은 언제?" → "1443년"</text>
+  <text x="482" y="282" font-size="11" fill="#64748b">지문에서 답을 찾아 반환</text>
+  <!-- use -->
+  <line x1="780" y1="180" x2="840" y2="180" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ie13)"/>
+  <rect x="860" y="130" width="300" height="100" rx="12" fill="#1e3a8a"/>
+  <text x="1010" y="165" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">지식 그래프·검색</text>
+  <text x="1010" y="192" font-size="13" fill="#dbeafe" text-anchor="middle">질의응답·요약의 재료</text>
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">개체·관계를 뽑고 질문에 답하면, 방대한 텍스트를 '구조화된 지식'으로 바꿀 수 있다</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · AI가 내놓은 답, 그대로 믿어도 될까?</text>
+  <g>
+    <rect x="50" y="90" width="265" height="150" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+    <rect x="50" y="90" width="265" height="42" rx="12" fill="#b91c1c"/><text x="182" y="118" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">편향·차별</text>
+    <text x="72" y="160" font-size="13" fill="#334155">성별·인종·직업 편향이</text>
+    <text x="72" y="182" font-size="13" fill="#334155">출력에 반영될 수 있음</text>
+    <text x="72" y="212" font-size="12" fill="#94a3b8">StereoSet 등으로 측정</text>
+    <rect x="330" y="90" width="265" height="150" rx="12" fill="#fff7ed" stroke="#fed7aa"/>
+    <rect x="330" y="90" width="265" height="42" rx="12" fill="#c2410c"/><text x="462" y="118" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">환각·위해성</text>
+    <text x="352" y="160" font-size="13" fill="#334155">사실이 아닌 내용을</text>
+    <text x="352" y="182" font-size="13" fill="#334155">자신 있게 생성·독성 표현</text>
+    <text x="352" y="212" font-size="12" fill="#94a3b8">TruthfulQA·RealToxicity</text>
+    <rect x="610" y="90" width="265" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="610" y="90" width="265" height="42" rx="12" fill="#1e40af"/><text x="742" y="118" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">프라이버시</text>
+    <text x="632" y="160" font-size="13" fill="#334155">개인정보가 학습·출력에</text>
+    <text x="632" y="182" font-size="13" fill="#334155">노출될 위험</text>
+    <text x="632" y="212" font-size="12" fill="#94a3b8">GDPR·차등 프라이버시</text>
+    <rect x="890" y="90" width="265" height="150" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <rect x="890" y="90" width="265" height="42" rx="12" fill="#15803d"/><text x="1022" y="118" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">저작권·오남용</text>
+    <text x="912" y="160" font-size="13" fill="#334155">학습·생성물의 저작권,</text>
+    <text x="912" y="182" font-size="13" fill="#334155">딥페이크·허위정보</text>
+    <text x="912" y="212" font-size="12" fill="#94a3b8">가드레일·사람 감독</text>
+  </g>
+  <rect x="250" y="270" width="700" height="52" rx="12" fill="#1e3a8a"/>
+  <text x="600" y="302" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">AI의 결과를 그대로 받아들이지 말고 — 읽고, 이해하고, 검증하라</text>
+  <text x="600" y="344" font-size="13" fill="#94a3b8" text-anchor="middle">근거 제시(RAG)·사람 감독(HITL)·투명성으로 책임 있게 활용한다</text>
+</svg>

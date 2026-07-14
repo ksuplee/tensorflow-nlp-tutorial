@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 하나의 모델이 번역·요약·코딩을 모두 한다면?</text>
+  <defs><marker id="l12" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- one model -->
+  <rect x="470" y="130" width="260" height="90" rx="14" fill="#1e3a8a"/>
+  <text x="600" y="168" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">하나의 LLM</text>
+  <text x="600" y="194" font-size="12" fill="#dbeafe" text-anchor="middle">(예: ChatGPT · GPT 계열)</text>
+  <!-- tasks radiating -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="60" y="90" width="150" height="44" rx="10" fill="#eff6ff" stroke="#bfdbfe"/><text x="135" y="117" fill="#1e3a8a">번역</text>
+    <rect x="60" y="160" width="150" height="44" rx="10" fill="#eff6ff" stroke="#bfdbfe"/><text x="135" y="187" fill="#1e3a8a">요약</text>
+    <rect x="60" y="230" width="150" height="44" rx="10" fill="#eff6ff" stroke="#bfdbfe"/><text x="135" y="257" fill="#1e3a8a">감성 분석</text>
+    <rect x="990" y="90" width="150" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/><text x="1065" y="117" fill="#1e3a8a">코딩</text>
+    <rect x="990" y="160" width="150" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/><text x="1065" y="187" fill="#1e3a8a">추론·수학</text>
+    <rect x="990" y="230" width="150" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/><text x="1065" y="257" fill="#1e3a8a">작문·질의응답</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#l12)">
+    <line x1="466" y1="150" x2="214" y2="112"/><line x1="466" y1="172" x2="214" y2="182"/><line x1="466" y1="196" x2="214" y2="252"/>
+    <line x1="734" y1="150" x2="986" y2="112"/><line x1="734" y1="172" x2="986" y2="182"/><line x1="734" y1="196" x2="986" y2="252"/>
+  </g>
+  <text x="600" y="256" font-size="13" fill="#64748b" text-anchor="middle">태스크마다 따로 학습하지 않고</text>
+  <text x="600" y="278" font-size="13" fill="#64748b" text-anchor="middle">지시(프롬프트)만으로 수행</text>
+  <text x="600" y="326" font-size="14" fill="#334155" text-anchor="middle">"다음 토큰 예측"만 매우 크게 학습했을 뿐인데, 어떻게 이런 범용성이 생겼을까?</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 같은 문제도 '어떻게 묻느냐'에 따라 답이 달라진다</text>
+  <text x="600" y="72" font-size="14" fill="#334155" text-anchor="middle">문제: "23 × 17 은?" — 모델은 파라미터를 바꾸지 않는데, 프롬프트만 다르게</text>
+  <g>
+    <rect x="60" y="100" width="350" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="60" y="100" width="350" height="44" rx="12" fill="#64748b"/><text x="235" y="128" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">그냥 물으면</text>
+    <text x="82" y="176" font-size="13" fill="#334155">"23 × 17 = ?"</text>
+    <rect x="82" y="196" width="286" height="34" rx="6" fill="#fee2e2"/><text x="225" y="218" font-size="14" fill="#b91c1c" text-anchor="middle">"391" (틀릴 때가 많음)</text>
+    <text x="235" y="266" font-size="12" fill="#94a3b8" text-anchor="middle">한 번에 답 → 실수 잦음</text>
+    <rect x="425" y="100" width="350" height="200" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="425" y="100" width="350" height="44" rx="12" fill="#2563eb"/><text x="600" y="128" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">예시를 함께(퓨샷)</text>
+    <text x="447" y="172" font-size="12" fill="#334155">"12×11=132, 15×13=195,</text>
+    <text x="447" y="192" font-size="12" fill="#334155"> 23×17=?"</text>
+    <rect x="447" y="206" width="306" height="34" rx="6" fill="#dbeafe"/><text x="600" y="228" font-size="14" fill="#1e3a8a" text-anchor="middle">형식·기준을 파악해 정답↑</text>
+    <text x="600" y="270" font-size="12" fill="#94a3b8" text-anchor="middle">예시로 '어떻게'를 학습</text>
+    <rect x="790" y="100" width="350" height="200" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="790" y="100" width="350" height="44" rx="12" fill="#1e3a8a"/><text x="965" y="128" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">단계별로(CoT)</text>
+    <text x="812" y="172" font-size="12" fill="#334155">"단계별로 생각해보자:</text>
+    <text x="812" y="192" font-size="12" fill="#334155"> 23×17 = 23×10 + 23×7 …"</text>
+    <rect x="812" y="206" width="306" height="34" rx="6" fill="#dcfce7"/><text x="965" y="228" font-size="14" fill="#166534" text-anchor="middle">= 230+161 = 391 → 정답</text>
+    <text x="965" y="270" font-size="12" fill="#94a3b8" text-anchor="middle">추론 과정을 밖으로 꺼냄</text>
+  </g>
+  <text x="600" y="336" font-size="14" fill="#334155" text-anchor="middle">프롬프트를 설계하는 것만으로 성능이 달라진다 — 이것이 프롬프트 엔지니어링이다</text>
+</svg>
