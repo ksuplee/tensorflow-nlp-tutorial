@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">언어모델 = 다음 단어 예측</text>
+  <defs>
+    <marker id="ap" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- input -->
+  <text x="140" y="120" font-size="15" fill="#64748b" text-anchor="middle">입력 시퀀스</text>
+  <rect x="40" y="132" width="200" height="70" rx="10" fill="#1e3a8a"/>
+  <text x="140" y="176" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">"I am a ___"</text>
+  <!-- LM box -->
+  <line x1="240" y1="167" x2="296" y2="167" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ap)"/>
+  <rect x="300" y="128" width="200" height="78" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="400" y="162" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">언어모델</text>
+  <text x="400" y="188" font-size="13" fill="#64748b" text-anchor="middle">P(다음 단어 | 문맥)</text>
+  <line x1="500" y1="167" x2="556" y2="167" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ap)"/>
+  <!-- prob bars -->
+  <text x="560" y="120" font-size="15" fill="#64748b">후보 단어별 확률</text>
+  <g font-size="16">
+    <text x="560" y="158" fill="#334155">student</text>
+    <rect x="660" y="142" width="300" height="24" rx="4" fill="#1e3a8a"/><text x="975" y="160" fill="#1e3a8a" font-weight="700">0.5</text>
+    <text x="560" y="200" fill="#334155">teacher</text>
+    <rect x="660" y="184" width="180" height="24" rx="4" fill="#2563eb"/><text x="855" y="202" fill="#2563eb" font-weight="700">0.3</text>
+    <text x="560" y="242" fill="#334155">data</text>
+    <rect x="660" y="226" width="120" height="24" rx="4" fill="#93c5fd"/><text x="795" y="244" fill="#60a5fa" font-weight="700">0.2</text>
+  </g>
+  <!-- output -->
+  <rect x="660" y="286" width="360" height="58" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="840" y="322" font-size="16" fill="#334155" text-anchor="middle">예측: 가장 확률 높은 <tspan font-weight="700" fill="#1e3a8a">"student"</tspan> 선택</text>
+  <!-- note -->
+  <rect x="40" y="250" width="480" height="110" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="280" y="280" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">언어모델은 단어 시퀀스에 확률을 부여</text>
+  <g font-size="14" fill="#334155">
+    <text x="62" y="310">· 기계번역: P(나는 버스를 탔다) &gt; P(나는 버스를 태운다)</text>
+    <text x="62" y="336">· 오타교정·음성인식·검색어 자동완성의 근간</text>
+  </g>
+</svg>

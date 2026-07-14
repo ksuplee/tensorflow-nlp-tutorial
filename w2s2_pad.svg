@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1040" height="380" fill="#ffffff"/>
+  <text x="520" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">패딩(Padding) — 길이를 동일하게 맞추기</text>
+  <g text-anchor="middle">
+    <text x="230" y="80" font-size="16" font-weight="700" fill="#1e3a8a">가변 길이 시퀀스</text>
+    <g font-size="14" fill="#334155" text-anchor="start">
+      <rect x="90" y="98" width="120" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="150" y="118" text-anchor="middle">1  5</text>
+      <rect x="90" y="138" width="180" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="180" y="158" text-anchor="middle">1  8  5</text>
+      <rect x="90" y="178" width="90" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="135" y="198" text-anchor="middle">9  2</text>
+      <rect x="90" y="218" width="240" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="210" y="238" text-anchor="middle">2  4  3  2</text>
+    </g>
+    <text x="230" y="290" font-size="13" fill="#64748b">문장마다 길이가 달라 하나의 행렬로 못 묶음</text>
+
+    <text x="520" y="200" font-size="30" fill="#64748b">→</text>
+    <text x="520" y="230" font-size="13" fill="#94a3b8">maxlen=5</text>
+    <text x="520" y="250" font-size="12" fill="#94a3b8">post</text>
+
+    <text x="800" y="80" font-size="16" font-weight="700" fill="#1e3a8a">패딩 후 (0으로 채움)</text>
+    <g font-size="14" text-anchor="middle">
+      <rect x="640" y="98" width="320" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="800" y="118" fill="#334155">1   5  <tspan fill="#dc2626">0   0   0</tspan></text>
+      <rect x="640" y="138" width="320" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="800" y="158" fill="#334155">1   8   5  <tspan fill="#dc2626">0   0</tspan></text>
+      <rect x="640" y="178" width="320" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="800" y="198" fill="#334155">9   2  <tspan fill="#dc2626">0   0   0</tspan></text>
+      <rect x="640" y="218" width="320" height="30" rx="5" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="800" y="238" fill="#334155">2   4   3   2  <tspan fill="#dc2626">0</tspan></text>
+    </g>
+    <text x="800" y="290" font-size="13" fill="#64748b">직사각 행렬 → 배치 처리 가능</text>
+    <text x="520" y="340" font-size="14" fill="#334155">Numpy 또는 Keras pad_sequences()로 가장 긴 길이에 맞춰 가상의 단어 '0'을 채운다</text>
+  </g>
+</svg>

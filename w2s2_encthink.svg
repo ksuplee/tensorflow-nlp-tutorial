@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="360" fill="#ffffff"/>
+  <text x="550" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">텍스트 인코딩 개념 — 문자를 숫자로</text>
+  <g text-anchor="middle">
+    <rect x="40" y="90" width="220" height="90" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="150" y="120" font-size="15" font-weight="700" fill="#1e3a8a">텍스트 입력</text>
+    <text x="150" y="150" font-size="15" fill="#334155">"좋은 아침 입니다."</text>
+
+    <rect x="310" y="90" width="220" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="420" y="120" font-size="15" font-weight="700" fill="#1e3a8a">토큰화</text>
+    <text x="420" y="150" font-size="13" fill="#334155">[좋은, 아침, 입니다, .]</text>
+
+    <rect x="580" y="70" width="300" height="130" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="730" y="98" font-size="15" font-weight="700" fill="#1e3a8a">텍스트 인코딩</text>
+    <g font-size="13" fill="#334155">
+      <text x="730" y="124">좋은 → [1,0,0,0]</text>
+      <text x="730" y="146">아침 → [0,1,0,0]</text>
+      <text x="730" y="168">입니다 → [0,0,1,0]</text>
+      <text x="730" y="190">. → [0,0,0,1]</text>
+    </g>
+
+    <rect x="930" y="90" width="130" height="90" rx="10" fill="#1e3a8a"/>
+    <text x="995" y="130" font-size="15" font-weight="700" fill="#ffffff">머신러닝</text>
+    <text x="995" y="152" font-size="15" font-weight="700" fill="#ffffff">모델</text>
+
+    <g fill="#64748b" font-size="26">
+      <text x="285" y="140">→</text>
+      <text x="555" y="140">→</text>
+      <text x="905" y="140">→</text>
+    </g>
+
+    <text x="550" y="270" font-size="15" fill="#334155">모델은 숫자만 이해한다. 텍스트를 토큰으로 나눈 뒤, 각 토큰을 숫자(정수·벡터)로 바꾸는 과정이 인코딩이다.</text>
+    <text x="550" y="300" font-size="14" fill="#64748b">정수 인코딩 · 패딩 · 원-핫 인코딩</text>
+  </g>
+</svg>

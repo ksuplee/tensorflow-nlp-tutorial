@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="430" fill="#ffffff"/>
+  <text x="550" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">정수 인코딩 — 빈도순 인덱스 부여</text>
+  <g>
+    <rect x="40" y="80" width="230" height="300" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="155" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">1) 빈도수 계산</text>
+    <g font-size="14" fill="#334155">
+      <text x="70" y="150">단어 : 빈도수</text>
+      <text x="70" y="182">the : 6</text>
+      <text x="70" y="210">a : 5</text>
+      <text x="70" y="238">barber : 4</text>
+      <text x="70" y="266">huge : 3</text>
+      <text x="70" y="294">secret : 2</text>
+      <text x="70" y="322">word : 1</text>
+    </g>
+    <text x="155" y="360" font-size="12" fill="#64748b" text-anchor="middle">Counter · FreqDist</text>
+
+    <rect x="330" y="80" width="230" height="300" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="445" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">2) 빈도순 정렬 → 인덱스</text>
+    <g font-size="14" fill="#334155">
+      <text x="360" y="150">단어 : 인덱스</text>
+      <text x="360" y="182">the : 1</text>
+      <text x="360" y="210">a : 2</text>
+      <text x="360" y="238">barber : 3</text>
+      <text x="360" y="266">huge : 4</text>
+      <text x="360" y="294">secret : 5</text>
+      <text x="360" y="322">word : 6</text>
+    </g>
+    <text x="445" y="360" font-size="12" fill="#64748b" text-anchor="middle">높은 빈도 → 낮은 정수</text>
+
+    <rect x="620" y="80" width="440" height="300" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="840" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">3) 정수 매핑(인코딩)</text>
+    <g font-size="14" fill="#334155">
+      <text x="650" y="152">문장: [barber, a, huge, secret]</text>
+      <text x="650" y="188" font-weight="700" fill="#1e3a8a">→ [3, 2, 4, 5]</text>
+    </g>
+    <text x="650" y="232" font-size="13" fill="#64748b">· most_common(n): 상위 n개 단어만 사용</text>
+    <text x="650" y="258" font-size="13" fill="#64748b">· 미포함 단어 → OOV(예: 인덱스 없음/OOV 토큰)</text>
+    <text x="650" y="284" font-size="13" fill="#64748b">· enumerate(): 순서형 자료에 인덱스 부여</text>
+    <text x="650" y="310" font-size="13" fill="#64748b">· Keras Tokenizer(): 빈도 기반 인덱스·인코딩</text>
+    <text x="840" y="352" font-size="12" fill="#94a3b8" text-anchor="middle">단어를 정수 인덱스로 바꾸면 모델이 처리할 수 있다</text>
+
+    <g fill="#64748b" font-size="26" text-anchor="middle">
+      <text x="300" y="235">→</text>
+      <text x="590" y="235">→</text>
+    </g>
+  </g>
+</svg>

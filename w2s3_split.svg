@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1000" height="340" fill="#ffffff"/>
+  <text x="500" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">테스트 데이터 분리 (train_test_split)</text>
+  <g text-anchor="middle">
+    <text x="500" y="82" font-size="15" font-weight="700" fill="#1e3a8a">전체 데이터</text>
+    <rect x="150" y="96" width="700" height="44" rx="6" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="500" y="124" font-size="14" fill="#334155">X (입력) + y (레이블)</text>
+
+    <text x="500" y="182" font-size="26" fill="#64748b">↓  분리 (예: 7 : 3)</text>
+
+    <rect x="150" y="205" width="490" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="395" y="232" font-size="15" font-weight="700" fill="#1e3a8a">훈련 데이터 (70%)</text>
+    <text x="395" y="254" font-size="13" fill="#334155">X_train, y_train — 모델 학습</text>
+
+    <rect x="655" y="205" width="195" height="60" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="752" y="232" font-size="15" font-weight="700" fill="#1e3a8a">테스트 (30%)</text>
+    <text x="752" y="254" font-size="13" fill="#334155">X_test, y_test — 평가</text>
+
+    <text x="500" y="305" font-size="13" fill="#64748b">사이킷런 train_test_split() 또는 수동 분리 · 필요 시 데이터를 먼저 섞음(shuffle)</text>
+  </g>
+</svg>

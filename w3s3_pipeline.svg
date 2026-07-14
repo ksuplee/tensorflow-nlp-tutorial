@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="300" viewBox="0 0 1180 300" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1180" height="300" fill="#ffffff"/>
+  <text x="590" y="42" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF-IDF 문서 검색 파이프라인</text>
+
+  <!-- boxes -->
+  <g>
+    <!-- 1 원문 (dark) -->
+    <rect x="30" y="95" width="155" height="86" rx="12" fill="#1e3a8a"/>
+    <text x="107" y="132" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">원문 코퍼스</text>
+    <text x="107" y="156" font-size="12" fill="#cbd5e1" text-anchor="middle">문서 집합</text>
+
+    <!-- 2 전처리 -->
+    <rect x="216" y="95" width="155" height="86" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="293" y="132" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">전처리</text>
+    <text x="293" y="156" font-size="12" fill="#64748b" text-anchor="middle">토큰화·정규화</text>
+
+    <!-- 3 DTM -->
+    <rect x="402" y="95" width="155" height="86" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="479" y="132" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">DTM 생성</text>
+    <text x="479" y="156" font-size="12" fill="#64748b" text-anchor="middle">등장 횟수 행렬</text>
+
+    <!-- 4 TF-IDF -->
+    <rect x="588" y="95" width="155" height="86" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="665" y="132" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF-IDF 변환</text>
+    <text x="665" y="156" font-size="12" fill="#64748b" text-anchor="middle">가중치 부여</text>
+
+    <!-- 5 cosine -->
+    <rect x="774" y="95" width="155" height="86" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="851" y="132" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">코사인 유사도</text>
+    <text x="851" y="156" font-size="12" fill="#475569" text-anchor="middle">질의와 비교</text>
+
+    <!-- 6 result (medium blue) -->
+    <rect x="960" y="95" width="155" height="86" rx="12" fill="#2563eb"/>
+    <text x="1037" y="132" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">검색 결과</text>
+    <text x="1037" y="156" font-size="12" fill="#dbeafe" text-anchor="middle">상위 문서 반환</text>
+  </g>
+
+  <!-- arrows -->
+  <g fill="#2563eb">
+    <polygon points="188,138 208,138 208,131 220,140 208,149 208,142 188,142"/>
+    <polygon points="374,138 394,138 394,131 406,140 394,149 394,142 374,142"/>
+    <polygon points="560,138 580,138 580,131 592,140 580,149 580,142 560,142"/>
+    <polygon points="746,138 766,138 766,131 778,140 766,149 766,142 746,142"/>
+    <polygon points="932,138 952,138 952,131 964,140 952,149 952,142 932,142"/>
+  </g>
+
+  <!-- query feeding cosine -->
+  <rect x="774" y="220" width="155" height="52" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="851" y="243" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">질의(query)</text>
+  <text x="851" y="262" font-size="12" fill="#64748b" text-anchor="middle">같은 벡터 공간으로 변환</text>
+  <line x1="851" y1="220" x2="851" y2="185" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="851,183 846,193 856,193" fill="#2563eb"/>
+
+  <text x="30" y="296" font-size="14" fill="#64748b">※ 질의도 동일한 TF-IDF 공간으로 변환한 뒤, 모든 문서와의 코사인 유사도를 계산해 가장 유사한 문서를 반환한다.</text>
+</svg>

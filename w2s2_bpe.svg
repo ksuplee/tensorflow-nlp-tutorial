@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="500" viewBox="0 0 1150 500" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="500" fill="#ffffff"/>
+  <text x="575" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">BPE(Byte Pair Encoding) 병합 과정</text>
+  <text x="575" y="70" font-size="14" fill="#64748b" text-anchor="middle">가장 자주 인접해 등장하는 문자쌍을 반복적으로 병합하여 부분단어를 만든다</text>
+  <defs><marker id="bp" markerWidth="12" markerHeight="12" refX="6" refY="9" orient="auto"><path d="M0,0 L12,0 L6,9 z" fill="#2563eb"/></marker></defs>
+  <g font-size="16" text-anchor="middle">
+    <rect x="120" y="96" width="910" height="60" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="220" y="132" font-weight="700" fill="#1e3a8a">초기</text>
+    <text x="640" y="132" fill="#334155" font-size="17">l o w · l o w e s t · n e w e s t · w i d e s t   (문자 단위로 분해)</text>
+
+    <rect x="120" y="184" width="910" height="60" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="220" y="210" font-weight="700" fill="#1e3a8a">1회 병합</text>
+    <text x="220" y="232" font-size="12" fill="#64748b">최빈쌍 (e,s)</text>
+    <text x="640" y="220" fill="#334155" font-size="17">l o w · l o w <tspan fill="#2563eb" font-weight="700">es</tspan> t · n e w <tspan fill="#2563eb" font-weight="700">es</tspan> t · w i d <tspan fill="#2563eb" font-weight="700">es</tspan> t</text>
+
+    <rect x="120" y="272" width="910" height="60" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="220" y="298" font-weight="700" fill="#1e3a8a">2회 병합</text>
+    <text x="220" y="320" font-size="12" fill="#64748b">최빈쌍 (es,t)</text>
+    <text x="640" y="308" fill="#334155" font-size="17">l o w · l o w <tspan fill="#2563eb" font-weight="700">est</tspan> · n e w <tspan fill="#2563eb" font-weight="700">est</tspan> · w i d <tspan fill="#2563eb" font-weight="700">est</tspan></text>
+
+    <rect x="120" y="360" width="910" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="220" y="386" font-weight="700" fill="#1e3a8a">3회 병합</text>
+    <text x="220" y="408" font-size="12" fill="#64748b">최빈쌍 (l,o)</text>
+    <text x="640" y="396" fill="#334155" font-size="17"><tspan fill="#2563eb" font-weight="700">lo</tspan> w · <tspan fill="#2563eb" font-weight="700">lo</tspan> w est · n e w est · w i d est</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5">
+    <line x1="575" y1="158" x2="575" y2="182" marker-end="url(#bp)"/>
+    <line x1="575" y1="246" x2="575" y2="270" marker-end="url(#bp)"/>
+    <line x1="575" y1="334" x2="575" y2="358" marker-end="url(#bp)"/>
+  </g>
+  <text x="575" y="456" font-size="15" fill="#64748b" text-anchor="middle">→ 어휘: { lo, w, est, ... } — 자주 쓰는 조각은 하나의 토큰이 되고, 드문 단어도 조각으로 표현되어 OOV가 사라진다</text>
+</svg>

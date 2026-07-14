@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 전처리 코드를 매번 복사·붙여넣기 한다면?</text>
+  <defs>
+    <marker id="tb3" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- left: copy-paste -->
+  <rect x="50" y="70" width="500" height="250" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="300" y="100" font-size="16" font-weight="700" fill="#64748b" text-anchor="middle">복사·붙여넣기 (반복)</text>
+  <g font-size="12" fill="#334155">
+    <rect x="80" y="120" width="130" height="80" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="145" y="150" text-anchor="middle">노트북 A</text><text x="145" y="172" text-anchor="middle" fill="#94a3b8">전처리 v1</text>
+    <rect x="235" y="120" width="130" height="80" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="300" y="150" text-anchor="middle">노트북 B</text><text x="300" y="172" text-anchor="middle" fill="#94a3b8">전처리 v2'</text>
+    <rect x="390" y="120" width="130" height="80" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="455" y="150" text-anchor="middle">노트북 C</text><text x="455" y="172" text-anchor="middle" fill="#94a3b8">전처리 v?</text>
+  </g>
+  <text x="300" y="240" font-size="13" fill="#ef7373" text-anchor="middle">노트북마다 규칙이 미묘하게 달라짐</text>
+  <text x="300" y="262" font-size="13" fill="#94a3b8" text-anchor="middle">→ 결과 불일치, 실험 신뢰 저하</text>
+  <!-- right: module -->
+  <rect x="650" y="70" width="500" height="250" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="900" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">모듈화 (재사용)</text>
+  <rect x="820" y="120" width="160" height="54" rx="10" fill="#1e3a8a"/>
+  <text x="900" y="145" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">KoPreprocessor</text>
+  <text x="900" y="164" font-size="11" fill="#dbeafe" text-anchor="middle">공용 전처리 클래스</text>
+  <g font-size="12" fill="#334155">
+    <rect x="675" y="230" width="130" height="60" rx="8" fill="#fff" stroke="#bfdbfe"/><text x="740" y="265" text-anchor="middle">노트북 A</text>
+    <rect x="835" y="230" width="130" height="60" rx="8" fill="#fff" stroke="#bfdbfe"/><text x="900" y="265" text-anchor="middle">노트북 B</text>
+    <rect x="995" y="230" width="130" height="60" rx="8" fill="#fff" stroke="#bfdbfe"/><text x="1060" y="265" text-anchor="middle">노트북 C</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#tb3)">
+    <line x1="880" y1="174" x2="770" y2="228"/>
+    <line x1="900" y1="174" x2="900" y2="228"/>
+    <line x1="920" y1="174" x2="1030" y2="228"/>
+  </g>
+  <text x="900" y="312" font-size="13" fill="#1e3a8a" text-anchor="middle">한 번 정의 → 어디서나 import → 일관성·재현성 ↑</text>
+</svg>

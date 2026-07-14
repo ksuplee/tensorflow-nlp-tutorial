@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · "I am a ___" 다음에 올 단어는?</text>
+  <!-- sentence with blank -->
+  <rect x="300" y="76" width="600" height="60" rx="12" fill="#1e3a8a"/>
+  <text x="600" y="116" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">I am a <tspan fill="#93c5fd">____</tspan></text>
+  <!-- candidate bubbles -->
+  <g>
+    <rect x="150" y="180" width="260" height="64" rx="32" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="280" y="210" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">student</text>
+    <text x="280" y="232" font-size="13" fill="#64748b" text-anchor="middle">가장 그럴듯?</text>
+    <rect x="470" y="180" width="260" height="64" rx="32" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="600" y="210" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">teacher</text>
+    <text x="600" y="232" font-size="13" fill="#64748b" text-anchor="middle">가능</text>
+    <rect x="790" y="180" width="260" height="64" rx="32" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="920" y="210" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">data</text>
+    <text x="920" y="232" font-size="13" fill="#64748b" text-anchor="middle">덜 자연스러움</text>
+  </g>
+  <text x="600" y="300" font-size="14" fill="#334155" text-anchor="middle">사람은 자연스럽게 후보를 떠올린다 — 각 후보에 "확률"을 매길 수 있다면 어떨까?</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="410" viewBox="0 0 1100 410" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="410" fill="#ffffff"/>
+  <text x="550" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">원-핫 인코딩(One-Hot Encoding)</text>
+  <g>
+    <rect x="40" y="80" width="500" height="230" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="290" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">단어 집합(vocabulary) = 벡터 차원</text>
+    <text x="70" y="145" font-size="14" fill="#334155">['나', '는', '자연어', '처리', '를', '배운다']</text>
+    <g font-size="14" fill="#334155">
+      <text x="70" y="182">나        → [1, 0, 0, 0, 0, 0]</text>
+      <text x="70" y="212">는        → [0, 1, 0, 0, 0, 0]</text>
+      <text x="70" y="242" font-weight="700" fill="#1e3a8a">자연어  → [0, 0, 1, 0, 0, 0]</text>
+      <text x="70" y="272">처리     → [0, 0, 0, 1, 0, 0]</text>
+    </g>
+    <text x="290" y="300" font-size="12" fill="#64748b" text-anchor="middle">해당 인덱스에 '1', 나머지는 '0'</text>
+
+    <rect x="580" y="80" width="480" height="230" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+    <text x="820" y="110" font-size="15" font-weight="700" fill="#b91c1c" text-anchor="middle">한계</text>
+    <g font-size="14" fill="#334155">
+      <text x="610" y="150">· 단어 수가 늘면 벡터 차원도 계속 증가</text>
+      <text x="610" y="150" dy="30">  (저장공간·희소성 문제)</text>
+      <text x="610" y="210">· 단어 간 유사도를 표현하지 못함</text>
+      <text x="610" y="210" dy="30">  → 연관 검색 불가</text>
+      <text x="610" y="270" font-weight="700" fill="#1e3a8a">→ 워드 임베딩이 필요(7주차)</text>
+    </g>
+
+    <text x="550" y="360" font-size="14" fill="#334155" text-anchor="middle">Keras: Tokenizer.texts_to_sequences() → to_categorical() 로 정수 인코딩을 원-핫으로 변환</text>
+  </g>
+</svg>

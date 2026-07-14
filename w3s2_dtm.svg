@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="470" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">카운트 기반 단어 표현: 원-핫 인코딩과 DTM</text>
+
+  <!-- ① one-hot -->
+  <rect x="60" y="66" width="1080" height="170" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="96" font-size="16" font-weight="700" fill="#1e3a8a">① 원-핫 인코딩 — 해당 단어의 위치만 1, 나머지는 0인 희소 벡터</text>
+
+  <!-- one-hot rows -->
+  <g font-size="15">
+    <text x="120" y="140" fill="#334155" text-anchor="end">사과</text>
+    <rect x="140" y="126" width="30" height="24" fill="#2563eb"/><text x="155" y="143" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="172" y="126" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="187" y="143" fill="#94a3b8" text-anchor="middle">0</text>
+    <rect x="204" y="126" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="219" y="143" fill="#94a3b8" text-anchor="middle">0</text>
+
+    <text x="120" y="176" fill="#334155" text-anchor="end">바나나</text>
+    <rect x="140" y="162" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="155" y="179" fill="#94a3b8" text-anchor="middle">0</text>
+    <rect x="172" y="162" width="30" height="24" fill="#2563eb"/><text x="187" y="179" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="204" y="162" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="219" y="179" fill="#94a3b8" text-anchor="middle">0</text>
+
+    <text x="120" y="212" fill="#334155" text-anchor="end">강아지</text>
+    <rect x="140" y="198" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="155" y="215" fill="#94a3b8" text-anchor="middle">0</text>
+    <rect x="172" y="198" width="30" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="187" y="215" fill="#94a3b8" text-anchor="middle">0</text>
+    <rect x="204" y="198" width="30" height="24" fill="#2563eb"/><text x="219" y="215" fill="#ffffff" text-anchor="middle">1</text>
+  </g>
+
+  <text x="300" y="150" font-size="15" font-weight="700" fill="#1e3a8a">한계</text>
+  <text x="300" y="178" font-size="14" fill="#475569">· 차원 = 어휘 크기 → 매우 희소(sparse)</text>
+  <text x="300" y="204" font-size="14" fill="#475569">· 모든 단어 간 거리가 동일 → 의미·유사도 반영 불가</text>
+  <text x="300" y="228" font-size="13" fill="#64748b">⇒ 워드 임베딩(7주차)의 등장 동기</text>
+
+  <!-- ② DTM -->
+  <rect x="60" y="252" width="1080" height="192" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="282" font-size="16" font-weight="700" fill="#1e3a8a">② Bag-of-Words · 문서-단어 행렬(DTM) — 단어 순서를 무시하고 등장 횟수로 벡터화</text>
+
+  <!-- documents list -->
+  <g font-size="14" fill="#475569">
+    <text x="85" y="320">문서1: 먹고 싶은 사과</text>
+    <text x="85" y="348">문서2: 먹고 싶은 바나나</text>
+    <text x="85" y="376">문서3: 노란 바나나 바나나</text>
+  </g>
+
+  <!-- matrix -->
+  <g font-size="14">
+    <!-- column headers -->
+    <g fill="#1e3a8a" font-weight="700" text-anchor="middle">
+      <text x="530" y="312">먹고</text><text x="600" y="312">싶은</text><text x="670" y="312">사과</text><text x="740" y="312">바나나</text><text x="810" y="312">노란</text>
+    </g>
+    <!-- row labels -->
+    <g fill="#1e3a8a" font-weight="700" text-anchor="end">
+      <text x="480" y="340">문서1</text><text x="480" y="372">문서2</text><text x="480" y="404">문서3</text>
+    </g>
+    <!-- cells: doc1 [1,1,1,0,0] doc2 [1,1,0,1,0] doc3 [0,0,0,2,1] -->
+    <g text-anchor="middle" fill="#334155">
+      <!-- row1 -->
+      <rect x="500" y="324" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="530" y="341">1</text>
+      <rect x="570" y="324" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="600" y="341">1</text>
+      <rect x="640" y="324" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="670" y="341">1</text>
+      <rect x="710" y="324" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="740" y="341" fill="#94a3b8">0</text>
+      <rect x="780" y="324" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="810" y="341" fill="#94a3b8">0</text>
+      <!-- row2 -->
+      <rect x="500" y="356" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="530" y="373">1</text>
+      <rect x="570" y="356" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="600" y="373">1</text>
+      <rect x="640" y="356" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="670" y="373" fill="#94a3b8">0</text>
+      <rect x="710" y="356" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="740" y="373">1</text>
+      <rect x="780" y="356" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="810" y="373" fill="#94a3b8">0</text>
+      <!-- row3 -->
+      <rect x="500" y="388" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="530" y="405" fill="#94a3b8">0</text>
+      <rect x="570" y="388" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="600" y="405" fill="#94a3b8">0</text>
+      <rect x="640" y="388" width="60" height="24" fill="#ffffff" stroke="#cbd5e1"/><text x="670" y="405" fill="#94a3b8">0</text>
+      <rect x="710" y="388" width="60" height="24" fill="#bfdbfe" stroke="#2563eb"/><text x="740" y="405" font-weight="700">2</text>
+      <rect x="780" y="388" width="60" height="24" fill="#eff6ff" stroke="#93c5fd"/><text x="810" y="405">1</text>
+    </g>
+  </g>
+  <text x="900" y="360" font-size="14" fill="#475569">각 문서 = 단어 빈도 벡터</text>
+  <text x="900" y="386" font-size="13" fill="#64748b">순서 정보는 사라짐</text>
+</svg>
