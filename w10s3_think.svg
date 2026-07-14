@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 번역 중인 디코더가 '정답'을 미리 보면 안 되는 이유는?</text>
+  <text x="600" y="72" font-size="14" fill="#64748b" text-anchor="middle">디코더는 문장을 한 번에 입력받지만, 각 단어를 낼 때 아직 안 나온 미래 단어를 참고하면 안 된다</text>
+  <!-- masking grid -->
+  <text x="220" y="110" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">룩-어헤드 마스크(Look-ahead Mask)</text>
+  <g font-size="12" text-anchor="middle">
+    <text x="120" y="140" fill="#64748b">je</text><text x="170" y="140" fill="#64748b">suis</text><text x="230" y="140" fill="#64748b">étud.</text><text x="300" y="140" fill="#64748b">&lt;eos&gt;</text>
+    <!-- rows -->
+    <rect x="95" y="150" width="50" height="34" fill="#1e3a8a"/><rect x="150" y="150" width="50" height="34" fill="#334155"/><rect x="205" y="150" width="50" height="34" fill="#334155"/><rect x="260" y="150" width="70" height="34" fill="#334155"/>
+    <rect x="95" y="188" width="50" height="34" fill="#2563eb"/><rect x="150" y="188" width="50" height="34" fill="#2563eb"/><rect x="205" y="188" width="50" height="34" fill="#334155"/><rect x="260" y="188" width="70" height="34" fill="#334155"/>
+    <rect x="95" y="226" width="50" height="34" fill="#2563eb"/><rect x="150" y="226" width="50" height="34" fill="#2563eb"/><rect x="205" y="226" width="50" height="34" fill="#2563eb"/><rect x="260" y="226" width="70" height="34" fill="#334155"/>
+    <rect x="95" y="264" width="50" height="34" fill="#2563eb"/><rect x="150" y="264" width="50" height="34" fill="#2563eb"/><rect x="205" y="264" width="50" height="34" fill="#2563eb"/><rect x="260" y="264" width="70" height="34" fill="#2563eb"/>
+    <text x="70" y="171" fill="#64748b" text-anchor="end">je</text><text x="70" y="209" fill="#64748b" text-anchor="end">suis</text><text x="70" y="247" fill="#64748b" text-anchor="end">étud.</text><text x="70" y="285" fill="#64748b" text-anchor="end">eos</text>
+  </g>
+  <rect x="360" y="180" width="24" height="18" fill="#2563eb"/><text x="392" y="194" font-size="13" fill="#334155">참고 가능(과거·현재)</text>
+  <rect x="360" y="210" width="24" height="18" fill="#334155"/><text x="392" y="224" font-size="13" fill="#334155">가림(미래 단어)</text>
+  <!-- note -->
+  <rect x="620" y="130" width="540" height="170" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="890" y="162" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">왜 필요한가</text>
+  <g font-size="14" fill="#334155">
+    <text x="644" y="196">· 추론 시에는 미래 단어를 알 수 없음</text>
+    <text x="644" y="226">· 훈련 때 미래를 보면 '컨닝' → 일반화 실패</text>
+    <text x="644" y="256">· 미래 위치의 어텐션 스코어에</text>
+    <text x="664" y="278" font-size="13" fill="#64748b">아주 작은 음수(-∞)를 더해 softmax에서 0으로</text>
+  </g>
+</svg>

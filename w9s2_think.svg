@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="320" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · seq2seq는 실제로 어떻게 동작할까?</text>
+  <defs><marker id="n9" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <g>
+    <rect x="40" y="120" width="180" height="90" rx="10" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="130" y="152" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">입력 시퀀스</text>
+    <text x="130" y="178" font-size="12" fill="#64748b" text-anchor="middle">"I am a student"</text>
+    <rect x="260" y="120" width="180" height="90" rx="10" fill="#1e3a8a"/>
+    <text x="350" y="152" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">인코더</text>
+    <text x="350" y="178" font-size="12" fill="#dbeafe" text-anchor="middle">입력을 읽어 압축</text>
+    <rect x="480" y="120" width="180" height="90" rx="10" fill="#2563eb"/>
+    <text x="570" y="152" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">컨텍스트 벡터</text>
+    <text x="570" y="178" font-size="12" fill="#dbeafe" text-anchor="middle">마지막 은닉 상태</text>
+    <rect x="700" y="120" width="180" height="90" rx="10" fill="#1e3a8a"/>
+    <text x="790" y="152" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">디코더</text>
+    <text x="790" y="178" font-size="12" fill="#dbeafe" text-anchor="middle">한 단어씩 생성</text>
+    <rect x="920" y="120" width="240" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="1040" y="152" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">출력 시퀀스</text>
+    <text x="1040" y="178" font-size="12" fill="#64748b" text-anchor="middle">"je suis étudiant"</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#n9)">
+    <line x1="220" y1="165" x2="256" y2="165"/><line x1="440" y1="165" x2="476" y2="165"/><line x1="660" y1="165" x2="696" y2="165"/><line x1="880" y1="165" x2="916" y2="165"/>
+  </g>
+  <text x="600" y="270" font-size="14" fill="#334155" text-anchor="middle">입력(영어) → 인코더 → 컨텍스트 벡터 → 디코더 → 출력(프랑스어)</text>
+  <text x="600" y="298" font-size="13" fill="#64748b" text-anchor="middle">그런데 입력·출력 문장의 길이가 다르다면? 병렬 코퍼스로 이 매핑을 학습한다</text>
+</svg>

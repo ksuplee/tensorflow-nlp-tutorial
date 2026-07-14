@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 긴 문장을 벡터 하나에 다 담을 수 있을까?</text>
+  <defs><marker id="a9" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#ef4444"/></marker></defs>
+  <!-- long sentence -->
+  <g font-size="12" text-anchor="middle">
+    <rect x="60" y="120" width="70" height="34" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="95" y="142" fill="#1e3a8a">단어1</text>
+    <rect x="140" y="120" width="70" height="34" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="175" y="142" fill="#1e3a8a">단어2</text>
+    <rect x="220" y="120" width="70" height="34" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="255" y="142" fill="#1e3a8a">단어3</text>
+    <text x="320" y="142" fill="#94a3b8">· · ·</text>
+    <rect x="360" y="120" width="80" height="34" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="400" y="142" fill="#1e3a8a">단어 N</text>
+  </g>
+  <!-- squeeze into one vector -->
+  <path d="M 440 137 C 500 137, 500 137, 540 137" stroke="#ef4444" stroke-width="2.5" marker-end="url(#a9)" fill="none"/>
+  <rect x="560" y="110" width="140" height="54" rx="10" fill="#ef4444"/>
+  <text x="630" y="134" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">고정 길이</text>
+  <text x="630" y="152" font-size="12" fill="#fee2e2" text-anchor="middle">컨텍스트 벡터 1개</text>
+  <text x="630" y="190" font-size="13" fill="#b91c1c" text-anchor="middle">병목! 정보 손실</text>
+  <!-- solution -->
+  <rect x="760" y="100" width="400" height="140" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="960" y="132" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">어텐션의 아이디어</text>
+  <g font-size="14" fill="#334155">
+    <text x="784" y="166">디코더가 단어를 낼 때마다,</text>
+    <text x="784" y="192">입력의 <tspan font-weight="700" fill="#1e3a8a">모든 은닉 상태</tspan>를 다시 보고</text>
+    <text x="784" y="218"><tspan font-weight="700" fill="#1e3a8a">중요한 부분에 집중(attend)</tspan></text>
+  </g>
+  <text x="600" y="290" font-size="14" fill="#334155" text-anchor="middle">"I love machine learning" 번역 중 'machine'을 낼 때는 입력의 'machine'에 더 주목하면 어떨까?</text>
+</svg>

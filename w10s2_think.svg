@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · "그것"은 무엇을 가리킬까?</text>
+  <!-- sentence -->
+  <rect x="80" y="90" width="1040" height="50" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="600" y="122" font-size="16" fill="#334155" text-anchor="middle">"그 <tspan font-weight="700" fill="#1e3a8a">동물</tspan>은 길을 건너지 않았다. 왜냐하면 <tspan font-weight="700" fill="#ef4444">그것</tspan>은 너무 <tspan font-weight="700" fill="#16a34a">피곤</tspan>했기 때문이다."</text>
+  <!-- attention arcs -->
+  <path d="M 900 90 C 800 40, 300 40, 205 88" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#th10)"/>
+  <path d="M 905 140 C 950 175, 1010 175, 1030 142" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <defs><marker id="th10" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <text x="550" y="60" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">강한 어텐션: '그것' → '동물'</text>
+  <text x="980" y="188" font-size="12" fill="#94a3b8" text-anchor="middle">약한 어텐션: '그것' → '피곤'</text>
+  <!-- note -->
+  <rect x="240" y="210" width="720" height="90" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="240" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">셀프 어텐션(Self-Attention)</text>
+  <text x="600" y="268" font-size="14" fill="#334155" text-anchor="middle">문장 안의 각 단어가 <tspan font-weight="700">다른 모든 단어</tspan>와의 관련도를 계산해</text>
+  <text x="600" y="290" font-size="14" fill="#334155" text-anchor="middle">'그것'이 '동물'을 가리킴을 스스로 학습한다 (Q=K=V=입력 단어들)</text>
+</svg>

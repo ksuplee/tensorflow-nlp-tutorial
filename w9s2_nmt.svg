@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">단어 수준 번역기: 훈련(교사 강요) vs 추론</text>
+  <defs><marker id="nm9" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- training -->
+  <rect x="40" y="70" width="540" height="270" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="310" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">훈련: 교사 강요(Teacher Forcing)</text>
+  <text x="66" y="132" font-size="13" fill="#64748b">디코더 입력(정답을 그대로):</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="66" y="142" width="80" height="30" rx="5" fill="#e2e8f0"/><text x="106" y="162" fill="#334155">&lt;sos&gt;</text>
+    <rect x="156" y="142" width="70" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><text x="191" y="162" fill="#1e3a8a">je</text>
+    <rect x="236" y="142" width="70" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><text x="271" y="162" fill="#1e3a8a">suis</text>
+    <rect x="316" y="142" width="100" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><text x="366" y="162" fill="#1e3a8a">étudiant</text>
+  </g>
+  <text x="66" y="210" font-size="13" fill="#64748b">디코더 출력(예측):</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="66" y="220" width="70" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="101" y="240" fill="#1e3a8a">je</text>
+    <rect x="146" y="220" width="70" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="181" y="240" fill="#1e3a8a">suis</text>
+    <rect x="226" y="220" width="100" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><text x="276" y="240" fill="#1e3a8a">étudiant</text>
+    <rect x="336" y="220" width="80" height="30" rx="5" fill="#e2e8f0"/><text x="376" y="240" fill="#334155">&lt;eos&gt;</text>
+  </g>
+  <text x="310" y="295" font-size="13" fill="#334155" text-anchor="middle">정답을 다음 입력으로 넣어 빠르고 안정적으로 학습</text>
+  <text x="310" y="320" font-size="12" fill="#64748b" text-anchor="middle">손실: sparse_categorical_crossentropy</text>
+  <!-- inference -->
+  <rect x="620" y="70" width="540" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="890" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">추론: 순차 생성</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="650" y="150" width="80" height="34" rx="6" fill="#e2e8f0"/><text x="690" y="172" fill="#334155">&lt;sos&gt;</text>
+    <rect x="760" y="150" width="70" height="34" rx="6" fill="#1e3a8a"/><text x="795" y="172" fill="#fff">je</text>
+    <rect x="860" y="150" width="70" height="34" rx="6" fill="#1e3a8a"/><text x="895" y="172" fill="#fff">suis</text>
+    <rect x="960" y="150" width="100" height="34" rx="6" fill="#1e3a8a"/><text x="1010" y="172" fill="#fff">étudiant</text>
+    <rect x="1090" y="150" width="60" height="34" rx="6" fill="#e2e8f0"/><text x="1120" y="172" fill="#334155">eos</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#nm9)">
+    <path d="M 795 184 C 795 210, 720 210, 690 186" fill="none" stroke-dasharray="4 3"/>
+    <path d="M 895 184 C 895 210, 820 210, 790 186" fill="none" stroke-dasharray="4 3"/>
+    <path d="M 1010 184 C 1010 210, 930 210, 900 186" fill="none" stroke-dasharray="4 3"/>
+  </g>
+  <text x="890" y="250" font-size="13" fill="#334155" text-anchor="middle">이전 시점의 예측을 다음 입력으로 사용</text>
+  <text x="890" y="278" font-size="12" fill="#64748b" text-anchor="middle">&lt;eos&gt;가 나올 때까지 반복 (정답 없음)</text>
+  <text x="890" y="312" font-size="13" fill="#94a3b8" text-anchor="middle">인코더의 컨텍스트 벡터로 디코더를 시작</text>
+</svg>

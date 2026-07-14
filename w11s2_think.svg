@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 한 번 잘 배워두면, 여러 문제에 써먹을 수 있을까?</text>
+  <defs><marker id="ft11" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- pretraining -->
+  <rect x="60" y="90" width="440" height="200" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="280" y="120" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">① 사전 훈련 (Pre-training)</text>
+  <g font-size="14" fill="#334155">
+    <text x="86" y="156">· 위키피디아 등 <tspan font-weight="700">레이블 없는</tspan> 대량 텍스트</text>
+    <text x="86" y="186">· 마스크드 언어 모델(MLM)</text>
+    <text x="86" y="214">· 다음 문장 예측(NSP)</text>
+    <text x="86" y="248" font-size="13" fill="#64748b">→ 범용적인 "언어 이해" 능력 습득</text>
+    <text x="86" y="272" font-size="12" fill="#94a3b8">한 번, 아주 비싸게 (구글이 공개)</text>
+  </g>
+  <line x1="500" y1="190" x2="560" y2="190" stroke="#2563eb" stroke-width="3" marker-end="url(#ft11)"/>
+  <text x="530" y="178" font-size="12" fill="#64748b" text-anchor="middle">전이</text>
+  <!-- finetuning -->
+  <rect x="580" y="90" width="560" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="860" y="120" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">② 파인 튜닝 (Fine-tuning)</text>
+  <g font-size="14" fill="#334155">
+    <text x="606" y="156">· 사전학습 모델에 <tspan font-weight="700">소량의 레이블</tspan> 데이터로</text>
+    <text x="606" y="184">· 파라미터를 <tspan font-weight="700">재조정</tspan>(추가 훈련)</text>
+    <text x="606" y="212">· 태스크마다 출력층만 바꿔 붙임</text>
+    <text x="606" y="246" font-size="13" fill="#64748b">→ 감성분류·NER·QA 등에 빠르게 적응</text>
+    <text x="606" y="272" font-size="12" fill="#94a3b8">여러 번, 값싸게 (각자 목적에 맞게)</text>
+  </g>
+  <text x="600" y="326" font-size="14" fill="#334155" text-anchor="middle">"크게 사전학습 → 작게 파인튜닝" — 전이 학습이 현대 NLP의 표준이 되었다</text>
+</svg>

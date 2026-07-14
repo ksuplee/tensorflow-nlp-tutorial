@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">BERT 구조: 트랜스포머 인코더 스택</text>
+  <defs><marker id="be11" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- input tokens -->
+  <g font-size="12" text-anchor="middle">
+    <rect x="80" y="300" width="80" height="34" rx="6" fill="#e2e8f0"/><text x="120" y="322" fill="#334155">[CLS]</text>
+    <rect x="170" y="300" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="210" y="322" fill="#1e3a8a">나는</text>
+    <rect x="260" y="300" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="300" y="322" fill="#1e3a8a">학교</text>
+    <rect x="350" y="300" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="390" y="322" fill="#1e3a8a">간다</text>
+    <rect x="440" y="300" width="80" height="34" rx="6" fill="#e2e8f0"/><text x="480" y="322" fill="#334155">[SEP]</text>
+  </g>
+  <!-- encoder stack -->
+  <rect x="70" y="130" width="460" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="300" y="158" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">트랜스포머 인코더 × L</text>
+  <rect x="100" y="175" width="400" height="34" rx="6" fill="#2563eb"/><text x="300" y="197" font-size="12" fill="#fff" text-anchor="middle">멀티 헤드 셀프 어텐션 (양방향)</text>
+  <rect x="100" y="217" width="400" height="34" rx="6" fill="#1e3a8a"/><text x="300" y="239" font-size="12" fill="#fff" text-anchor="middle">FFNN + Add &amp; Norm</text>
+  <text x="300" y="268" font-size="11" fill="#64748b" text-anchor="middle">↑ 인코더 층을 L번 쌓음</text>
+  <!-- output contextual -->
+  <g font-size="11" text-anchor="middle">
+    <rect x="80" y="80" width="80" height="30" rx="5" fill="#16a34a"/><text x="120" y="100" fill="#fff">C(문맥)</text>
+    <rect x="170" y="80" width="80" height="30" rx="5" fill="#2563eb"/><text x="210" y="100" fill="#fff">T₁</text>
+    <rect x="260" y="80" width="80" height="30" rx="5" fill="#2563eb"/><text x="300" y="100" fill="#fff">T₂</text>
+    <rect x="350" y="80" width="80" height="30" rx="5" fill="#2563eb"/><text x="390" y="100" fill="#fff">T₃</text>
+    <rect x="440" y="80" width="80" height="30" rx="5" fill="#2563eb"/><text x="480" y="100" fill="#fff">T[SEP]</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#be11)"><line x1="300" y1="300" x2="300" y2="282"/><line x1="300" y1="130" x2="300" y2="112"/></g>
+  <text x="300" y="128" font-size="11" fill="#64748b" text-anchor="middle">문맥 반영 출력(Contextual Embedding)</text>
+  <!-- size table -->
+  <rect x="600" y="90" width="560" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="880" y="120" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">BERT의 크기</text>
+  <g font-size="14" fill="#334155">
+    <text x="628" y="156"><tspan font-weight="700" fill="#1e3a8a">BERT-Base</tspan>: L=12 · D=768 · A=12</text>
+    <text x="648" y="180" font-size="13" fill="#64748b">→ 약 1.1억(110M) 파라미터</text>
+    <text x="628" y="216"><tspan font-weight="700" fill="#1e3a8a">BERT-Large</tspan>: L=24 · D=1024 · A=16</text>
+    <text x="648" y="240" font-size="13" fill="#64748b">→ 약 3.4억(340M) 파라미터</text>
+    <text x="628" y="272" font-size="12" fill="#94a3b8">L=인코더 층 · D=d_model · A=어텐션 헤드</text>
+  </g>
+</svg>
