@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · "그것"이 가리키는 건 무엇일까?</text>
+  <defs><marker id="d6" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/></marker></defs>
+  <!-- sentence -->
+  <rect x="80" y="90" width="1040" height="60" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="110" y="128" font-size="17" fill="#334155">지민은 도서관에서 <tspan font-weight="700" fill="#1e3a8a">책</tspan>을 빌렸는데, 오랫동안 그가 찾던 <tspan font-weight="700" fill="#ef4444">그것</tspan>이었다.</text>
+  <!-- long dependency arc -->
+  <path d="M 305 88 C 400 60, 780 60, 900 88" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#d6)"/>
+  <text x="600" y="171" font-size="13" fill="#ef4444" text-anchor="middle" font-weight="700">멀리 떨어진 두 단어의 의존 관계 = 장기 의존성(long-term dependency)</text>
+  <!-- note left: problem -->
+  <rect x="80" y="180" width="500" height="130" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="330" y="210" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">바닐라 RNN의 한계</text>
+  <text x="102" y="242" font-size="14" fill="#334155">시점이 길어질수록 앞의 정보(x₁)가</text>
+  <text x="102" y="268" font-size="14" fill="#334155">뒤로 충분히 전달되지 못하고 희미해짐</text>
+  <text x="102" y="294" font-size="13" fill="#64748b">→ "그것"이 "책"임을 잊어버릴 수 있음</text>
+  <!-- note right: solution -->
+  <rect x="620" y="180" width="500" height="130" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="870" y="210" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">해결</text>
+  <text x="642" y="242" font-size="14" fill="#334155">기억을 조절하는 게이트를 가진</text>
+  <text x="642" y="268" font-size="14" fill="#334155"><tspan font-weight="700" fill="#1e3a8a">LSTM · GRU</tspan> (이번 차시)</text>
+  <text x="642" y="294" font-size="13" fill="#64748b">이후 Transformer(10주차)로 근본 해결</text>
+</svg>

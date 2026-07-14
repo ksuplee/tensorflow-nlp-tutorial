@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">GRU: LSTM을 단순화한 게이트 순환 유닛</text>
+  <!-- LSTM column -->
+  <rect x="60" y="80" width="500" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="60" y="80" width="500" height="50" rx="12" fill="#1e3a8a"/><text x="310" y="112" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">LSTM</text>
+  <g font-size="15" fill="#334155">
+    <text x="86" y="162">게이트 <tspan font-weight="700" fill="#1e3a8a">3개</tspan>: 입력 · 망각 · 출력</text>
+    <text x="86" y="196">상태 <tspan font-weight="700" fill="#1e3a8a">2개</tspan>: 셀 상태 Cₜ + 은닉 hₜ</text>
+    <text x="86" y="230">표현력이 크고 안정적</text>
+    <text x="86" y="264">파라미터가 많아 학습이 무거움</text>
+  </g>
+  <text x="310" y="316" font-size="13" fill="#64748b" text-anchor="middle">긴 시퀀스·복잡한 과제에 강함</text>
+  <!-- GRU column -->
+  <rect x="640" y="80" width="500" height="270" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="640" y="80" width="500" height="50" rx="12" fill="#2563eb"/><text x="890" y="112" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">GRU (2014, 조경현)</text>
+  <g font-size="15" fill="#334155">
+    <text x="666" y="162">게이트 <tspan font-weight="700" fill="#1e3a8a">2개</tspan>: 업데이트 · 리셋</text>
+    <text x="666" y="196">상태 <tspan font-weight="700" fill="#1e3a8a">1개</tspan>: 은닉 hₜ (셀 상태 없음)</text>
+    <text x="666" y="230">계산이 단순하고 빠름</text>
+    <text x="666" y="264">적은 데이터에서 효율적</text>
+  </g>
+  <text x="890" y="316" font-size="13" fill="#64748b" text-anchor="middle">LSTM과 비슷한 성능을 더 가볍게</text>
+  <text x="600" y="368" font-size="14" fill="#334155" text-anchor="middle">둘 다 게이트로 장기 의존성 문제를 완화 — 과제·데이터 규모에 따라 선택한다</text>
+</svg>

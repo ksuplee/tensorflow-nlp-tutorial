@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="38" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">과소적합 · 적정적합 · 과적합 (편향-분산 트레이드오프)</text>
+
+  <!-- panels -->
+  <!-- panel 1: underfit -->
+  <rect x="70" y="62" width="310" height="258" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="225" y="90" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">과소적합 (Underfitting)</text>
+  <text x="225" y="110" font-size="13" fill="#64748b" text-anchor="middle">높은 편향 · 패턴을 못 잡음</text>
+  <g stroke="#94a3b8" stroke-width="1.5"><line x1="105" y1="130" x2="105" y2="300"/><line x1="105" y1="300" x2="365" y2="300"/></g>
+  <g fill="#2563eb"><circle cx="130" cy="268" r="4"/><circle cx="165" cy="248" r="4"/><circle cx="200" cy="222" r="4"/><circle cx="230" cy="214" r="4"/><circle cx="262" cy="188" r="4"/><circle cx="297" cy="196" r="4"/><circle cx="330" cy="168" r="4"/></g>
+  <line x1="130" y1="262" x2="330" y2="176" stroke="#dc2626" stroke-width="3"/>
+
+  <!-- panel 2: good fit -->
+  <rect x="445" y="62" width="310" height="258" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="600" y="90" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">적정적합 (Good fit)</text>
+  <text x="600" y="110" font-size="13" fill="#64748b" text-anchor="middle">편향·분산 균형 · 일반화 우수</text>
+  <g stroke="#94a3b8" stroke-width="1.5"><line x1="480" y1="130" x2="480" y2="300"/><line x1="480" y1="300" x2="740" y2="300"/></g>
+  <g fill="#2563eb"><circle cx="505" cy="268" r="4"/><circle cx="540" cy="248" r="4"/><circle cx="575" cy="222" r="4"/><circle cx="605" cy="214" r="4"/><circle cx="637" cy="188" r="4"/><circle cx="672" cy="196" r="4"/><circle cx="705" cy="168" r="4"/></g>
+  <path d="M 505 266 Q 575 226 605 212 T 705 174" fill="none" stroke="#16a34a" stroke-width="3"/>
+
+  <!-- panel 3: overfit -->
+  <rect x="820" y="62" width="310" height="258" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="975" y="90" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">과적합 (Overfitting)</text>
+  <text x="975" y="110" font-size="13" fill="#64748b" text-anchor="middle">높은 분산 · 잡음까지 암기</text>
+  <g stroke="#94a3b8" stroke-width="1.5"><line x1="855" y1="130" x2="855" y2="300"/><line x1="855" y1="300" x2="1115" y2="300"/></g>
+  <g fill="#2563eb"><circle cx="880" cy="268" r="4"/><circle cx="915" cy="248" r="4"/><circle cx="950" cy="222" r="4"/><circle cx="980" cy="214" r="4"/><circle cx="1012" cy="188" r="4"/><circle cx="1047" cy="196" r="4"/><circle cx="1080" cy="168" r="4"/></g>
+  <polyline points="880,268 915,248 950,222 980,214 1012,188 1047,196 1080,168" fill="none" stroke="#dc2626" stroke-width="3"/>
+
+  <text x="600" y="360" font-size="15" fill="#475569" text-anchor="middle">모델 복잡도를 높이면 편향↓ 분산↑ — <tspan font-weight="700" fill="#1e3a8a">검증 성능이 가장 좋은 지점</tspan>이 최적</text>
+  <text x="600" y="386" font-size="13" fill="#64748b" text-anchor="middle">과적합 대응: 더 많은 데이터 · 규제(regularization) · 조기 종료 · 드롭아웃(5주차)</text>
+</svg>

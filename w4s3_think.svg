@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 세 클래스는 어떻게 나눌까?</text>
+  <!-- plot area -->
+  <rect x="360" y="70" width="480" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <!-- three colored regions via translucent polygons -->
+  <polygon points="360,70 600,70 480,205 360,205" fill="#2563eb" opacity="0.10"/>
+  <polygon points="600,70 840,70 840,205 480,205" fill="#16a34a" opacity="0.10"/>
+  <polygon points="360,205 480,205 840,205 840,340 360,340" fill="#ef4444" opacity="0.10"/>
+  <!-- boundaries -->
+  <line x1="480" y1="205" x2="600" y2="70" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="480" y1="205" x2="840" y2="205" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="480" y1="205" x2="360" y2="205" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <!-- blue points (top-left) -->
+  <g fill="#2563eb"><circle cx="430" cy="120" r="7"/><circle cx="470" cy="150" r="7"/><circle cx="500" cy="110" r="7"/><circle cx="450" cy="175" r="7"/></g>
+  <!-- green points (top-right) -->
+  <g fill="#16a34a"><circle cx="660" cy="120" r="7"/><circle cx="710" cy="150" r="7"/><circle cx="750" cy="110" r="7"/><circle cx="700" cy="175" r="7"/></g>
+  <!-- red points (bottom) -->
+  <g fill="#ef4444"><circle cx="520" cy="280" r="7"/><circle cx="600" cy="300" r="7"/><circle cx="680" cy="270" r="7"/><circle cx="590" cy="255" r="7"/></g>
+  <!-- legend -->
+  <rect x="880" y="110" width="290" height="170" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <circle cx="905" cy="145" r="7" fill="#2563eb"/><text x="920" y="150" font-size="14" fill="#334155">클래스 1 (예: setosa)</text>
+  <circle cx="905" cy="178" r="7" fill="#16a34a"/><text x="920" y="183" font-size="14" fill="#334155">클래스 2 (versicolor)</text>
+  <circle cx="905" cy="211" r="7" fill="#ef4444"/><text x="920" y="216" font-size="14" fill="#334155">클래스 3 (virginica)</text>
+  <text x="900" y="248" font-size="12" fill="#64748b">채색 영역 = 결정 경계</text>
+  <text x="900" y="268" font-size="12" fill="#64748b">각 클래스 확률의 합 = 1</text>
+  <text x="600" y="368" font-size="14" fill="#334155" text-anchor="middle">소프트맥스 회귀는 로지스틱 회귀를 다중 클래스로 일반화한다</text>
+</svg>

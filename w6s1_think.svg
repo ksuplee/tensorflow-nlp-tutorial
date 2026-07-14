@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 순서가 있는 데이터, 어떻게 처리할까?</text>
+  <defs>
+    <marker id="r6" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+  </defs>
+  <!-- sequential data examples -->
+  <rect x="60" y="90" width="240" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="180" y="120" font-size="15" font-weight="700" fill="#64748b" text-anchor="middle">순차·시계열 데이터</text>
+  <g font-size="15" fill="#334155">
+    <text x="85" y="156">· 텍스트(단어의 나열)</text>
+    <text x="85" y="188">· 주가(시간 순 가격)</text>
+    <text x="85" y="220">· 음성(파형 시퀀스)</text>
+    <text x="85" y="252">· 날씨(일자별 기록)</text>
+  </g>
+  <!-- arrow -->
+  <line x1="300" y1="190" x2="360" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#r6)"/>
+  <!-- RNN cell with recurrence -->
+  <rect x="380" y="120" width="440" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="150" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">순환 신경망(RNN)</text>
+  <rect x="470" y="170" width="120" height="70" rx="10" fill="#dbeafe" stroke="#93c5fd"/><text x="530" y="200" font-size="13" fill="#1e3a8a" text-anchor="middle">입력 xₜ</text>
+  <rect x="620" y="170" width="150" height="70" rx="10" fill="#1e3a8a"/><text x="695" y="200" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">은닉 상태 hₜ</text><text x="695" y="222" font-size="11" fill="#dbeafe" text-anchor="middle">기억을 담는 벡터</text>
+  <line x1="590" y1="205" x2="616" y2="205" stroke="#2563eb" stroke-width="2.5" marker-end="url(#r6)"/>
+  <path d="M 745 170 C 745 130, 620 130, 645 168" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="5 3" marker-end="url(#r6)"/>
+  <text x="695" y="128" font-size="12" fill="#64748b" text-anchor="middle">이전 hₜ₋₁를 다시 입력</text>
+  <!-- output -->
+  <line x1="820" y1="190" x2="880" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#r6)"/>
+  <rect x="900" y="155" width="240" height="70" rx="12" fill="#f8fafc" stroke="#e2e8f0"/><text x="1020" y="188" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">출력 oₜ</text><text x="1020" y="210" font-size="12" fill="#64748b" text-anchor="middle">예측·분류·다음 단어</text>
+  <text x="600" y="322" font-size="14" fill="#334155" text-anchor="middle">RNN은 이전 시점의 정보(은닉 상태)를 현재 입력과 함께 사용해 "순서"를 기억한다</text>
+</svg>

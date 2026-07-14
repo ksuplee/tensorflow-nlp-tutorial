@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">활성화 함수(비선형) 비교</text>
+  <!-- panel template: 4 panels -->
+  <!-- Step -->
+  <rect x="30" y="70" width="275" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="167" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">계단 (Step)</text>
+  <line x1="60" y1="240" x2="280" y2="240" stroke="#cbd5e1" stroke-width="1.5"/><line x1="170" y1="130" x2="170" y2="300" stroke="#cbd5e1" stroke-width="1.5"/>
+  <path d="M60 290 L170 290 L170 150 L280 150" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="167" y="325" font-size="12" fill="#64748b" text-anchor="middle">0 또는 1 (개념적)</text>
+  <!-- Sigmoid -->
+  <rect x="320" y="70" width="275" height="270" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="457" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">시그모이드</text>
+  <line x1="350" y1="240" x2="570" y2="240" stroke="#cbd5e1" stroke-width="1.5"/><line x1="460" y1="130" x2="460" y2="300" stroke="#cbd5e1" stroke-width="1.5"/>
+  <path d="M350 288 C420 288, 440 150, 570 150" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="457" y="322" font-size="12" fill="#ef4444" text-anchor="middle">양 끝 기울기≈0 → 기울기 소실</text>
+  <!-- tanh -->
+  <rect x="610" y="70" width="275" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="747" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">tanh</text>
+  <line x1="640" y1="215" x2="860" y2="215" stroke="#cbd5e1" stroke-width="1.5"/><line x1="750" y1="130" x2="750" y2="300" stroke="#cbd5e1" stroke-width="1.5"/>
+  <path d="M640 295 C710 295, 720 135, 860 135" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="747" y="325" font-size="12" fill="#64748b" text-anchor="middle">-1 ~ 1, 0 중심</text>
+  <!-- ReLU -->
+  <rect x="900" y="70" width="275" height="270" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1037" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">ReLU</text>
+  <line x1="930" y1="270" x2="1150" y2="270" stroke="#cbd5e1" stroke-width="1.5"/><line x1="1030" y1="140" x2="1030" y2="300" stroke="#cbd5e1" stroke-width="1.5"/>
+  <path d="M930 270 L1030 270 L1140 150" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="1037" y="322" font-size="12" fill="#16a34a" text-anchor="middle">가장 인기 · 음수=0(dying ReLU)</text>
+  <text x="600" y="372" font-size="14" fill="#334155" text-anchor="middle">직선 하나로 그릴 수 없는 비선형 함수라야 신경망이 복잡한 패턴을 학습할 수 있다</text>
+  <text x="600" y="398" font-size="13" fill="#64748b" text-anchor="middle">기울기 소실 대안: ReLU·Leaky ReLU / 다중 클래스 출력: Softmax</text>
+</svg>

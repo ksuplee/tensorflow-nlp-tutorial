@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">과적합 방지·학습 안정화 방법</text>
+  <!-- 5 cards -->
+  <g>
+    <rect x="40" y="80" width="360" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="40" y="80" width="360" height="46" rx="12" fill="#1e3a8a"/><text x="220" y="110" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">데이터 늘리기</text>
+    <text x="62" y="156" font-size="14" fill="#334155">· 더 많은 데이터 수집</text>
+    <text x="62" y="184" font-size="14" fill="#334155">· 데이터 증강(Augmentation)</text>
+    <text x="62" y="210" font-size="13" fill="#64748b">텍스트: 역번역(Back Translation)</text>
+    <rect x="420" y="80" width="360" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="420" y="80" width="360" height="46" rx="12" fill="#2563eb"/><text x="600" y="110" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">가중치 규제 (L1/L2)</text>
+    <text x="442" y="156" font-size="14" fill="#334155">· L1: 가중치 절대값 합 페널티</text>
+    <text x="442" y="184" font-size="14" fill="#334155">· L2: 가중치 제곱합(가중치 감쇠)</text>
+    <text x="442" y="210" font-size="13" fill="#64748b">큰 가중치를 억제 → 단순한 모델</text>
+    <rect x="800" y="80" width="360" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="800" y="80" width="360" height="46" rx="12" fill="#1e3a8a"/><text x="980" y="110" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">드롭아웃 (Dropout)</text>
+    <text x="822" y="156" font-size="14" fill="#334155">· 학습 시 뉴런 일부를 무작위로 끔</text>
+    <text x="822" y="184" font-size="14" fill="#334155">· 예측 시에는 전부 사용</text>
+    <text x="822" y="210" font-size="13" fill="#64748b">서로 다른 신경망을 조합한 효과</text>
+    <rect x="230" y="250" width="360" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="230" y="250" width="360" height="46" rx="12" fill="#2563eb"/><text x="410" y="280" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">조기 종료 (Early Stopping)</text>
+    <text x="252" y="326" font-size="14" fill="#334155">· 검증 손실이 오르기 시작하면</text>
+    <text x="252" y="354" font-size="14" fill="#334155">  학습을 멈춤</text>
+    <text x="252" y="380" font-size="13" fill="#64748b">검증 최소 지점의 모델을 채택</text>
+    <rect x="610" y="250" width="360" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="610" y="250" width="360" height="46" rx="12" fill="#1e3a8a"/><text x="790" y="280" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">배치 정규화</text>
+    <text x="632" y="326" font-size="14" fill="#334155">· 층 입력을 평균0·분산1로 정규화</text>
+    <text x="632" y="354" font-size="14" fill="#334155">· 학습 안정·가속, 과적합 완화</text>
+    <text x="632" y="380" font-size="13" fill="#64748b">내부 공변량 변화 억제</text>
+  </g>
+</svg>

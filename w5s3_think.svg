@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 왜 검증 손실이 다시 올라갈까?</text>
+  <!-- axes -->
+  <g stroke="#334155" stroke-width="2"><line x1="140" y1="310" x2="760" y2="310"/><line x1="140" y1="310" x2="140" y2="90"/></g>
+  <text x="450" y="345" font-size="14" fill="#334155" text-anchor="middle">에포크(학습 반복) →</text>
+  <text x="105" y="200" font-size="14" fill="#334155" text-anchor="middle" transform="rotate(-90 105 200)">손실(loss)</text>
+  <!-- train loss: keeps decreasing -->
+  <path d="M 150 120 C 300 200, 500 260, 750 285" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="640" y="270" font-size="13" fill="#2563eb" font-weight="700">훈련 손실 ↓ 계속 감소</text>
+  <!-- val loss: U shape -->
+  <path d="M 150 160 C 300 240, 380 250, 430 248 C 560 244, 650 200, 750 150" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <text x="600" y="150" font-size="13" fill="#ef4444" font-weight="700">검증 손실 ↑ 다시 증가</text>
+  <!-- overfitting point -->
+  <line x1="430" y1="248" x2="430" y2="90" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
+  <circle cx="430" cy="248" r="6" fill="#16a34a"/>
+  <text x="430" y="80" font-size="13" fill="#16a34a" font-weight="700" text-anchor="middle">조기 종료 지점</text>
+  <text x="430" y="120" font-size="12" fill="#16a34a" text-anchor="middle">(검증 최소)</text>
+  <!-- note panel -->
+  <rect x="820" y="110" width="340" height="180" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="990" y="142" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">과적합(Overfitting)</text>
+  <g font-size="13" fill="#334155">
+    <text x="842" y="176">훈련 데이터의 잡음·세부까지</text>
+    <text x="842" y="200">외워 버려, 새 데이터 성능이</text>
+    <text x="842" y="224">오히려 나빠지는 현상</text>
+    <text x="842" y="258" fill="#64748b">→ 규제·드롭아웃·조기 종료로 대응</text>
+  </g>
+  <text x="450" y="372" font-size="13" fill="#64748b" text-anchor="middle">훈련 손실만 보면 좋아 보이지만, 검증 손실이 오르기 시작하면 과적합이 시작된 것</text>
+</svg>

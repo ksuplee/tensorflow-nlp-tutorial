@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="430" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">로지스틱 회귀: 시그모이드와 이진 분류</text>
+
+  <!-- ① sigmoid plot -->
+  <rect x="60" y="66" width="580" height="340" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="96" font-size="16" font-weight="700" fill="#1e3a8a">① 시그모이드 함수 — 실수 z를 0~1 확률로 변환</text>
+
+  <!-- axes -->
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="100" y1="130" x2="100" y2="340"/>
+    <line x1="100" y1="340" x2="600" y2="340"/>
+  </g>
+  <!-- 0.5 dashed -->
+  <line x1="100" y1="240" x2="600" y2="240" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="350" y1="130" x2="350" y2="340" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- sigmoid curve -->
+  <polyline points="110,338 180,335 250,320 290,296 350,240 410,184 450,160 520,145 600,142" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  <!-- labels -->
+  <text x="92" y="146" font-size="13" fill="#64748b" text-anchor="end">1.0</text>
+  <text x="92" y="245" font-size="13" fill="#64748b" text-anchor="end">0.5</text>
+  <text x="92" y="344" font-size="13" fill="#64748b" text-anchor="end">0</text>
+  <text x="350" y="360" font-size="13" fill="#64748b" text-anchor="middle">z = 0</text>
+  <text x="610" y="344" font-size="13" fill="#64748b">z</text>
+  <text x="360" y="232" font-size="13" fill="#475569">임계값 0.5</text>
+  <text x="235" y="175" font-size="19" fill="#334155" font-family="'Times New Roman',serif">σ(z) = 1 / (1 + e⁻ᶻ)</text>
+
+  <!-- ② pipeline -->
+  <rect x="660" y="66" width="480" height="340" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="685" y="96" font-size="16" font-weight="700" fill="#1e3a8a">② 예측과 학습</text>
+
+  <rect x="690" y="112" width="420" height="52" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="900" y="135" font-size="14" fill="#475569" text-anchor="middle">① 선형 결합</text>
+  <text x="900" y="155" font-size="16" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">z = w·x + b</text>
+
+  <text x="900" y="182" font-size="18" fill="#2563eb" text-anchor="middle">↓</text>
+
+  <rect x="690" y="188" width="420" height="52" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="900" y="211" font-size="14" fill="#475569" text-anchor="middle">② 시그모이드로 확률화</text>
+  <text x="900" y="231" font-size="16" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">P(y=1 | x) = σ(z)</text>
+
+  <text x="900" y="258" font-size="18" fill="#2563eb" text-anchor="middle">↓</text>
+
+  <rect x="690" y="264" width="420" height="52" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="900" y="287" font-size="14" fill="#475569" text-anchor="middle">③ 임계값 분류</text>
+  <text x="900" y="307" font-size="15" fill="#334155" text-anchor="middle">P ≥ 0.5 → 클래스 1, 아니면 0</text>
+
+  <text x="685" y="345" font-size="14" fill="#475569">학습: <tspan font-weight="700" fill="#1e3a8a">크로스 엔트로피</tspan> 비용을 경사하강법으로 최소화</text>
+  <text x="685" y="372" font-size="13" fill="#64748b">예) 리뷰 긍정/부정, 스팸/정상 메일 판별</text>
+</svg>

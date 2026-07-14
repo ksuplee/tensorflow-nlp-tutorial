@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 머신 러닝 vs 딥 러닝</text>
+  <!-- header -->
+  <rect x="40" y="66" width="300" height="50" rx="8" fill="#1e3a8a"/><text x="190" y="97" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">구분</text>
+  <rect x="345" y="66" width="405" height="50" rx="8" fill="#2563eb"/><text x="547" y="97" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">머신 러닝</text>
+  <rect x="755" y="66" width="405" height="50" rx="8" fill="#1e3a8a"/><text x="957" y="97" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">딥 러닝</text>
+  <g font-size="14">
+    <rect x="40" y="120" width="1120" height="52" fill="#eff6ff"/>
+    <text x="60" y="152" font-weight="700" fill="#1e3a8a">특징 추출</text>
+    <text x="365" y="152" fill="#334155">전문가의 수동 추출</text>
+    <text x="775" y="152" fill="#334155">모델이 자동 추출</text>
+    <rect x="40" y="176" width="1120" height="52" fill="#f8fafc"/>
+    <text x="60" y="208" font-weight="700" fill="#1e3a8a">모델 복잡도</text>
+    <text x="365" y="208" fill="#334155">간단·해석 용이</text>
+    <text x="775" y="208" fill="#334155">다층의 복잡한 모델</text>
+    <rect x="40" y="232" width="1120" height="52" fill="#eff6ff"/>
+    <text x="60" y="264" font-weight="700" fill="#1e3a8a">데이터 요구</text>
+    <text x="365" y="264" fill="#334155">작은 데이터셋에도 작동</text>
+    <text x="775" y="264" fill="#334155">대량 데이터셋 필요</text>
+    <rect x="40" y="288" width="1120" height="60" fill="#f8fafc"/>
+    <text x="60" y="314" font-weight="700" fill="#1e3a8a">대표 알고리즘</text>
+    <text x="365" y="314" fill="#334155">회귀, 결정 트리, SVM,</text>
+    <text x="365" y="336" fill="#334155">k-NN</text>
+    <text x="775" y="314" fill="#334155">인공신경망(ANN) 중심 —</text>
+    <text x="775" y="336" fill="#334155">CNN, RNN, GAN, 트랜스포머</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1"><line x1="345" y1="120" x2="345" y2="348"/><line x1="755" y1="120" x2="755" y2="348"/></g>
+  <text x="600" y="382" font-size="14" fill="#334155" text-anchor="middle">딥 러닝은 인공신경망을 깊게 쌓아 특징을 스스로 학습한다 — 그 출발점이 퍼셉트론이다</text>
+</svg>
