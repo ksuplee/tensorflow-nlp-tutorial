@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="470" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">자연어처리의 대표 응용 분야</text>
+  <g>
+    <rect x="40" y="80" width="270" height="330" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="40" y="80" width="270" height="52" rx="12" fill="#1e3a8a"/>
+    <text x="175" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">텍스트 분류·요약</text>
+    <g font-size="15" fill="#334155">
+      <text x="62" y="164">· 스팸 필터링</text>
+      <text x="62" y="196">· 감성 분석(긍/부정)</text>
+      <text x="62" y="228">· 주제 분류·언어 식별</text>
+      <text x="62" y="260">· 추출적/추상적 요약</text>
+    </g>
+    <text x="62" y="300" font-size="13" fill="#64748b">뉴스·논문·리뷰를</text>
+    <text x="62" y="322" font-size="13" fill="#64748b">범주화하거나 압축</text>
+  </g>
+  <g>
+    <rect x="325" y="80" width="270" height="330" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="325" y="80" width="270" height="52" rx="12" fill="#2563eb"/>
+    <text x="460" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">기계번역</text>
+    <g font-size="15" fill="#334155">
+      <text x="347" y="164">· 규칙 기반(RBMT)</text>
+      <text x="347" y="196">· 통계 기반(SMT)</text>
+      <text x="347" y="228">· 신경망 기반(NMT)</text>
+      <text x="347" y="260">· 실시간 대화 번역</text>
+    </g>
+    <text x="347" y="300" font-size="13" fill="#64748b">seq2seq·트랜스포머로</text>
+    <text x="347" y="322" font-size="13" fill="#64748b">자연스러운 번역 실현</text>
+  </g>
+  <g>
+    <rect x="610" y="80" width="270" height="330" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="610" y="80" width="270" height="52" rx="12" fill="#1e3a8a"/>
+    <text x="745" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">대화 시스템</text>
+    <g font-size="15" fill="#334155">
+      <text x="632" y="164">· 고객 서비스 챗봇</text>
+      <text x="632" y="196">· 가상 비서(Siri 등)</text>
+      <text x="632" y="228">· 헬스케어 상담</text>
+      <text x="632" y="260">· 규칙/ML/하이브리드</text>
+    </g>
+    <text x="632" y="300" font-size="13" fill="#64748b">이해→대화관리→생성</text>
+    <text x="632" y="322" font-size="13" fill="#64748b">구성으로 24/7 응대</text>
+  </g>
+  <g>
+    <rect x="895" y="80" width="265" height="330" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="895" y="80" width="265" height="52" rx="12" fill="#2563eb"/>
+    <text x="1027" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">현재·미래 서비스</text>
+    <g font-size="15" fill="#334155">
+      <text x="917" y="164">· 멀티모달 생성(GPT-4o)</text>
+      <text x="917" y="196">· 음성 인식·작곡</text>
+      <text x="917" y="228">· 개인화 학습·의료</text>
+      <text x="917" y="260">· 다국어 협업·IoT</text>
+    </g>
+    <text x="917" y="300" font-size="13" fill="#64748b">텍스트를 넘어 이미지·</text>
+    <text x="917" y="322" font-size="13" fill="#64748b">음성으로 확장 중</text>
+  </g>
+  <text x="600" y="452" font-size="14" fill="#64748b" text-anchor="middle">검색·번역·챗봇·정보추출·감성분석 등 NLP는 이미 일상 곳곳에서 작동한다</text>
+</svg>

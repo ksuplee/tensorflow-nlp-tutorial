@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">NLP 과제의 4가지 유형</text>
+  <g text-anchor="middle">
+    <!-- 분류 -->
+    <rect x="50" y="80" width="540" height="170" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="320" y="112" font-size="19" font-weight="700" fill="#1e3a8a">① 분류 (Classification)</text>
+    <text x="320" y="140" font-size="14" fill="#64748b">문장/문서 → 하나의 레이블</text>
+    <rect x="90" y="160" width="200" height="40" rx="8" fill="#fff" stroke="#93c5fd"/><text x="190" y="186" font-size="15" fill="#334155">"이 영화 최고!"</text>
+    <path d="M300 180 L360 180" stroke="#2563eb" stroke-width="2.5" marker-end="url(#t1)"/>
+    <rect x="370" y="160" width="180" height="40" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="460" y="186" font-size="15" font-weight="700" fill="#1e3a8a">긍정</text>
+    <text x="320" y="232" font-size="13" fill="#64748b">예: 감성분석, 스팸분류, 주제분류</text>
+    <!-- 시퀀스 라벨링 -->
+    <rect x="610" y="80" width="540" height="170" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="880" y="112" font-size="19" font-weight="700" fill="#1e3a8a">② 시퀀스 라벨링</text>
+    <text x="880" y="140" font-size="14" fill="#64748b">각 토큰마다 레이블 부여</text>
+    <g font-size="13">
+      <rect x="650" y="160" width="90" height="38" rx="6" fill="#fff" stroke="#93c5fd"/><text x="695" y="184" fill="#334155">홍길동</text>
+      <rect x="748" y="160" width="60" height="38" rx="6" fill="#fff" stroke="#93c5fd"/><text x="778" y="184" fill="#334155">은</text>
+      <rect x="816" y="160" width="90" height="38" rx="6" fill="#fff" stroke="#93c5fd"/><text x="861" y="184" fill="#334155">서울</text>
+      <rect x="650" y="204" width="90" height="30" rx="6" fill="#dbeafe"/><text x="695" y="225" fill="#1e3a8a" font-weight="700">PER</text>
+      <rect x="748" y="204" width="60" height="30" rx="6" fill="#f1f5f9"/><text x="778" y="225" fill="#64748b">O</text>
+      <rect x="816" y="204" width="90" height="30" rx="6" fill="#dbeafe"/><text x="861" y="225" fill="#1e3a8a" font-weight="700">LOC</text>
+    </g>
+    <text x="1000" y="192" font-size="13" fill="#64748b">예: 개체명인식(NER),</text>
+    <text x="1000" y="212" font-size="13" fill="#64748b">품사 태깅(POS)</text>
+    <!-- 생성 -->
+    <rect x="50" y="270" width="540" height="170" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="320" y="302" font-size="19" font-weight="700" fill="#1e3a8a">③ 생성 (Generation)</text>
+    <text x="320" y="330" font-size="14" fill="#64748b">시퀀스 → 시퀀스</text>
+    <rect x="90" y="350" width="180" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="180" y="376" font-size="15" fill="#334155">I love NLP</text>
+    <path d="M280 370 L340 370" stroke="#2563eb" stroke-width="2.5" marker-end="url(#t1)"/>
+    <rect x="350" y="350" width="200" height="40" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="450" y="376" font-size="15" font-weight="700" fill="#1e3a8a">나는 NLP를 좋아해</text>
+    <text x="320" y="422" font-size="13" fill="#64748b">예: 기계번역, 요약, 대화 생성</text>
+    <!-- 매칭 -->
+    <rect x="610" y="270" width="540" height="170" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="880" y="302" font-size="19" font-weight="700" fill="#1e3a8a">④ 매칭 (Matching)</text>
+    <text x="880" y="330" font-size="14" fill="#64748b">두 텍스트의 관계 판단</text>
+    <rect x="650" y="350" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="725" y="376" font-size="14" fill="#334155">질문</text>
+    <text x="820" y="376" font-size="20" fill="#2563eb">↔</text>
+    <rect x="850" y="350" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="925" y="376" font-size="14" fill="#334155">문서</text>
+    <text x="880" y="422" font-size="13" fill="#64748b">예: 질의응답, 문서 유사도, 검색</text>
+  </g>
+  <defs><marker id="t1" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#2563eb"/></marker></defs>
+</svg>

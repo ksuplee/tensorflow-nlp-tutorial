@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 같은 글자 "배", 뜻은 셋</text>
+  <defs>
+    <marker id="tb2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <!-- center word -->
+  <circle cx="600" cy="140" r="46" fill="#1e3a8a"/>
+  <text x="600" y="150" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">배</text>
+  <!-- three meanings -->
+  <g>
+    <rect x="120" y="110" width="200" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="220" y="137" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">과일 (pear)</text>
+    <text x="220" y="158" font-size="12" fill="#64748b" text-anchor="middle">배를 깎았다</text>
+    <rect x="500" y="238" width="200" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="600" y="265" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">선박 (ship)</text>
+    <text x="600" y="286" font-size="12" fill="#64748b" text-anchor="middle">배를 탔다</text>
+    <rect x="880" y="110" width="200" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="980" y="137" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">신체 (belly)</text>
+    <text x="980" y="158" font-size="12" fill="#64748b" text-anchor="middle">배가 아프다</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="1.5" marker-end="url(#tb2)">
+    <line x1="556" y1="130" x2="324" y2="140"/>
+    <line x1="600" y1="186" x2="600" y2="234"/>
+    <line x1="644" y1="130" x2="876" y2="140"/>
+  </g>
+  <text x="600" y="344" font-size="14" fill="#334155" text-anchor="middle">사람은 문맥으로 즉시 구분한다 — 컴퓨터는 어떻게 올바른 뜻을 고를 수 있을까?</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 인간과 컴퓨터의 대화, 1970년대 vs 2020년대</text>
+  <!-- left ELIZA -->
+  <rect x="50" y="70" width="500" height="250" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="50" y="70" width="500" height="46" rx="12" fill="#64748b"/>
+  <text x="300" y="100" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">1966 · ELIZA (규칙 기반)</text>
+  <rect x="78" y="138" width="300" height="40" rx="20" fill="#e2e8f0"/>
+  <text x="96" y="163" font-size="14" fill="#334155">사용자: "I am happy."</text>
+  <rect x="222" y="196" width="300" height="40" rx="20" fill="#dbeafe"/>
+  <text x="240" y="221" font-size="14" fill="#1e3a8a">ELIZA: "Why are you happy?"</text>
+  <text x="300" y="286" font-size="13" fill="#94a3b8" text-anchor="middle">정해진 규칙으로 되물을 뿐</text>
+  <text x="300" y="306" font-size="13" fill="#94a3b8" text-anchor="middle">의미는 이해하지 못함</text>
+  <!-- right ChatGPT -->
+  <rect x="650" y="70" width="500" height="250" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="650" y="70" width="500" height="46" rx="12" fill="#1e3a8a"/>
+  <text x="900" y="100" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">2020s · ChatGPT (LLM)</text>
+  <rect x="678" y="138" width="300" height="40" rx="20" fill="#dbeafe"/>
+  <text x="696" y="163" font-size="14" fill="#334155">사용자: "이 문장 번역·요약해줘"</text>
+  <rect x="822" y="196" width="300" height="40" rx="20" fill="#2563eb"/>
+  <text x="840" y="221" font-size="14" fill="#fff">GPT: 맥락 이해 후 수행</text>
+  <text x="900" y="286" font-size="13" fill="#64748b" text-anchor="middle">번역·요약·코딩까지</text>
+  <text x="900" y="306" font-size="13" fill="#64748b" text-anchor="middle">맥락을 유지하며 수행</text>
+  <!-- vs -->
+  <circle cx="600" cy="195" r="26" fill="#1e3a8a"/>
+  <text x="600" y="202" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">VS</text>
+  <text x="600" y="348" font-size="14" fill="#334155" text-anchor="middle">무엇이 이 차이를 만들었을까? 컴퓨터가 언어를 "이해"한다는 것은 무엇일까?</text>
+</svg>

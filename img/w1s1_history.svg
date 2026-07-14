@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="420" viewBox="0 0 1300 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1300" height="420" fill="#ffffff"/>
+  <text x="650" y="44" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">자연어처리의 발전사</text>
+  <defs><linearGradient id="tl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <marker id="ah" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1e3a8a"/></marker></defs>
+  <line x1="60" y1="360" x2="1250" y2="360" stroke="url(#tl)" stroke-width="6" marker-end="url(#ah)"/>
+  <g text-anchor="middle">
+    <rect x="70" y="90" width="270" height="230" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="205" y="122" font-size="20" font-weight="700" fill="#1e3a8a">규칙 기반</text>
+    <text x="205" y="146" font-size="14" fill="#64748b">1950s~1980s</text>
+    <g font-size="15" fill="#334155"><text x="205" y="184">• 문법·규칙 사전</text><text x="205" y="212">• 전문가가 규칙 작성</text><text x="205" y="240">• ELIZA, 규칙 번역</text><text x="205" y="284" font-size="13" fill="#64748b">한계: 확장·예외 처리</text></g>
+    <circle cx="205" cy="360" r="9" fill="#1e3a8a"/>
+
+    <rect x="365" y="90" width="270" height="230" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="500" y="122" font-size="20" font-weight="700" fill="#1e3a8a">통계 기반</text>
+    <text x="500" y="146" font-size="14" fill="#64748b">1990s~2000s</text>
+    <g font-size="15" fill="#334155"><text x="500" y="184">• 대규모 코퍼스·확률</text><text x="500" y="212">• N-gram, HMM</text><text x="500" y="240">• 통계 기계번역(SMT)</text><text x="500" y="284" font-size="13" fill="#64748b">데이터로 규칙을 학습</text></g>
+    <circle cx="500" cy="360" r="9" fill="#1e3a8a"/>
+
+    <rect x="660" y="90" width="270" height="230" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="795" y="122" font-size="20" font-weight="700" fill="#1e3a8a">신경망</text>
+    <text x="795" y="146" font-size="14" fill="#64748b">2013~2017</text>
+    <g font-size="15" fill="#334155"><text x="795" y="184">• 워드 임베딩(Word2Vec)</text><text x="795" y="212">• RNN·LSTM, seq2seq</text><text x="795" y="240">• 어텐션, 트랜스포머</text><text x="795" y="284" font-size="13" fill="#64748b">표현을 스스로 학습</text></g>
+    <circle cx="795" cy="360" r="9" fill="#2563eb"/>
+
+    <rect x="955" y="90" width="290" height="230" rx="12" fill="#1e3a8a"/>
+    <text x="1100" y="122" font-size="20" font-weight="700" fill="#fff">LLM 시대</text>
+    <text x="1100" y="146" font-size="14" fill="#c7d2fe">2018~현재</text>
+    <g font-size="15" fill="#e0e7ff"><text x="1100" y="184">• 사전학습-미세조정</text><text x="1100" y="212">• BERT, GPT</text><text x="1100" y="240">• ChatGPT, 프롬프트·RAG</text><text x="1100" y="284" font-size="13" fill="#c7d2fe">범용 언어 능력</text></g>
+    <circle cx="1100" cy="360" r="9" fill="#1e3a8a" stroke="#fff" stroke-width="2"/>
+  </g>
+</svg>

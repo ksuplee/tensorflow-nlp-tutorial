@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="440" viewBox="0 0 1150 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="440" fill="#ffffff"/>
+  <text x="575" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">토큰화의 단위</text>
+  <text x="575" y="72" font-size="15" fill="#64748b" text-anchor="middle">예문: "자연어처리는 재미있다"</text>
+  <g font-size="15">
+    <!-- 문자 -->
+    <rect x="50" y="96" width="240" height="52" rx="8" fill="#1e3a8a"/><text x="170" y="128" fill="#fff" font-weight="700" text-anchor="middle">① 문자(character)</text>
+    <g text-anchor="middle" fill="#334155"><rect x="320" y="98" width="720" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd"/><text x="680" y="128">자 · 연 · 어 · 처 · 리 · 는 · 재 · 미 · 있 · 다</text></g>
+    <!-- 단어(어절) -->
+    <rect x="50" y="164" width="240" height="52" rx="8" fill="#2563eb"/><text x="170" y="196" fill="#fff" font-weight="700" text-anchor="middle">② 단어(어절)</text>
+    <g text-anchor="middle" fill="#334155"><rect x="320" y="166" width="720" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd"/><text x="680" y="196">자연어처리는 · 재미있다</text></g>
+    <!-- 형태소 -->
+    <rect x="50" y="232" width="240" height="52" rx="8" fill="#2563eb"/><text x="170" y="264" fill="#fff" font-weight="700" text-anchor="middle">③ 형태소(morpheme)</text>
+    <g text-anchor="middle" fill="#334155"><rect x="320" y="234" width="720" height="48" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="680" y="264">자연어 · 처리 · 는 · 재미있 · 다</text></g>
+    <!-- 부분단어 -->
+    <rect x="50" y="300" width="240" height="52" rx="8" fill="#1e3a8a"/><text x="170" y="332" fill="#fff" font-weight="700" text-anchor="middle">④ 부분단어(subword)</text>
+    <g text-anchor="middle" fill="#334155"><rect x="320" y="302" width="720" height="48" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="680" y="332">자연 · ##어 · ##처리 · ##는 · 재미 · ##있다</text></g>
+  </g>
+  <text x="575" y="392" font-size="15" fill="#64748b" text-anchor="middle">※ 문자 단위는 어휘가 작지만 시퀀스가 길고, 단어 단위는 OOV·희소성 문제가 크다.</text>
+  <text x="575" y="416" font-size="15" fill="#64748b" text-anchor="middle">한국어는 형태소가 의미 단위로 적합하며, 신경망 모델은 OOV에 강한 부분단어 토큰화를 주로 사용한다.</text>
+</svg>

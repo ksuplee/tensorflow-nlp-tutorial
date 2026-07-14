@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 원시 코퍼스를 그대로 넣으면 될까?</text>
+  <defs>
+    <marker id="tb1" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- raw -->
+  <rect x="60" y="120" width="330" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="225" y="150" font-size="15" font-weight="700" fill="#64748b" text-anchor="middle">원시 텍스트 (노이즈)</text>
+  <text x="225" y="185" font-size="15" fill="#334155" text-anchor="middle">&lt;b&gt;Hello&lt;/b&gt; WORLD!!!</text>
+  <text x="225" y="212" font-size="15" fill="#334155" text-anchor="middle">http://x.com 은/는 …</text>
+  <!-- filter -->
+  <rect x="450" y="110" width="300" height="140" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="140" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">전처리</text>
+  <g font-size="13" fill="#334155">
+    <text x="475" y="170">· 소문자화 · 유니코드 정규화</text>
+    <text x="475" y="196">· HTML 태그 · URL 제거</text>
+    <text x="475" y="222">· 불용어 제거 · 어형 정규화</text>
+  </g>
+  <!-- clean -->
+  <rect x="810" y="120" width="330" height="120" rx="12" fill="#1e3a8a"/>
+  <text x="975" y="150" font-size="15" font-weight="700" fill="#dbeafe" text-anchor="middle">정제된 코퍼스</text>
+  <text x="975" y="192" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">[hello, world]</text>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#tb1)">
+    <line x1="390" y1="180" x2="446" y2="180"/>
+    <line x1="750" y1="180" x2="806" y2="180"/>
+  </g>
+  <text x="600" y="322" font-size="14" fill="#334155" text-anchor="middle">사람은 자연스럽게 걸러 읽지만 모델은 그렇지 못하다 — 어떤 단계를 거쳐야 할까?</text>
+</svg>

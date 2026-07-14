@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">머신러닝 워크플로우 6단계</text>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <g>
+    <!-- step 1 -->
+    <rect x="40" y="120" width="160" height="110" rx="12" fill="#1e3a8a"/>
+    <text x="120" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">① 수집</text>
+    <text x="120" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">데이터·코퍼스</text>
+    <text x="120" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">확보</text>
+    <!-- step 2 -->
+    <rect x="228" y="120" width="160" height="110" rx="12" fill="#2563eb"/>
+    <text x="308" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">② 점검·탐색</text>
+    <text x="308" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">분포·품질 확인</text>
+    <text x="308" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">(EDA)</text>
+    <!-- step 3 -->
+    <rect x="416" y="120" width="160" height="110" rx="12" fill="#1e3a8a"/>
+    <text x="496" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">③ 전처리·정제</text>
+    <text x="496" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">정규화·토큰화</text>
+    <text x="496" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">특성 변환</text>
+    <!-- step 4 -->
+    <rect x="604" y="120" width="160" height="110" rx="12" fill="#2563eb"/>
+    <text x="684" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">④ 모델링·훈련</text>
+    <text x="684" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">모델 선택</text>
+    <text x="684" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">학습</text>
+    <!-- step 5 -->
+    <rect x="792" y="120" width="160" height="110" rx="12" fill="#1e3a8a"/>
+    <text x="872" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">⑤ 평가</text>
+    <text x="872" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">성능 측정</text>
+    <text x="872" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">튜닝</text>
+    <!-- step 6 -->
+    <rect x="980" y="120" width="160" height="110" rx="12" fill="#2563eb"/>
+    <text x="1060" y="152" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">⑥ 배포</text>
+    <text x="1060" y="183" font-size="13" fill="#dbeafe" text-anchor="middle">서비스 적용</text>
+    <text x="1060" y="203" font-size="13" fill="#dbeafe" text-anchor="middle">모니터링</text>
+  </g>
+  <!-- arrows -->
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)">
+    <line x1="202" y1="175" x2="224" y2="175"/>
+    <line x1="390" y1="175" x2="412" y2="175"/>
+    <line x1="578" y1="175" x2="600" y2="175"/>
+    <line x1="766" y1="175" x2="788" y2="175"/>
+    <line x1="954" y1="175" x2="976" y2="175"/>
+  </g>
+  <!-- feedback loop -->
+  <path d="M 872 230 C 872 300, 496 300, 496 232" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+  <text x="684" y="322" font-size="13" fill="#64748b" text-anchor="middle">평가 결과에 따라 전처리·모델링을 반복 개선</text>
+</svg>

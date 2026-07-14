@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">자연어처리(NLP)의 정의와 주요 목표</text>
+
+  <!-- ① definition -->
+  <rect x="60" y="66" width="1080" height="126" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="96" font-size="16" font-weight="700" fill="#1e3a8a">① 정의 — 컴퓨터가 인간의 언어(자연어)를 이해·해석·생성하는 기술</text>
+  <text x="85" y="126" font-size="14" fill="#475569">· <tspan font-weight="700" fill="#1e3a8a">자연어</tspan>(한국어·영어 등 사람의 언어) ↔ <tspan font-weight="700" fill="#1e3a8a">인공어</tspan>(프로그래밍 언어)</text>
+  <text x="85" y="152" font-size="14" fill="#475569">· 인접 분야: <tspan font-weight="700" fill="#1e3a8a">전산언어학</tspan>(언어를 계산 모델로) · <tspan font-weight="700" fill="#1e3a8a">머신러닝·딥러닝</tspan>(데이터로 학습) · <tspan font-weight="700" fill="#1e3a8a">HCI</tspan>(자연어 인터페이스)</text>
+  <text x="85" y="178" font-size="13" fill="#64748b">· 적용 기술: 머신러닝 y=f(x) — 입력·출력 관계 학습 / 딥러닝 — 다층 인공신경망으로 학습</text>
+
+  <!-- ② four goals -->
+  <rect x="60" y="208" width="1080" height="200" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="238" font-size="16" font-weight="700" fill="#1e3a8a">② 자연어처리의 4대 주요 목표</text>
+
+  <g>
+    <rect x="90" y="256" width="245" height="130" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="212" y="288" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">문법적 분석</text>
+    <text x="212" y="316" font-size="13" fill="#475569" text-anchor="middle">문장 구조·단어 관계 파악</text>
+    <text x="212" y="340" font-size="12" fill="#64748b" text-anchor="middle">형태소 · 품사 · 구문 ·</text>
+    <text x="212" y="360" font-size="12" fill="#64748b" text-anchor="middle">의존구조 분석</text>
+
+    <rect x="347" y="256" width="245" height="130" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="469" y="288" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">의미적 분석</text>
+    <text x="469" y="316" font-size="13" fill="#475569" text-anchor="middle">텍스트의 의미를 이해·해석</text>
+    <text x="469" y="340" font-size="12" fill="#64748b" text-anchor="middle">어휘 · 문장 의미 ·</text>
+    <text x="469" y="360" font-size="12" fill="#64748b" text-anchor="middle">상하위어 · 부분전체어</text>
+
+    <rect x="604" y="256" width="245" height="130" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="726" y="288" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">맥락 이해</text>
+    <text x="726" y="316" font-size="13" fill="#475569" text-anchor="middle">문맥 속 의미를 해석</text>
+    <text x="726" y="340" font-size="12" fill="#64748b" text-anchor="middle">단어·문장이 쓰인</text>
+    <text x="726" y="360" font-size="12" fill="#64748b" text-anchor="middle">상황·문맥 파악</text>
+
+    <rect x="861" y="256" width="245" height="130" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="983" y="288" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">텍스트 생성</text>
+    <text x="983" y="316" font-size="13" fill="#475569" text-anchor="middle">자연스러운 텍스트 생성</text>
+    <text x="983" y="340" font-size="12" fill="#64748b" text-anchor="middle">사람이 쓴 것처럼</text>
+    <text x="983" y="360" font-size="12" fill="#64748b" text-anchor="middle">응답·요약·번역 생성</text>
+  </g>
+</svg>

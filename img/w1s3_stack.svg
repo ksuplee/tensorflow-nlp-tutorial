@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="460" viewBox="0 0 1100 460" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="460" fill="#ffffff"/>
+  <text x="550" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">NLP 개발 환경 스택</text>
+  <g text-anchor="middle">
+    <rect x="150" y="72" width="800" height="60" rx="10" fill="#1e3a8a"/>
+    <text x="550" y="100" font-size="18" font-weight="700" fill="#fff">응용 (Applications)</text>
+    <text x="550" y="122" font-size="14" fill="#c7d2fe">텍스트 분류 · 기계번역 · 질의응답 · 요약 · 챗봇</text>
+
+    <text x="550" y="158" font-size="14" fill="#94a3b8">▲ 활용</text>
+
+    <rect x="80" y="172" width="450" height="118" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="305" y="200" font-size="17" font-weight="700" fill="#1e3a8a">모델·딥러닝 라이브러리</text>
+    <g font-size="15" fill="#334155"><text x="305" y="232">PyTorch — 신경망 구현·학습</text><text x="305" y="260">Hugging Face — 사전학습 모델·토크나이저</text></g>
+
+    <rect x="570" y="172" width="450" height="118" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="795" y="200" font-size="17" font-weight="700" fill="#1e3a8a">NLP·데이터 라이브러리</text>
+    <g font-size="15" fill="#334155"><text x="795" y="232">KoNLPy — 한국어 형태소 분석</text><text x="795" y="260">NLTK / spaCy · NumPy / Pandas</text></g>
+
+    <rect x="80" y="330" width="940" height="80" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="550" y="362" font-size="17" font-weight="700" fill="#1e3a8a">런타임 환경</text>
+    <text x="550" y="390" font-size="15" fill="#334155">Python 3.11+ · Google Colab(무료 GPU) · pip / 가상환경</text>
+  </g>
+</svg>

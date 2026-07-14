@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="500" fill="#ffffff"/>
+  <text x="550" y="44" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">자연어처리 실습 환경과 패키지 스택</text>
+  <g text-anchor="middle">
+    <rect x="150" y="74" width="800" height="60" rx="10" fill="#1e3a8a"/>
+    <text x="550" y="102" font-size="18" font-weight="700" fill="#fff">응용 (Applications)</text>
+    <text x="550" y="124" font-size="14" fill="#c7d2fe">텍스트 분류 · 기계번역 · 질의응답 · 요약 · 챗봇</text>
+
+    <text x="550" y="160" font-size="14" fill="#94a3b8">▲ 활용</text>
+
+    <rect x="60" y="176" width="320" height="128" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="220" y="204" font-size="17" font-weight="700" fill="#1e3a8a">머신러닝 패키지</text>
+    <g font-size="15" fill="#334155">
+      <text x="220" y="234">TensorFlow · Keras</text>
+      <text x="220" y="262">Gensim · Scikit-learn</text>
+      <text x="220" y="290" font-size="13" fill="#64748b">모델 학습·토픽 모델링</text>
+    </g>
+
+    <rect x="390" y="176" width="320" height="128" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="550" y="204" font-size="17" font-weight="700" fill="#1e3a8a">자연어처리 패키지</text>
+    <g font-size="15" fill="#334155">
+      <text x="550" y="234">NLTK · NLTK Data</text>
+      <text x="550" y="262">KoNLPy (JDK · JPype)</text>
+      <text x="550" y="290" font-size="13" fill="#64748b">영어·한국어 형태소 분석</text>
+    </g>
+
+    <rect x="720" y="176" width="320" height="128" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="880" y="204" font-size="17" font-weight="700" fill="#1e3a8a">데이터 분석 패키지</text>
+    <g font-size="15" fill="#334155">
+      <text x="880" y="234">Pandas · NumPy</text>
+      <text x="880" y="262">Matplotlib</text>
+      <text x="880" y="290" font-size="13" fill="#64748b">전처리·수치·시각화</text>
+    </g>
+
+    <text x="550" y="332" font-size="14" fill="#94a3b8">▲ 설치·실행</text>
+
+    <rect x="60" y="348" width="980" height="118" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="550" y="378" font-size="17" font-weight="700" fill="#1e3a8a">실습 환경 (Runtime)</text>
+    <text x="550" y="408" font-size="15" fill="#334155">아나콘다(Anaconda) — Jupyter Notebook · IPython · VS Code 통합 배포판</text>
+    <text x="550" y="436" font-size="15" fill="#334155">구글 코랩(Google Colab) — 설치 없이 브라우저에서 실행 · 무료 GPU</text>
+  </g>
+</svg>

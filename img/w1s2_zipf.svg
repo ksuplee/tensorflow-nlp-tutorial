@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="500" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">지프의 법칙(Zipf's Law)과 희소성</text>
+  <!-- axes -->
+  <g stroke="#334155" stroke-width="2">
+    <line x1="120" y1="420" x2="760" y2="420"/>
+    <line x1="120" y1="420" x2="120" y2="90"/>
+  </g>
+  <text x="440" y="458" font-size="16" fill="#334155" text-anchor="middle">단어 순위(rank) — 빈도가 높은 순</text>
+  <text x="52" y="255" font-size="16" fill="#334155" text-anchor="middle" transform="rotate(-90 52 255)">출현 빈도(frequency)</text>
+  <!-- zipf curve: f ~ 1/rank -->
+  <path d="M 130 110 C 175 250, 210 360, 300 392 C 420 410, 560 416, 760 419" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  <!-- head bars -->
+  <g fill="#1e3a8a">
+    <rect x="132" y="120" width="26" height="300"/>
+    <rect x="166" y="210" width="26" height="210"/>
+    <rect x="200" y="285" width="26" height="135"/>
+    <rect x="234" y="330" width="26" height="90"/>
+  </g>
+  <!-- tail bars -->
+  <g fill="#93c5fd">
+    <rect x="290" y="392" width="18" height="28"/>
+    <rect x="316" y="398" width="18" height="22"/>
+    <rect x="342" y="402" width="18" height="18"/>
+    <rect x="380" y="405" width="14" height="15"/>
+    <rect x="420" y="408" width="14" height="12"/>
+    <rect x="470" y="410" width="14" height="10"/>
+    <rect x="530" y="412" width="14" height="8"/>
+    <rect x="600" y="413" width="14" height="7"/>
+    <rect x="680" y="414" width="14" height="6"/>
+  </g>
+  <!-- head annotation -->
+  <rect x="150" y="95" width="250" height="70" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="275" y="122" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">소수의 고빈도어</text>
+  <text x="275" y="147" font-size="13" fill="#64748b" text-anchor="middle">"은/는, 이/가, the, of" 등</text>
+  <!-- tail annotation -->
+  <rect x="470" y="300" width="270" height="80" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="605" y="328" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">다수의 저빈도어 (롱테일)</text>
+  <text x="605" y="352" font-size="13" fill="#64748b" text-anchor="middle">대부분의 단어는 드물게 출현</text>
+  <text x="605" y="371" font-size="13" fill="#64748b" text-anchor="middle">→ 미등록어(OOV)·데이터 희소성</text>
+  <line x1="470" y1="360" x2="330" y2="405" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <!-- right implication panel -->
+  <g>
+    <rect x="810" y="95" width="350" height="325" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="985" y="128" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">왜 중요한가</text>
+    <g font-size="15" fill="#334155">
+      <text x="832" y="170">· 빈도 상위 소수 단어가</text>
+      <text x="848" y="194">  전체 사용량의 대부분 차지</text>
+      <text x="832" y="232">· 무한한 조합 → 대부분의</text>
+      <text x="848" y="256">  표현은 학습 데이터에 희소</text>
+      <text x="832" y="294">· 새 단어가 계속 등장 →</text>
+      <text x="848" y="318">  OOV(Out-Of-Vocabulary)</text>
+      <text x="832" y="356">· 부분단어 토큰화(BPE)로</text>
+      <text x="848" y="380">  희소성 완화 (2주차)</text>
+    </g>
+  </g>
+</svg>

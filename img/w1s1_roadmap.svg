@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="440" viewBox="0 0 1300 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1300" height="440" fill="#ffffff"/>
+  <text x="650" y="44" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">교과목 학습 로드맵 (14주)</text>
+  <defs><marker id="rm" markerWidth="13" markerHeight="13" refX="10" refY="5" orient="auto"><path d="M0,0 L11,5 L0,10 z" fill="#2563eb"/></marker></defs>
+  <g text-anchor="middle">
+    <rect x="40" y="100" width="280" height="250" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="40" y="100" width="280" height="48" rx="14" fill="#2563eb"/>
+    <text x="180" y="132" font-size="18" font-weight="700" fill="#fff">기초 (1~5주)</text>
+    <g font-size="15" fill="#334155"><text x="180" y="182">1주 NLP 개요</text><text x="180" y="212">2주 전처리·토큰화</text><text x="180" y="242">3주 언어모델</text><text x="180" y="272">4주 머신러닝</text><text x="180" y="302">5주 딥러닝</text></g>
+
+    <rect x="360" y="100" width="280" height="250" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="360" y="100" width="280" height="48" rx="14" fill="#2563eb"/>
+    <text x="500" y="132" font-size="18" font-weight="700" fill="#fff">신경망 NLP (6~9주)</text>
+    <g font-size="15" fill="#334155"><text x="500" y="188">6주 RNN·LSTM·GRU</text><text x="500" y="222">7주 워드 임베딩</text><text x="500" y="256">8주 분류·태깅</text><text x="500" y="290">9주 기계번역·어텐션</text></g>
+
+    <rect x="680" y="100" width="280" height="250" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="680" y="100" width="280" height="48" rx="14" fill="#1e3a8a"/>
+    <text x="820" y="132" font-size="18" font-weight="700" fill="#fff">트랜스포머 (10~11주)</text>
+    <g font-size="15" fill="#334155"><text x="820" y="196">10주 트랜스포머</text><text x="820" y="230" font-size="13" fill="#64748b">(셀프 어텐션·인코더·디코더)</text><text x="820" y="268">11주 BERT</text><text x="820" y="300" font-size="13" fill="#64748b">(사전학습·파인튜닝)</text></g>
+
+    <rect x="1000" y="100" width="280" height="250" rx="14" fill="#1e3a8a"/>
+    <text x="1140" y="132" font-size="18" font-weight="700" fill="#fff">LLM·응용 (12~14주)</text>
+    <g font-size="15" fill="#e0e7ff"><text x="1140" y="182">12주 LLM·프롬프트</text><text x="1140" y="214">13주 NLP 응용</text><text x="1140" y="246" font-size="13" fill="#c7d2fe">(QA·요약·대화)</text><text x="1140" y="282">14주 RAG·에이전트·윤리</text></g>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5">
+    <line x1="322" y1="225" x2="357" y2="225" marker-end="url(#rm)"/>
+    <line x1="642" y1="225" x2="677" y2="225" marker-end="url(#rm)"/>
+    <line x1="962" y1="225" x2="997" y2="225" marker-end="url(#rm)"/>
+  </g>
+  <text x="650" y="400" font-size="15" fill="#64748b" text-anchor="middle">※ 통계 → 머신러닝/딥러닝 → 신경망 NLP → 트랜스포머 → LLM으로 이어지는 발전 흐름을 따라 학습한다. (15주: 기말시험)</text>
+</svg>

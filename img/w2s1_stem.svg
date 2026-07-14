@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="430" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">어간 추출(Stemming) vs 표제어 추출(Lemmatization)</text>
+  <!-- left: stemming -->
+  <rect x="40" y="80" width="540" height="310" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="40" y="80" width="540" height="52" rx="12" fill="#1e3a8a"/>
+  <text x="310" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">어간 추출 (Stemming)</text>
+  <text x="66" y="162" font-size="15" fill="#334155">· 규칙 기반으로 어미를 잘라 어간을 얻음</text>
+  <text x="66" y="190" font-size="15" fill="#334155">· 빠르지만 사전에 없는 형태가 나올 수 있음</text>
+  <text x="66" y="218" font-size="15" fill="#64748b">· 대표: 포터(Porter) 알고리즘</text>
+  <g font-size="15">
+    <rect x="66" y="240" width="488" height="130" rx="8" fill="#ffffff" stroke="#dbeafe"/>
+    <text x="90" y="272" fill="#334155">formalize</text><text x="250" y="272" fill="#2563eb">→ formal</text>
+    <text x="90" y="304" fill="#334155">organization</text><text x="250" y="304" fill="#2563eb">→ organ</text>
+    <text x="90" y="336" fill="#334155">studies</text><text x="250" y="336" fill="#2563eb">→ studi</text>
+    <text x="330" y="336" font-size="13" fill="#94a3b8">(비단어 가능)</text>
+  </g>
+  <!-- right: lemmatization -->
+  <rect x="620" y="80" width="540" height="310" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="620" y="80" width="540" height="52" rx="12" fill="#2563eb"/>
+  <text x="890" y="113" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">표제어 추출 (Lemmatization)</text>
+  <text x="646" y="162" font-size="15" fill="#334155">· 사전·품사 정보로 기본 사전형(lemma)을 찾음</text>
+  <text x="646" y="190" font-size="15" fill="#334155">· 정확하지만 상대적으로 느림</text>
+  <text x="646" y="218" font-size="15" fill="#64748b">· 품사(POS)를 함께 활용</text>
+  <g font-size="15">
+    <rect x="646" y="240" width="488" height="130" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="670" y="272" fill="#334155">am, are, is</text><text x="850" y="272" fill="#2563eb">→ be</text>
+    <text x="670" y="304" fill="#334155">studies</text><text x="850" y="304" fill="#2563eb">→ study</text>
+    <text x="670" y="336" fill="#334155">dies (v)</text><text x="850" y="336" fill="#2563eb">→ die</text>
+    <text x="960" y="336" font-size="13" fill="#94a3b8">(실제 단어)</text>
+  </g>
+</svg>

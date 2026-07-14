@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 자연어처리 학습을 위한 효율적 환경은?</text>
+  <g>
+    <rect x="60" y="80" width="340" height="180" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="60" y="80" width="340" height="48" rx="12" fill="#1e3a8a"/>
+    <text x="230" y="111" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">학습 환경</text>
+    <text x="230" y="160" font-size="15" fill="#334155" text-anchor="middle">온라인 강의(웹)</text>
+    <text x="230" y="190" font-size="15" fill="#334155" text-anchor="middle">강의노트(PDF)</text>
+    <text x="230" y="220" font-size="15" fill="#334155" text-anchor="middle">전자교재(웹)</text>
+    <rect x="430" y="80" width="340" height="180" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="430" y="80" width="340" height="48" rx="12" fill="#2563eb"/>
+    <text x="600" y="111" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">실습 환경</text>
+    <text x="600" y="160" font-size="15" fill="#334155" text-anchor="middle">소스 코드(웹)</text>
+    <text x="600" y="190" font-size="15" fill="#334155" text-anchor="middle">도구·패키지</text>
+    <text x="600" y="220" font-size="15" fill="#334155" text-anchor="middle">PC·노트북</text>
+    <rect x="800" y="80" width="340" height="180" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="800" y="80" width="340" height="48" rx="12" fill="#1e3a8a"/>
+    <text x="970" y="111" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">소통 환경</text>
+    <text x="970" y="160" font-size="15" fill="#334155" text-anchor="middle">토론방(웹)</text>
+    <text x="970" y="190" font-size="15" fill="#334155" text-anchor="middle">이메일</text>
+    <text x="970" y="220" font-size="15" fill="#334155" text-anchor="middle">공지·질의응답</text>
+  </g>
+  <text x="600" y="308" font-size="14" fill="#334155" text-anchor="middle">이론을 직접 코드로 확인하려면? 설치 없이 브라우저에서 GPU까지 쓸 수 있다면?</text>
+</svg>
