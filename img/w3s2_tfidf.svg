@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="460" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF-IDF와 코사인 유사도</text>
+
+  <!-- ① TF-IDF -->
+  <rect x="60" y="66" width="1080" height="168" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="96" font-size="16" font-weight="700" fill="#1e3a8a">① TF-IDF — 흔한 단어는 낮게, 특정 문서의 특징어는 높게 가중</text>
+
+  <!-- TF x IDF = TFIDF -->
+  <g>
+    <rect x="95" y="120" width="180" height="82" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="185" y="150" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF</text>
+    <text x="185" y="174" font-size="13" fill="#475569" text-anchor="middle">단어 빈도</text>
+    <text x="185" y="192" font-size="12" fill="#64748b" text-anchor="middle">문서 내 등장 횟수</text>
+
+    <text x="292" y="168" font-size="26" font-weight="700" fill="#2563eb" text-anchor="middle">×</text>
+
+    <rect x="310" y="120" width="210" height="82" rx="10" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="415" y="150" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">IDF</text>
+    <text x="415" y="174" font-size="13" fill="#475569" text-anchor="middle">역문서 빈도</text>
+    <text x="415" y="193" font-size="14" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">log( N / (1+df) )</text>
+
+    <text x="537" y="168" font-size="24" font-weight="700" fill="#2563eb" text-anchor="middle">=</text>
+
+    <rect x="555" y="120" width="180" height="82" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="645" y="156" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF-IDF</text>
+    <text x="645" y="182" font-size="13" fill="#475569" text-anchor="middle">가중치</text>
+  </g>
+  <text x="775" y="150" font-size="14" fill="#475569">· 모든 문서에 흔한 단어('은/는/이') → 낮은 점수</text>
+  <text x="775" y="178" font-size="14" fill="#475569">· 특정 문서에만 자주 → 높은 점수 = 핵심어</text>
+
+  <!-- ② cosine -->
+  <rect x="60" y="250" width="1080" height="188" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="280" font-size="16" font-weight="700" fill="#1e3a8a">② 코사인 유사도 — 두 문서 벡터가 이루는 각도로 유사도 측정</text>
+
+  <!-- axes -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="150" y1="410" x2="330" y2="410"/>
+    <line x1="150" y1="410" x2="150" y2="305"/>
+  </g>
+  <polygon points="330,410 322,406 322,414" fill="#94a3b8"/>
+  <polygon points="150,305 146,313 154,313" fill="#94a3b8"/>
+  <text x="336" y="414" font-size="12" fill="#64748b">단어 A</text>
+  <text x="150" y="300" font-size="12" fill="#64748b" text-anchor="middle">단어 B</text>
+  <!-- vectors -->
+  <line x1="150" y1="410" x2="315" y2="360" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="315,360 305,358 309,368" fill="#2563eb"/>
+  <line x1="150" y1="410" x2="255" y2="320" stroke="#1e3a8a" stroke-width="3"/>
+  <polygon points="255,320 246,324 253,330" fill="#1e3a8a"/>
+  <text x="322" y="358" font-size="14" font-weight="700" fill="#2563eb">D₁</text>
+  <text x="258" y="316" font-size="14" font-weight="700" fill="#1e3a8a">D₂</text>
+  <path d="M 200 397 A 52 52 0 0 0 188 372" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="210" y="378" font-size="15" font-weight="700" fill="#334155">θ</text>
+
+  <!-- formula -->
+  <text x="600" y="345" font-size="24" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">cos θ = ( A · B ) / ( ‖A‖ ‖B‖ )</text>
+  <text x="600" y="388" font-size="15" fill="#475569" text-anchor="middle">각도 θ가 작을수록(방향이 비슷할수록) 1에 가까움 → 두 문서가 유사</text>
+  <text x="600" y="414" font-size="14" fill="#64748b" text-anchor="middle">빈도 벡터는 0 이상 → 값의 범위 0~1 · 문서 길이에 영향받지 않음</text>
+</svg>

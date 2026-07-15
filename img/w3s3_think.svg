@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · TF-IDF = TF × IDF, 왜 곱할까?</text>
+  <!-- TF -->
+  <rect x="80" y="110" width="300" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="230" y="145" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">TF ↑</text>
+  <text x="230" y="178" font-size="15" fill="#334155" text-anchor="middle">이 문서에 자주 나옴</text>
+  <text x="230" y="204" font-size="13" fill="#64748b" text-anchor="middle">→ 이 문서에서 중요</text>
+  <!-- times -->
+  <text x="430" y="180" font-size="34" font-weight="700" fill="#94a3b8" text-anchor="middle">×</text>
+  <!-- IDF -->
+  <rect x="480" y="110" width="300" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="630" y="145" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">IDF ↑</text>
+  <text x="630" y="178" font-size="15" fill="#334155" text-anchor="middle">다른 문서엔 드묾</text>
+  <text x="630" y="204" font-size="13" fill="#64748b" text-anchor="middle">→ 흔한 말 아님</text>
+  <!-- equals -->
+  <text x="830" y="180" font-size="34" font-weight="700" fill="#94a3b8" text-anchor="middle">=</text>
+  <!-- result -->
+  <rect x="880" y="110" width="260" height="120" rx="12" fill="#1e3a8a"/>
+  <text x="1010" y="152" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">높은 점수</text>
+  <text x="1010" y="184" font-size="15" fill="#dbeafe" text-anchor="middle">이 문서의</text>
+  <text x="1010" y="208" font-size="15" fill="#dbeafe" text-anchor="middle">핵심어(keyword)</text>
+  <text x="600" y="300" font-size="14" fill="#334155" text-anchor="middle">"이 문서엔 자주, 다른 문서엔 드문" 단어를 부각 — 코드로 직접 계산하면?</text>
+</svg>

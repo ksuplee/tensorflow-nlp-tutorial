@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 분류 문제, 둘 중 하나? 여럿 중 하나?</text>
+  <!-- binary -->
+  <rect x="60" y="80" width="520" height="230" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="60" y="80" width="520" height="48" rx="12" fill="#1e3a8a"/>
+  <text x="320" y="111" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">이진 분류 (Binary)</text>
+  <g font-size="15" fill="#334155">
+    <text x="86" y="162">· 출력층 뉴런 1개 → <tspan font-weight="700" fill="#1e3a8a">시그모이드</tspan></text>
+    <text x="86" y="196">· 손실: <tspan font-weight="700" fill="#1e3a8a">binary_crossentropy</tspan></text>
+    <text x="86" y="230">· 0.5 기준으로 두 클래스 판정</text>
+  </g>
+  <text x="86" y="272" font-size="14" fill="#64748b">예) 감성 분류(긍/부), 스팸/정상 메일</text>
+  <!-- multi -->
+  <rect x="620" y="80" width="520" height="230" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="620" y="80" width="520" height="48" rx="12" fill="#2563eb"/>
+  <text x="880" y="111" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">다중 클래스 분류 (Multi-class)</text>
+  <g font-size="15" fill="#334155">
+    <text x="646" y="162">· 출력층 뉴런 K개 → <tspan font-weight="700" fill="#1e3a8a">소프트맥스</tspan></text>
+    <text x="646" y="196">· 손실: <tspan font-weight="700" fill="#1e3a8a">categorical_crossentropy</tspan></text>
+    <text x="646" y="230">· 확률 최대 클래스 선택(argmax)</text>
+  </g>
+  <text x="646" y="272" font-size="14" fill="#64748b">예) 뉴스 주제 분류, 품사 태깅, 개체명 인식</text>
+  <text x="600" y="342" font-size="14" fill="#334155" text-anchor="middle">이번 주는 감성 분류·스팸 분류(문장 단위)와 개체명 인식(토큰 단위 태깅)을 다룬다</text>
+</svg>

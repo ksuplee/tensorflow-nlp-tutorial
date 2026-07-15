@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 텍스트 이진 분류, 꼭 RNN이어야 할까?</text>
+  <!-- RNN -->
+  <rect x="60" y="80" width="520" height="220" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="60" y="80" width="520" height="46" rx="12" fill="#64748b"/>
+  <text x="320" y="110" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">RNN 방식 (순서대로 읽기)</text>
+  <g font-size="15" fill="#334155">
+    <text x="86" y="158">· LSTM/GRU를 다 대 일 구조로</text>
+    <text x="86" y="190">· 단어를 앞에서부터 순차 처리</text>
+    <text x="86" y="222">· 장기 맥락·순서에 강함</text>
+  </g>
+  <text x="86" y="262" font-size="13" fill="#64748b">단, 순차 처리라 병렬화가 어려움</text>
+  <!-- CNN -->
+  <rect x="620" y="80" width="520" height="220" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="620" y="80" width="520" height="46" rx="12" fill="#1e3a8a"/>
+  <text x="880" y="110" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">CNN 방식 (부분 패턴 스캔)</text>
+  <g font-size="15" fill="#334155">
+    <text x="646" y="158">· 이미지용 CNN을 1D CNN으로</text>
+    <text x="646" y="190">· 커널이 n-gram 패턴을 포착</text>
+    <text x="646" y="222">· 병렬 처리로 빠름</text>
+  </g>
+  <text x="646" y="262" font-size="13" fill="#64748b">예) 1D CNN 스팸 메일 분류</text>
+  <text x="600" y="326" font-size="13" fill="#94a3b8" text-anchor="middle">같은 이진 분류라도 접근이 다르다 — 이번 차시는 CNN을 텍스트에 적용해 본다</text>
+</svg>

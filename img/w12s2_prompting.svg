@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="470" viewBox="0 0 1250 470" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1250" height="470" fill="#ffffff"/>
+  <text x="625" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">프롬프팅 유형</text>
+  <g font-size="14">
+    <!-- 제로샷 -->
+    <rect x="30" y="70" width="380" height="360" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="30" y="70" width="380" height="46" rx="14" fill="#2563eb"/>
+    <text x="220" y="100" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">제로샷 (Zero-shot)</text>
+    <text x="55" y="146" fill="#64748b">예시 없이 지시만 제공</text>
+    <rect x="55" y="162" width="330" height="150" rx="8" fill="#fff" stroke="#cbd5e1"/>
+    <text x="70" y="190" fill="#334155">다음 리뷰의 감성을</text>
+    <text x="70" y="214" fill="#334155">긍정/부정으로 답하라.</text>
+    <text x="70" y="252" fill="#334155">리뷰: "배송도 빠르고 최고!"</text>
+    <text x="70" y="290" fill="#1e3a8a" font-weight="700">감성:</text>
+    <text x="55" y="345" fill="#15803d" font-weight="700">→ 긍정</text>
+    <text x="55" y="392" font-size="12.5" fill="#64748b">간단하지만 어려운 태스크엔</text>
+    <text x="55" y="412" font-size="12.5" fill="#64748b">정확도가 낮을 수 있다</text>
+
+    <!-- 퓨샷 -->
+    <rect x="435" y="70" width="380" height="360" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <rect x="435" y="70" width="380" height="46" rx="14" fill="#2563eb"/>
+    <text x="625" y="100" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">퓨샷 (Few-shot)</text>
+    <text x="460" y="146" fill="#64748b">몇 개의 예시를 함께 제공</text>
+    <rect x="460" y="162" width="330" height="180" rx="8" fill="#fff" stroke="#cbd5e1"/>
+    <text x="475" y="188" fill="#334155">리뷰: "별로예요" → 부정</text>
+    <text x="475" y="212" fill="#334155">리뷰: "정말 만족" → 긍정</text>
+    <text x="475" y="236" fill="#64748b" font-size="12">(예시 = 인컨텍스트 러닝)</text>
+    <text x="475" y="272" fill="#334155">리뷰: "배송도 빠르고 최고!"</text>
+    <text x="475" y="310" fill="#1e3a8a" font-weight="700">→</text>
+    <text x="460" y="375" fill="#15803d" font-weight="700">→ 긍정 (정확도 향상)</text>
+    <text x="460" y="410" font-size="12.5" fill="#64748b">예시로 형식·기준을 학습</text>
+
+    <!-- CoT -->
+    <rect x="840" y="70" width="380" height="360" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="840" y="70" width="380" height="46" rx="14" fill="#1e3a8a"/>
+    <text x="1030" y="100" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">사고연쇄 (CoT)</text>
+    <text x="865" y="146" fill="#64748b">"단계별로 생각"하도록 유도</text>
+    <rect x="865" y="162" width="330" height="180" rx="8" fill="#fff" stroke="#2563eb"/>
+    <text x="880" y="188" fill="#334155">문제: 사과 3개, 2배 사면?</text>
+    <text x="880" y="220" fill="#334155">단계별로 풀어보자.</text>
+    <text x="880" y="252" fill="#475569" font-size="13">1) 처음 3개</text>
+    <text x="880" y="274" fill="#475569" font-size="13">2) 2배 = 6개 추가</text>
+    <text x="880" y="296" fill="#475569" font-size="13">3) 합계 9개</text>
+    <text x="880" y="326" fill="#1e3a8a" font-weight="700">답: 9개</text>
+    <text x="865" y="375" fill="#15803d" font-weight="700">→ 다단계 추론 성능 향상</text>
+    <text x="865" y="410" font-size="12.5" fill="#64748b">복잡한 추론 문제에 효과적</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">RNN의 입출력 구조 유형</text>
+  <defs><marker id="ty6" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L5,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- helper: each panel -->
+  <!-- one-to-many -->
+  <rect x="40" y="80" width="350" height="260" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="215" y="110" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">일 대 다 (one-to-many)</text>
+  <g>
+    <rect x="180" y="250" width="70" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/>
+    <rect x="120" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="192" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="264" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/>
+    <rect x="120" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/><rect x="192" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/><rect x="264" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#ty6)"><line x1="143" y1="180" x2="143" y2="156"/><line x1="215" y1="180" x2="215" y2="156"/><line x1="287" y1="180" x2="287" y2="156"/><line x1="166" y1="200" x2="190" y2="200"/><line x1="238" y1="200" x2="262" y2="200"/><line x1="215" y1="250" x2="215" y2="222"/></g>
+  <text x="215" y="314" font-size="14" fill="#334155" text-anchor="middle">이미지 → 캡션 생성</text>
+  <!-- many-to-one -->
+  <rect x="425" y="80" width="350" height="260" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="600" y="110" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">다 대 일 (many-to-one)</text>
+  <g>
+    <rect x="505" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><rect x="577" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><rect x="649" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/>
+    <rect x="505" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="577" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="649" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/>
+    <rect x="649" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#ty6)"><line x1="528" y1="250" x2="528" y2="222"/><line x1="600" y1="250" x2="600" y2="222"/><line x1="672" y1="250" x2="672" y2="222"/><line x1="551" y1="200" x2="575" y2="200"/><line x1="623" y1="200" x2="647" y2="200"/><line x1="672" y1="180" x2="672" y2="156"/></g>
+  <text x="600" y="314" font-size="14" fill="#334155" text-anchor="middle">리뷰 → 감성 분류·스팸 분류</text>
+  <!-- many-to-many -->
+  <rect x="810" y="80" width="350" height="260" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="985" y="110" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">다 대 다 (many-to-many)</text>
+  <g>
+    <rect x="890" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><rect x="962" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><rect x="1034" y="250" width="46" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/>
+    <rect x="890" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="962" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/><rect x="1034" y="180" width="46" height="40" rx="6" fill="#1e3a8a"/>
+    <rect x="890" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/><rect x="962" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/><rect x="1034" y="120" width="46" height="34" rx="6" fill="#bfdbfe" stroke="#60a5fa"/>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.8" marker-end="url(#ty6)"><line x1="913" y1="250" x2="913" y2="222"/><line x1="985" y1="250" x2="985" y2="222"/><line x1="1057" y1="250" x2="1057" y2="222"/><line x1="913" y1="180" x2="913" y2="156"/><line x1="985" y1="180" x2="985" y2="156"/><line x1="1057" y1="180" x2="1057" y2="156"/><line x1="936" y1="200" x2="960" y2="200"/><line x1="1008" y1="200" x2="1032" y2="200"/></g>
+  <text x="985" y="314" font-size="14" fill="#334155" text-anchor="middle">기계번역·개체명 인식</text>
+</svg>

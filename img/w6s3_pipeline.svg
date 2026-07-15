@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">LSTM 텍스트 분류 파이프라인</text>
+  <defs><marker id="p6" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <g>
+    <rect x="40" y="120" width="150" height="90" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="115" y="152" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">문장</text>
+    <text x="115" y="176" font-size="12" fill="#64748b" text-anchor="middle">"이 영화 정말</text>
+    <text x="115" y="193" font-size="12" fill="#64748b" text-anchor="middle">재미있다"</text>
+    <rect x="230" y="120" width="160" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="310" y="150" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">토큰화 + 패딩</text>
+    <text x="310" y="174" font-size="12" fill="#64748b" text-anchor="middle">정수 시퀀스</text>
+    <text x="310" y="192" font-size="12" fill="#64748b" text-anchor="middle">[12, 5, 30, 0, 0]</text>
+    <rect x="430" y="120" width="160" height="90" rx="10" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="510" y="150" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">임베딩층</text>
+    <text x="510" y="174" font-size="12" fill="#64748b" text-anchor="middle">각 단어 →</text>
+    <text x="510" y="192" font-size="12" fill="#64748b" text-anchor="middle">밀집 벡터</text>
+    <rect x="630" y="120" width="180" height="90" rx="10" fill="#1e3a8a"/>
+    <text x="720" y="150" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">LSTM</text>
+    <text x="720" y="174" font-size="12" fill="#dbeafe" text-anchor="middle">시퀀스를 순서대로</text>
+    <text x="720" y="192" font-size="12" fill="#dbeafe" text-anchor="middle">읽어 맥락 요약</text>
+    <rect x="850" y="120" width="150" height="90" rx="10" fill="#2563eb"/>
+    <text x="925" y="150" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">마지막 hₜ</text>
+    <text x="925" y="176" font-size="12" fill="#dbeafe" text-anchor="middle">→ Linear</text>
+    <text x="925" y="193" font-size="12" fill="#dbeafe" text-anchor="middle">→ softmax</text>
+    <rect x="1040" y="120" width="130" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="1105" y="158" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">긍정 / 부정</text>
+    <text x="1105" y="184" font-size="12" fill="#64748b" text-anchor="middle">(감성 분류)</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#p6)">
+    <line x1="190" y1="165" x2="226" y2="165"/><line x1="390" y1="165" x2="426" y2="165"/><line x1="590" y1="165" x2="626" y2="165"/><line x1="810" y1="165" x2="846" y2="165"/><line x1="1000" y1="165" x2="1036" y2="165"/>
+  </g>
+  <text x="600" y="270" font-size="14" fill="#334155" text-anchor="middle">다 대 일(many-to-one) 구조 — LSTM이 문장 전체를 읽고 마지막 은닉 상태로 분류한다</text>
+  <text x="600" y="300" font-size="13" fill="#64748b" text-anchor="middle">패딩된 '0'은 마스킹으로 무시, 배치 단위로 병렬 학습</text>
+</svg>

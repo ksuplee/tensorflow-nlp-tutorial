@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">LLM 활용 패러다임의 전환</text>
+  <defs><marker id="pg" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#64748b"/></marker></defs>
+  <!-- 과거 -->
+  <rect x="40" y="70" width="1120" height="150" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="70" y="102" font-size="18" font-weight="700" fill="#64748b">기존: 사전학습 → 태스크별 파인튜닝</text>
+  <g text-anchor="middle" font-size="14">
+    <rect x="70" y="120" width="150" height="70" rx="10" fill="#e2e8f0"/><text x="145" y="150" fill="#334155" font-weight="700">사전학습</text><text x="145" y="172" fill="#64748b" font-size="12">BERT 등</text>
+    <line x1="220" y1="155" x2="280" y2="155" stroke="#64748b" stroke-width="2" marker-end="url(#pg)"/>
+    <rect x="285" y="112" width="180" height="40" rx="8" fill="#fff" stroke="#94a3b8"/><text x="375" y="138" fill="#334155">파인튜닝 → 감성분류 모델</text>
+    <rect x="285" y="158" width="180" height="40" rx="8" fill="#fff" stroke="#94a3b8"/><text x="375" y="184" fill="#334155">파인튜닝 → NER 모델</text>
+    <rect x="490" y="112" width="180" height="40" rx="8" fill="#fff" stroke="#94a3b8"/><text x="580" y="138" fill="#334155">파인튜닝 → QA 모델</text>
+    <text x="820" y="160" fill="#b91c1c" font-size="15">태스크마다 별도 모델·데이터·학습 필요</text>
+  </g>
+  <!-- LLM -->
+  <rect x="40" y="240" width="1120" height="160" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="272" font-size="18" font-weight="700" fill="#1e3a8a">LLM: 사전학습 → 프롬프트</text>
+  <g text-anchor="middle" font-size="14">
+    <rect x="70" y="290" width="180" height="90" rx="10" fill="#1e3a8a"/><text x="160" y="328" fill="#fff" font-weight="700">대규모 LLM</text><text x="160" y="352" fill="#c7d2fe" font-size="12">(하나의 범용 모델)</text>
+    <line x1="250" y1="335" x2="320" y2="335" stroke="#2563eb" stroke-width="2.5" marker-end="url(#pg2)"/>
+    <rect x="330" y="298" width="200" height="34" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="430" y="321" fill="#1e3a8a">프롬프트 → 감성분류</text>
+    <rect x="330" y="336" width="200" height="34" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="430" y="359" fill="#1e3a8a">프롬프트 → 번역</text>
+    <rect x="550" y="298" width="200" height="34" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="650" y="321" fill="#1e3a8a">프롬프트 → 요약</text>
+    <rect x="550" y="336" width="200" height="34" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="650" y="359" fill="#1e3a8a">프롬프트 → QA</text>
+    <text x="930" y="338" fill="#15803d" font-size="15">파라미터 갱신 없이 지시(프롬프트)만으로</text>
+  </g>
+  <defs><marker id="pg2" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#2563eb"/></marker></defs>
+</svg>

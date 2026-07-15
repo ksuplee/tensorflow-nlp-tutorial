@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 빈칸을 채우려면 앞뒤를 모두 봐야 하지 않을까?</text>
+  <text x="600" y="70" font-size="15" fill="#334155" text-anchor="middle">"나는 <tspan font-weight="700" fill="#ef4444">[MASK]</tspan>에 가서 그곳에서 빵과 <tspan font-weight="700" fill="#ef4444">[MASK]</tspan>를 샀다"</text>
+  <defs><marker id="bt11" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- GPT unidirectional -->
+  <rect x="60" y="100" width="520" height="210" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="320" y="130" font-size="16" font-weight="700" fill="#64748b" text-anchor="middle">GPT (단방향, 왼→오)</text>
+  <g font-size="13" text-anchor="middle">
+    <rect x="90" y="160" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="182" fill="#1e3a8a">나는</text>
+    <rect x="185" y="160" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="225" y="182" fill="#1e3a8a">빵을</text>
+    <rect x="280" y="160" width="80" height="34" rx="6" fill="#1e3a8a"/><text x="320" y="182" fill="#fff">?</text>
+  </g>
+  <path d="M 170 177 L 278 177" stroke="#2563eb" stroke-width="2" marker-end="url(#bt11)"/>
+  <text x="320" y="235" font-size="13" fill="#334155" text-anchor="middle">이전 단어들만 보고 다음 단어 예측</text>
+  <text x="320" y="262" font-size="13" fill="#94a3b8" text-anchor="middle">→ 뒤쪽 문맥을 못 봄 (생성에 강함)</text>
+  <text x="320" y="290" font-size="12" fill="#64748b" text-anchor="middle">트랜스포머 디코더 기반</text>
+  <!-- BERT bidirectional -->
+  <rect x="620" y="100" width="520" height="210" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="880" y="130" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">BERT (양방향)</text>
+  <g font-size="13" text-anchor="middle">
+    <rect x="670" y="160" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="710" y="182" fill="#1e3a8a">나는</text>
+    <rect x="765" y="160" width="90" height="34" rx="6" fill="#ef4444"/><text x="810" y="182" fill="#fff">[MASK]</text>
+    <rect x="870" y="160" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="910" y="182" fill="#1e3a8a">가서</text>
+    <rect x="965" y="160" width="80" height="34" rx="6" fill="#dbeafe" stroke="#93c5fd"/><text x="1005" y="182" fill="#1e3a8a">빵을</text>
+  </g>
+  <path d="M 750 200 C 780 224, 790 224, 808 200" stroke="#2563eb" stroke-width="2" marker-end="url(#bt11)" fill="none"/>
+  <path d="M 910 200 C 880 224, 830 224, 812 200" stroke="#2563eb" stroke-width="2" marker-end="url(#bt11)" fill="none"/>
+  <text x="880" y="245" font-size="13" fill="#334155" text-anchor="middle">좌우 문맥을 <tspan font-weight="700" fill="#1e3a8a">동시에</tspan> 보고 [MASK] 예측</text>
+  <text x="880" y="272" font-size="13" fill="#94a3b8" text-anchor="middle">→ 깊은 문맥 이해 (이해·분류에 강함)</text>
+  <text x="880" y="294" font-size="12" fill="#64748b" text-anchor="middle">트랜스포머 인코더 기반(2018, 구글)</text>
+  <text x="600" y="342" font-size="13" fill="#94a3b8" text-anchor="middle">ELMo(얕은 양방향)·GPT(단방향)를 넘어, BERT는 진짜 양방향 문맥을 학습한다</text>
+</svg>

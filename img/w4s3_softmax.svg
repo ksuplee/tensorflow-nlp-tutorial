@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="430" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">소프트맥스 회귀: 다중 클래스 분류</text>
+
+  <!-- ① softmax function -->
+  <rect x="60" y="66" width="1080" height="140" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="96" font-size="16" font-weight="700" fill="#1e3a8a">① 소프트맥스 함수 — 클래스별 점수(logit)를 확률 분포로 변환</text>
+  <text x="300" y="150" font-size="22" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">softmax(zᵢ) = e^(zᵢ) / Σⱼ e^(zⱼ)</text>
+  <text x="640" y="135" font-size="14" fill="#475569">· 모든 클래스 확률의 합 = 1</text>
+  <text x="640" y="162" font-size="14" fill="#475569">· 정답 레이블은 원-핫 인코딩 · 비용은 크로스 엔트로피</text>
+  <text x="640" y="186" font-size="13" fill="#64748b">· 클래스가 2개면 로지스틱 회귀와 동일</text>
+
+  <!-- ② example flow -->
+  <rect x="60" y="222" width="1080" height="188" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="252" font-size="16" font-weight="700" fill="#1e3a8a">② 예시 — 텍스트 감성 3분류</text>
+
+  <!-- input -->
+  <rect x="85" y="280" width="210" height="90" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="190" y="312" font-size="13" fill="#64748b" text-anchor="middle">입력 문장</text>
+  <text x="190" y="336" font-size="14" fill="#334155" text-anchor="middle">"이 영화 정말</text>
+  <text x="190" y="356" font-size="14" fill="#334155" text-anchor="middle">최고였다"</text>
+
+  <text x="312" y="330" font-size="20" fill="#2563eb" text-anchor="middle">→</text>
+
+  <!-- scores -->
+  <rect x="330" y="280" width="200" height="90" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="430" y="302" font-size="13" fill="#64748b" text-anchor="middle">점수 z (w·x+b)</text>
+  <text x="350" y="326" font-size="14" fill="#334155">긍정</text><text x="510" y="326" font-size="14" fill="#334155" text-anchor="end">2.1</text>
+  <text x="350" y="346" font-size="14" fill="#334155">중립</text><text x="510" y="346" font-size="14" fill="#334155" text-anchor="end">0.8</text>
+  <text x="350" y="366" font-size="14" fill="#334155">부정</text><text x="510" y="366" font-size="14" fill="#334155" text-anchor="end">-1.0</text>
+
+  <text x="547" y="330" font-size="16" fill="#2563eb" text-anchor="middle">softmax</text>
+  <text x="547" y="348" font-size="20" fill="#2563eb" text-anchor="middle">→</text>
+
+  <!-- prob bars -->
+  <g>
+    <text x="600" y="300" font-size="13" fill="#64748b">확률 분포 (합=1)</text>
+    <!-- 긍정 0.76 -->
+    <text x="640" y="322" font-size="14" fill="#334155" text-anchor="end">긍정</text>
+    <rect x="650" y="311" width="304" height="16" rx="3" fill="#1e3a8a"/>
+    <text x="964" y="324" font-size="13" font-weight="700" fill="#1e3a8a">0.76</text>
+    <!-- 중립 0.21 -->
+    <text x="640" y="346" font-size="14" fill="#334155" text-anchor="end">중립</text>
+    <rect x="650" y="335" width="84" height="16" rx="3" fill="#60a5fa"/>
+    <text x="744" y="348" font-size="13" fill="#475569">0.21</text>
+    <!-- 부정 0.03 -->
+    <text x="640" y="370" font-size="14" fill="#334155" text-anchor="end">부정</text>
+    <rect x="650" y="359" width="14" height="16" rx="3" fill="#93c5fd"/>
+    <text x="674" y="372" font-size="13" fill="#475569">0.03</text>
+  </g>
+
+  <text x="1010" y="322" font-size="15" font-weight="700" fill="#16a34a" text-anchor="middle">argmax</text>
+  <text x="1010" y="346" font-size="16" font-weight="700" fill="#16a34a" text-anchor="middle">→ 긍정</text>
+</svg>

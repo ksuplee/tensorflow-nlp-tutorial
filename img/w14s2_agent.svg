@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="470" viewBox="0 0 1150 470" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="470" fill="#ffffff"/>
+  <text x="575" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">LLM 에이전트의 동작 루프</text>
+  <defs><marker id="a1" markerWidth="13" markerHeight="13" refX="10" refY="5" orient="auto"><path d="M0,0 L11,5 L0,10 z" fill="#2563eb"/></marker></defs>
+  <!-- center LLM -->
+  <circle cx="420" cy="270" r="72" fill="#1e3a8a"/>
+  <text x="420" y="265" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">LLM</text>
+  <text x="420" y="290" font-size="13" fill="#c7d2fe" text-anchor="middle">(에이전트 두뇌)</text>
+  <!-- loop nodes -->
+  <g text-anchor="middle">
+    <rect x="300" y="90" width="240" height="60" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="420" y="118" font-size="17" font-weight="700" fill="#1e3a8a">① 사고 (Reasoning)</text>
+    <text x="420" y="138" font-size="12" fill="#64748b">목표 분석·다음 행동 계획</text>
+
+    <rect x="640" y="240" width="240" height="60" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="760" y="268" font-size="17" font-weight="700" fill="#1e3a8a">② 행동 (Action)</text>
+    <text x="760" y="288" font-size="12" fill="#64748b">도구 호출(검색·계산·코드)</text>
+
+    <rect x="300" y="390" width="240" height="60" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="420" y="418" font-size="17" font-weight="700" fill="#1e3a8a">③ 관찰 (Observation)</text>
+    <text x="420" y="438" font-size="12" fill="#64748b">도구 결과 확인</text>
+  </g>
+  <!-- arrows loop -->
+  <path d="M420 150 L420 196" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <path d="M480 220 Q600 200 660 258" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <path d="M700 300 Q560 400 542 415" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <path d="M360 390 Q330 340 372 318" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <text x="620" y="360" font-size="13" fill="#64748b">반복(목표 달성까지)</text>
+  <!-- tools -->
+  <rect x="900" y="120" width="220" height="230" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1010" y="150" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">도구(Tools)</text>
+  <g font-size="14" fill="#334155"><text x="925" y="188">🔍 웹·문서 검색</text><text x="925" y="222">🧮 계산기</text><text x="925" y="256">💻 코드 실행</text><text x="925" y="290">🗄 데이터베이스·API</text><text x="925" y="324" font-size="12" fill="#64748b">→ RAG도 도구의 하나</text></g>
+  <line x1="880" y1="270" x2="898" y2="235" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="575" y="466" font-size="14" fill="#64748b" text-anchor="middle">※ 사고-행동-관찰을 반복하며 도구를 활용해 복잡한 작업을 수행한다 (예: ReAct).</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">BERT의 입력: 세 가지 임베딩의 합</text>
+  <!-- tokens header -->
+  <g font-size="13" text-anchor="middle" font-weight="700">
+    <text x="130" y="88" fill="#334155">[CLS]</text><text x="250" y="88" fill="#334155">나는</text><text x="370" y="88" fill="#334155">학교</text><text x="490" y="88" fill="#334155">[SEP]</text><text x="610" y="88" fill="#334155">##에</text><text x="730" y="88" fill="#334155">간다</text><text x="850" y="88" fill="#334155">[SEP]</text>
+  </g>
+  <!-- Token embedding -->
+  <text x="60" y="128" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="end">토큰 임베딩</text>
+  <g fill="#1e3a8a"><rect x="90" y="110" width="80" height="30" rx="5"/><rect x="210" y="110" width="80" height="30" rx="5"/><rect x="330" y="110" width="80" height="30" rx="5"/><rect x="450" y="110" width="80" height="30" rx="5"/><rect x="570" y="110" width="80" height="30" rx="5"/><rect x="690" y="110" width="80" height="30" rx="5"/><rect x="810" y="110" width="80" height="30" rx="5"/></g>
+  <text x="960" y="130" font-size="12" fill="#64748b">WordPiece(30,522)</text>
+  <text x="450" y="162" font-size="20" fill="#94a3b8" text-anchor="middle">+</text>
+  <!-- Segment embedding -->
+  <text x="60" y="200" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="end">세그먼트 임베딩</text>
+  <g fill="#2563eb"><rect x="90" y="182" width="80" height="30" rx="5"/><rect x="210" y="182" width="80" height="30" rx="5"/><rect x="330" y="182" width="80" height="30" rx="5"/><rect x="450" y="182" width="80" height="30" rx="5"/></g>
+  <g fill="#93c5fd"><rect x="570" y="182" width="80" height="30" rx="5"/><rect x="690" y="182" width="80" height="30" rx="5"/><rect x="810" y="182" width="80" height="30" rx="5"/></g>
+  <text x="960" y="202" font-size="12" fill="#64748b">문장 A(0) / 문장 B(1)</text>
+  <text x="450" y="234" font-size="20" fill="#94a3b8" text-anchor="middle">+</text>
+  <!-- Position embedding -->
+  <text x="60" y="272" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="end">포지션 임베딩</text>
+  <g font-size="12" fill="#fff" text-anchor="middle">
+    <rect x="90" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="130" y="274">0</text>
+    <rect x="210" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="250" y="274">1</text>
+    <rect x="330" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="370" y="274">2</text>
+    <rect x="450" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="490" y="274">3</text>
+    <rect x="570" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="610" y="274">4</text>
+    <rect x="690" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="730" y="274">5</text>
+    <rect x="810" y="254" width="80" height="30" rx="5" fill="#64748b"/><text x="850" y="274">6</text>
+  </g>
+  <text x="960" y="274" font-size="12" fill="#64748b">위치 학습(최대 512)</text>
+  <!-- result note -->
+  <rect x="90" y="308" width="1020" height="52" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="332" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">= 세 임베딩을 더한 벡터가 BERT의 입력 (d_model = 768)</text>
+  <text x="600" y="352" font-size="12" fill="#64748b" text-anchor="middle">[CLS]=문장 대표 · [SEP]=문장 구분 · 포지션은 sin/cos가 아닌 학습으로 획득</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">선형 회귀와 경사 하강법(Gradient Descent)</text>
+  <!-- left: linear regression fit -->
+  <rect x="50" y="80" width="480" height="300" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="290" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">선형 회귀: 최적의 직선 찾기</text>
+  <g stroke="#334155" stroke-width="2"><line x1="100" y1="340" x2="500" y2="340"/><line x1="100" y1="340" x2="100" y2="140"/></g>
+  <text x="300" y="368" font-size="13" fill="#64748b" text-anchor="middle">공부 시간(x)</text>
+  <text x="72" y="240" font-size="13" fill="#64748b" text-anchor="middle" transform="rotate(-90 72 240)">성적(y)</text>
+  <g fill="#1e3a8a">
+    <circle cx="150" cy="310" r="6"/><circle cx="210" cy="285" r="6"/><circle cx="270" cy="250" r="6"/>
+    <circle cx="330" cy="235" r="6"/><circle cx="390" cy="195" r="6"/><circle cx="450" cy="170" r="6"/>
+  </g>
+  <line x1="130" y1="315" x2="470" y2="165" stroke="#2563eb" stroke-width="3"/>
+  <text x="360" y="300" font-size="14" fill="#2563eb">y = wx + b</text>
+  <text x="290" y="366" font-size="0" fill="#fff"> </text>
+  <!-- right: cost curve gradient descent -->
+  <rect x="560" y="80" width="590" height="300" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="855" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">비용 함수 J(w)를 최소화</text>
+  <g stroke="#334155" stroke-width="2"><line x1="620" y1="340" x2="1100" y2="340"/><line x1="620" y1="340" x2="620" y2="140"/></g>
+  <text x="860" y="368" font-size="13" fill="#64748b" text-anchor="middle">가중치 w</text>
+  <text x="596" y="240" font-size="13" fill="#64748b" text-anchor="middle" transform="rotate(-90 596 240)">비용 J(w)</text>
+  <!-- parabola -->
+  <path d="M 650 160 Q 860 470 1070 160" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <!-- descending balls -->
+  <circle cx="690" cy="215" r="9" fill="#93c5fd"/>
+  <circle cx="740" cy="285" r="9" fill="#60a5fa"/>
+  <circle cx="800" cy="322" r="9" fill="#2563eb"/>
+  <circle cx="860" cy="333" r="10" fill="#1e3a8a"/>
+  <text x="690" y="200" font-size="12" fill="#64748b" text-anchor="middle">시작</text>
+  <text x="860" y="320" font-size="12" fill="#1e3a8a" text-anchor="middle" font-weight="700">최소점</text>
+  <path d="M 700 220 Q 720 260 733 280" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 750 292 Q 775 315 792 320" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="1000" y="200" font-size="13" fill="#334155">기울기가 낮은</text>
+  <text x="1000" y="222" font-size="13" fill="#334155">방향으로 w 갱신</text>
+  <text x="1000" y="250" font-size="12" fill="#64748b">학습률(η)로</text>
+  <text x="1000" y="270" font-size="12" fill="#64748b">보폭 조절</text>
+  <text x="855" y="404" font-size="13" fill="#94a3b8" text-anchor="middle">비용 함수(MSE)를 미분해 기울기를 구하고, 반대 방향으로 w를 반복 갱신한다 (학습률이 너무 크면 발산)</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">부분단어 토큰화 3종 비교</text>
+  <!-- header row -->
+  <rect x="40" y="70" width="220" height="52" rx="8" fill="#1e3a8a"/><text x="150" y="103" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">알고리즘</text>
+  <rect x="260" y="70" width="430" height="52" rx="8" fill="#2563eb"/><text x="475" y="103" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">병합·분할 기준</text>
+  <rect x="690" y="70" width="470" height="52" rx="8" fill="#1e3a8a"/><text x="925" y="103" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">특징 · 대표 모델</text>
+  <!-- BPE -->
+  <rect x="40" y="128" width="1120" height="94" fill="#eff6ff"/>
+  <text x="150" y="170" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">BPE</text>
+  <text x="150" y="194" font-size="13" fill="#64748b" text-anchor="middle">Byte Pair Encoding</text>
+  <text x="282" y="165" font-size="15" fill="#334155">가장 자주 인접하는 문자·기호 쌍을</text>
+  <text x="282" y="189" font-size="15" fill="#334155">반복적으로 <tspan font-weight="700" fill="#1e3a8a">병합(merge)</tspan></text>
+  <text x="712" y="165" font-size="15" fill="#334155">빈도 기반, 단순·효율적</text>
+  <text x="712" y="189" font-size="15" fill="#64748b">GPT 계열</text>
+  <!-- WordPiece -->
+  <rect x="40" y="222" width="1120" height="94" fill="#f8fafc"/>
+  <text x="150" y="264" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">WordPiece</text>
+  <text x="282" y="259" font-size="15" fill="#334155">병합 기준으로 빈도 대신</text>
+  <text x="282" y="283" font-size="15" fill="#334155"><tspan font-weight="700" fill="#1e3a8a">우도(likelihood)</tspan> 증가를 사용</text>
+  <text x="712" y="259" font-size="15" fill="#334155">`##` 접두어로 이어붙임</text>
+  <text x="712" y="283" font-size="15" fill="#64748b">BERT</text>
+  <!-- SentencePiece -->
+  <rect x="40" y="316" width="1120" height="94" fill="#eff6ff"/>
+  <text x="150" y="358" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">SentencePiece</text>
+  <text x="282" y="353" font-size="15" fill="#334155">공백까지 기호(▁)로 다뤄</text>
+  <text x="282" y="377" font-size="15" fill="#334155"><tspan font-weight="700" fill="#1e3a8a">언어 독립적</tspan>으로 학습</text>
+  <text x="712" y="353" font-size="15" fill="#334155">한국어 등 띄어쓰기 유연 언어에 유용</text>
+  <text x="712" y="377" font-size="15" fill="#64748b">ALBERT · T5 · 다국어 모델</text>
+  <!-- grid lines -->
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="40" y1="222" x2="1160" y2="222"/><line x1="40" y1="316" x2="1160" y2="316"/>
+    <line x1="260" y1="128" x2="260" y2="410"/><line x1="690" y1="128" x2="690" y2="410"/>
+  </g>
+</svg>

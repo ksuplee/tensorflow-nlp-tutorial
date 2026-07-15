@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">RNN의 재귀적 표현과 시간 전개(unrolling)</text>
+  <defs>
+    <marker id="u6" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="u6r" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/></marker>
+  </defs>
+  <!-- left folded -->
+  <rect x="50" y="80" width="250" height="300" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="175" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">재귀적 표현(folded)</text>
+  <rect x="120" y="290" width="110" height="50" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="175" y="320" font-size="14" fill="#1e3a8a" text-anchor="middle">xₜ</text>
+  <rect x="120" y="190" width="110" height="60" rx="10" fill="#1e3a8a"/><text x="175" y="225" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">hₜ</text>
+  <rect x="120" y="110" width="110" height="50" rx="8" fill="#bfdbfe" stroke="#60a5fa"/><text x="175" y="140" font-size="14" fill="#1e3a8a" text-anchor="middle">oₜ</text>
+  <line x1="175" y1="290" x2="175" y2="252" stroke="#2563eb" stroke-width="2.5" marker-end="url(#u6)"/>
+  <line x1="175" y1="190" x2="175" y2="162" stroke="#2563eb" stroke-width="2.5" marker-end="url(#u6)"/>
+  <path d="M 230 205 C 285 205, 285 235, 232 235" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="5 3" marker-end="url(#u6)"/>
+  <text x="268" y="222" font-size="11" fill="#64748b">순환</text>
+  <!-- equals -->
+  <text x="330" y="235" font-size="30" fill="#94a3b8" text-anchor="middle">=</text>
+  <!-- right unrolled -->
+  <rect x="360" y="80" width="800" height="300" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="760" y="110" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">시점 흐름에 따른 표현(unrolled)</text>
+  <g>
+    <!-- t1 -->
+    <rect x="420" y="290" width="90" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="465" y="318" font-size="13" fill="#1e3a8a" text-anchor="middle">x₁</text>
+    <rect x="420" y="195" width="90" height="56" rx="10" fill="#1e3a8a"/><text x="465" y="228" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">h₁</text>
+    <rect x="420" y="120" width="90" height="46" rx="8" fill="#bfdbfe" stroke="#60a5fa"/><text x="465" y="148" font-size="13" fill="#1e3a8a" text-anchor="middle">o₁</text>
+    <!-- t2 -->
+    <rect x="590" y="290" width="90" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="635" y="318" font-size="13" fill="#1e3a8a" text-anchor="middle">x₂</text>
+    <rect x="590" y="195" width="90" height="56" rx="10" fill="#1e3a8a"/><text x="635" y="228" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">h₂</text>
+    <rect x="590" y="120" width="90" height="46" rx="8" fill="#bfdbfe" stroke="#60a5fa"/><text x="635" y="148" font-size="13" fill="#1e3a8a" text-anchor="middle">o₂</text>
+    <!-- t3 -->
+    <rect x="760" y="290" width="90" height="46" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="805" y="318" font-size="13" fill="#1e3a8a" text-anchor="middle">x₃</text>
+    <rect x="760" y="195" width="90" height="56" rx="10" fill="#1e3a8a"/><text x="805" y="228" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">h₃</text>
+    <rect x="760" y="120" width="90" height="46" rx="8" fill="#bfdbfe" stroke="#60a5fa"/><text x="805" y="148" font-size="13" fill="#1e3a8a" text-anchor="middle">o₃</text>
+    <!-- t... -->
+    <text x="930" y="228" font-size="20" fill="#94a3b8">· · ·</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.3" marker-end="url(#u6)">
+    <line x1="465" y1="290" x2="465" y2="253"/><line x1="465" y1="195" x2="465" y2="168"/>
+    <line x1="635" y1="290" x2="635" y2="253"/><line x1="635" y1="195" x2="635" y2="168"/>
+    <line x1="805" y1="290" x2="805" y2="253"/><line x1="805" y1="195" x2="805" y2="168"/>
+    <line x1="510" y1="223" x2="586" y2="223"/><line x1="680" y1="223" x2="756" y2="223"/><line x1="850" y1="223" x2="900" y2="223"/>
+  </g>
+  <text x="990" y="200" font-size="14" fill="#334155">hₜ = f(Wₓxₜ + Wₕhₜ₋₁ + b)</text>
+  <text x="990" y="228" font-size="12" fill="#64748b">같은 가중치 W를</text>
+  <text x="990" y="246" font-size="12" fill="#64748b">모든 시점이 공유</text>
+  <!-- BPTT arrow -->
+  <line x1="820" y1="360" x2="450" y2="360" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#u6r)"/>
+  <text x="635" y="352" font-size="12" fill="#ef4444" text-anchor="middle">역전파는 시간을 거슬러(BPTT) — 길어지면 기울기 소실·폭주</text>
+</svg>

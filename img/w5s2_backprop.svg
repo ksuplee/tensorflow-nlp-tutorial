@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">딥 러닝 학습 사이클</text>
+  <defs>
+    <marker id="c5" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker>
+  </defs>
+  <!-- 4 stages around a loop -->
+  <rect x="90" y="150" width="200" height="110" rx="12" fill="#1e3a8a"/>
+  <text x="190" y="190" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">① 순전파</text>
+  <text x="190" y="216" font-size="13" fill="#dbeafe" text-anchor="middle">Y = XW + B</text>
+  <text x="190" y="238" font-size="13" fill="#dbeafe" text-anchor="middle">예측값 생성</text>
+  <rect x="360" y="150" width="200" height="110" rx="12" fill="#2563eb"/>
+  <text x="460" y="190" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">② 손실 계산</text>
+  <text x="460" y="216" font-size="13" fill="#dbeafe" text-anchor="middle">예측 vs 정답</text>
+  <text x="460" y="238" font-size="13" fill="#dbeafe" text-anchor="middle">MSE·크로스 엔트로피</text>
+  <rect x="630" y="150" width="200" height="110" rx="12" fill="#1e3a8a"/>
+  <text x="730" y="190" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">③ 역전파</text>
+  <text x="730" y="216" font-size="13" fill="#dbeafe" text-anchor="middle">기울기 계산</text>
+  <text x="730" y="238" font-size="13" fill="#dbeafe" text-anchor="middle">(연쇄법칙)</text>
+  <rect x="900" y="150" width="200" height="110" rx="12" fill="#2563eb"/>
+  <text x="1000" y="184" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">④ 옵티마이저</text>
+  <text x="1000" y="210" font-size="13" fill="#dbeafe" text-anchor="middle">가중치 갱신</text>
+  <text x="1000" y="232" font-size="13" fill="#dbeafe" text-anchor="middle">SGD·Momentum·Adam</text>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#c5)">
+    <line x1="290" y1="205" x2="356" y2="205"/><line x1="560" y1="205" x2="626" y2="205"/><line x1="830" y1="205" x2="896" y2="205"/>
+  </g>
+  <!-- loop back arrow -->
+  <path d="M 1000 260 C 1000 330, 190 330, 190 264" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#c5)"/>
+  <text x="595" y="322" font-size="14" fill="#64748b" text-anchor="middle">에포크(epoch)만큼 반복 — 배치(batch) 단위로 갱신, 반복(iteration) = 배치 수</text>
+  <!-- optimizer note -->
+  <rect x="120" y="356" width="960" height="46" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="384" font-size="14" fill="#334155" text-anchor="middle">옵티마이저 계보: SGD → +Momentum(관성) → Adagrad·RMSprop(적응 학습률) → Adam(둘의 결합, 기본 선택)</text>
+</svg>

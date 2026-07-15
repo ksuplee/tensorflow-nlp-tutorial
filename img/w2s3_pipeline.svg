@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">실습 전처리 파이프라인 (KoPreprocessor)</text>
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- input -->
+  <rect x="40" y="90" width="200" height="70" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="140" y="120" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">원시 텍스트</text>
+  <text x="140" y="144" font-size="12" fill="#64748b" text-anchor="middle">&lt;b&gt;자연어처리&lt;/b&gt;를…</text>
+  <!-- steps -->
+  <g>
+    <rect x="290" y="90" width="180" height="70" rx="10" fill="#1e3a8a"/>
+    <text x="380" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">normalize()</text>
+    <text x="380" y="144" font-size="12" fill="#dbeafe" text-anchor="middle">유니코드·소문자·정규식</text>
+    <rect x="520" y="90" width="180" height="70" rx="10" fill="#2563eb"/>
+    <text x="610" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">형태소 토큰화</text>
+    <text x="610" y="144" font-size="12" fill="#dbeafe" text-anchor="middle">Okt.morphs(stem=True)</text>
+    <rect x="750" y="90" width="180" height="70" rx="10" fill="#1e3a8a"/>
+    <text x="840" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">불용어 제거</text>
+    <text x="840" y="144" font-size="12" fill="#dbeafe" text-anchor="middle">stopwords·길이 필터</text>
+    <rect x="980" y="90" width="180" height="70" rx="10" fill="#2563eb"/>
+    <text x="1070" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">정제 토큰</text>
+    <text x="1070" y="144" font-size="12" fill="#dbeafe" text-anchor="middle">['자연어','처리',…]</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)">
+    <line x1="240" y1="125" x2="286" y2="125"/>
+    <line x1="470" y1="125" x2="516" y2="125"/>
+    <line x1="700" y1="125" x2="746" y2="125"/>
+    <line x1="930" y1="125" x2="976" y2="125"/>
+  </g>
+  <!-- parallel BPE track -->
+  <rect x="290" y="230" width="640" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="610" y="262" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">병행: BPE 토크나이저 학습 (Hugging Face)</text>
+  <g font-size="14" fill="#334155">
+    <text x="314" y="294">· 도메인 코퍼스로 BpeTrainer(vocab_size=8000) 학습</text>
+    <text x="314" y="320">· 학습한 토크나이저 저장(my_bpe.json) 후 재사용</text>
+  </g>
+  <line x1="610" y1="160" x2="610" y2="228" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+  <!-- reuse note -->
+  <rect x="40" y="230" width="220" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="150" y="262" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">모듈화의 이점</text>
+  <g font-size="13" fill="#64748b">
+    <text x="62" y="292">· 클래스로 재사용</text>
+    <text x="62" y="316">· 실험 일관성·재현성</text>
+    <text x="62" y="340">· 노트북 간 공유 용이</text>
+  </g>
+  <text x="600" y="404" font-size="13" fill="#94a3b8" text-anchor="middle">형태소 토큰화(의미 단위)와 BPE(OOV 강건)를 비교하며 태스크에 맞게 선택한다</text>
+</svg>

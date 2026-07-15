@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="38" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">디코더 블록: 3개의 서브층</text>
+  <defs><marker id="de10" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- decoder column -->
+  <rect x="380" y="380" width="360" height="38" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="560" y="404" font-size="12" fill="#1e3a8a" text-anchor="middle">출력 임베딩 + 포지셔널 인코딩</text>
+  <rect x="380" y="300" width="360" height="56" rx="10" fill="#2563eb"/><text x="560" y="324" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">① 마스크드 셀프 어텐션</text><text x="560" y="344" font-size="11" fill="#dbeafe" text-anchor="middle">룩-어헤드 마스크 (미래 차단)</text>
+  <rect x="380" y="256" width="360" height="30" rx="6" fill="#16a34a"/><text x="560" y="276" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Add &amp; Norm</text>
+  <rect x="380" y="180" width="360" height="56" rx="10" fill="#1e3a8a"/><text x="560" y="204" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">② 인코더–디코더 어텐션</text><text x="560" y="224" font-size="11" fill="#dbeafe" text-anchor="middle">Q=디코더, K=V=인코더 출력</text>
+  <rect x="380" y="136" width="360" height="30" rx="6" fill="#16a34a"/><text x="560" y="156" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Add &amp; Norm</text>
+  <rect x="380" y="86" width="360" height="40" rx="10" fill="#1e3a8a"/><text x="560" y="111" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">③ 피드 포워드(FFNN) + Add &amp; Norm</text>
+  <rect x="380" y="48" width="360" height="28" rx="6" fill="#16a34a"/><text x="560" y="67" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Linear + Softmax → 다음 단어</text>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#de10)">
+    <line x1="560" y1="380" x2="560" y2="358"/><line x1="560" y1="300" x2="560" y2="288"/><line x1="560" y1="256" x2="560" y2="238"/><line x1="560" y1="180" x2="560" y2="168"/><line x1="560" y1="136" x2="560" y2="128"/><line x1="560" y1="86" x2="560" y2="78"/>
+  </g>
+  <!-- encoder output feeding in -->
+  <rect x="60" y="180" width="240" height="80" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="180" y="212" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">인코더 출력</text>
+  <text x="180" y="238" font-size="12" fill="#64748b" text-anchor="middle">Key · Value 제공</text>
+  <line x1="300" y1="208" x2="376" y2="208" stroke="#2563eb" stroke-width="2.5" marker-end="url(#de10)"/>
+  <!-- notes -->
+  <rect x="800" y="90" width="360" height="270" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="980" y="120" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">인코더와의 차이</text>
+  <g font-size="14" fill="#334155">
+    <text x="822" y="156">· 셀프 어텐션에 <tspan font-weight="700" fill="#1e3a8a">룩-어헤드</tspan></text>
+    <text x="840" y="178" font-size="13" fill="#64748b">마스크로 미래 단어 차단</text>
+    <text x="822" y="212">· <tspan font-weight="700" fill="#1e3a8a">인코더–디코더 어텐션</tspan>층</text>
+    <text x="840" y="234" font-size="13" fill="#64748b">추가 (입력 문장 참조)</text>
+    <text x="822" y="268">· 세 서브층 모두</text>
+    <text x="840" y="290" font-size="13" fill="#64748b">Add &amp; Norm으로 감쌈</text>
+    <text x="822" y="324" font-size="13" fill="#94a3b8">→ 인코더 셀프어텐션은</text>
+    <text x="840" y="344" font-size="13" fill="#94a3b8">패딩 마스크만 사용</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 길이가 다른 문장들을 어떻게 한 배치로 묶을까?</text>
+  <!-- variable length sentences -->
+  <text x="80" y="95" font-size="14" fill="#64748b">가변 길이 문장</text>
+  <g font-size="13">
+    <rect x="80" y="108" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="146" y="108" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="212" y="108" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="290" y="128" fill="#64748b">3단어</text>
+    <rect x="80" y="148" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="146" y="148" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="212" y="148" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="278" y="148" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="344" y="148" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="420" y="168" fill="#64748b">5단어</text>
+    <rect x="80" y="188" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/><rect x="146" y="188" width="60" height="30" rx="5" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="220" y="208" fill="#64748b">2단어</text>
+  </g>
+  <text x="480" y="165" font-size="30" fill="#94a3b8">→</text>
+  <!-- padded matrix -->
+  <text x="560" y="95" font-size="14" fill="#64748b">패딩(padding)으로 길이 통일</text>
+  <g font-size="13">
+    <rect x="560" y="108" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="626" y="108" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="692" y="108" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="758" y="108" width="60" height="30" rx="5" fill="#e2e8f0"/><rect x="824" y="108" width="60" height="30" rx="5" fill="#e2e8f0"/>
+    <rect x="560" y="148" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="626" y="148" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="692" y="148" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="758" y="148" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="824" y="148" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/>
+    <rect x="560" y="188" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="626" y="188" width="60" height="30" rx="5" fill="#bfdbfe" stroke="#60a5fa"/><rect x="692" y="188" width="60" height="30" rx="5" fill="#e2e8f0"/><rect x="758" y="188" width="60" height="30" rx="5" fill="#e2e8f0"/><rect x="824" y="188" width="60" height="30" rx="5" fill="#e2e8f0"/>
+  </g>
+  <text x="924" y="128" font-size="13" fill="#94a3b8">← 실제 토큰</text>
+  <text x="924" y="208" font-size="13" fill="#94a3b8">← 0 = 패딩</text>
+  <!-- note -->
+  <rect x="80" y="250" width="1040" height="80" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="280" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">패딩으로 길이를 맞춰 행렬(배치)로 만들되, 마스킹(masking)으로 '0'은 계산에서 무시</text>
+  <text x="600" y="308" font-size="13" fill="#64748b" text-anchor="middle">그래야 GPU가 여러 문장을 한 번에 병렬 처리하면서도, 패딩이 결과를 왜곡하지 않는다</text>
+</svg>

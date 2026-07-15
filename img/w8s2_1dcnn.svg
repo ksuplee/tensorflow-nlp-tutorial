@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">텍스트 분류를 위한 1D CNN</text>
+  <defs><marker id="d18" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- embedding matrix -->
+  <text x="130" y="90" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">임베딩 시퀀스</text>
+  <g font-size="12" fill="#334155" text-anchor="middle">
+    <rect x="70" y="105" width="120" height="30" rx="4" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="125">공짜 (벡터)</text>
+    <rect x="70" y="140" width="120" height="30" rx="4" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="160">경품 (벡터)</text>
+    <rect x="70" y="175" width="120" height="30" rx="4" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="195">지금 (벡터)</text>
+    <rect x="70" y="210" width="120" height="30" rx="4" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="230">클릭 (벡터)</text>
+    <rect x="70" y="245" width="120" height="30" rx="4" fill="#dbeafe" stroke="#93c5fd"/><text x="130" y="265">하세요 (벡터)</text>
+  </g>
+  <!-- kernels -->
+  <rect x="60" y="100" width="140" height="80" fill="none" stroke="#ef4444" stroke-width="2.5"/><text x="230" y="130" font-size="12" fill="#ef4444">2-gram 커널</text>
+  <rect x="62" y="172" width="136" height="108" fill="none" stroke="#16a34a" stroke-width="2.5"/><text x="230" y="230" font-size="12" fill="#16a34a">3-gram 커널</text>
+  <!-- conv arrow -->
+  <line x1="300" y1="190" x2="360" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#d18)"/>
+  <text x="330" y="180" font-size="12" fill="#64748b" text-anchor="middle">합성곱</text>
+  <!-- feature maps -->
+  <text x="440" y="90" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">특성 맵</text>
+  <g>
+    <rect x="400" y="110" width="30" height="120" rx="4" fill="#2563eb"/><rect x="440" y="110" width="30" height="120" rx="4" fill="#1e3a8a"/><rect x="480" y="110" width="30" height="120" rx="4" fill="#2563eb"/>
+  </g>
+  <!-- maxpool arrow -->
+  <line x1="530" y1="170" x2="590" y2="170" stroke="#2563eb" stroke-width="2.5" marker-end="url(#d18)"/>
+  <text x="560" y="160" font-size="12" fill="#64748b" text-anchor="middle">맥스풀링</text>
+  <!-- pooled vector -->
+  <text x="660" y="90" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">최댓값 추출</text>
+  <g>
+    <rect x="630" y="140" width="60" height="30" rx="4" fill="#1e3a8a"/><rect x="630" y="175" width="60" height="30" rx="4" fill="#1e3a8a"/><rect x="630" y="210" width="60" height="30" rx="4" fill="#1e3a8a"/>
+  </g>
+  <text x="660" y="265" font-size="11" fill="#64748b" text-anchor="middle">가장 강한 n-gram 신호</text>
+  <!-- concat + FC -->
+  <line x1="710" y1="190" x2="770" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#d18)"/>
+  <rect x="790" y="150" width="140" height="80" rx="10" fill="#2563eb"/>
+  <text x="860" y="182" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">완전연결</text>
+  <text x="860" y="206" font-size="11" fill="#dbeafe" text-anchor="middle">concat → Dense</text>
+  <line x1="930" y1="190" x2="990" y2="190" stroke="#2563eb" stroke-width="2.5" marker-end="url(#d18)"/>
+  <rect x="1010" y="150" width="150" height="80" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1085" y="180" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">스팸 / 정상</text>
+  <text x="1085" y="206" font-size="11" fill="#64748b" text-anchor="middle">softmax (뉴런 2)</text>
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">커널이 인접 단어(n-gram) 패턴을 포착 → 맥스풀링으로 핵심 신호만 남겨 분류</text>
+  <text x="600" y="358" font-size="13" fill="#64748b" text-anchor="middle">이진 분류지만 출력 뉴런 2개 + 소프트맥스로 구현하기도 한다</text>
+</svg>

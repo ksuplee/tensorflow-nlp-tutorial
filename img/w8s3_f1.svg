@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="410" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">평가 지표: 정밀도·재현율·F1 (정확도의 함정)</text>
+  <!-- confusion matrix -->
+  <text x="250" y="86" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">혼동 행렬</text>
+  <g font-size="13" text-anchor="middle">
+    <text x="150" y="112" fill="#64748b">예측 Positive</text><text x="310" y="112" fill="#64748b">예측 Negative</text>
+    <rect x="90" y="122" width="140" height="70" fill="#dbeafe" stroke="#93c5fd"/><text x="160" y="152" font-weight="700" fill="#1e3a8a">TP</text><text x="160" y="174" font-size="11" fill="#64748b">정답</text>
+    <rect x="240" y="122" width="140" height="70" fill="#fee2e2" stroke="#fca5a5"/><text x="310" y="152" font-weight="700" fill="#b91c1c">FN</text><text x="310" y="174" font-size="11" fill="#64748b">놓침</text>
+    <rect x="90" y="192" width="140" height="70" fill="#fee2e2" stroke="#fca5a5"/><text x="160" y="222" font-weight="700" fill="#b91c1c">FP</text><text x="160" y="244" font-size="11" fill="#64748b">오탐</text>
+    <rect x="240" y="192" width="140" height="70" fill="#dbeafe" stroke="#93c5fd"/><text x="310" y="222" font-weight="700" fill="#1e3a8a">TN</text><text x="310" y="244" font-size="11" fill="#64748b">정답</text>
+    <text x="60" y="162" fill="#64748b" transform="rotate(-90 60 162)">실제 P</text>
+    <text x="60" y="232" fill="#64748b" transform="rotate(-90 60 232)">실제 N</text>
+  </g>
+  <!-- metrics -->
+  <g font-size="15" fill="#334155">
+    <rect x="440" y="110" width="340" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="460" y="134" font-weight="700" fill="#1e3a8a">정밀도(Precision) = TP / (TP+FP)</text>
+    <text x="460" y="154" font-size="12" fill="#64748b">"찾았다고 한 것" 중 진짜 비율</text>
+    <rect x="440" y="172" width="340" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="460" y="196" font-weight="700" fill="#1e3a8a">재현율(Recall) = TP / (TP+FN)</text>
+    <text x="460" y="216" font-size="12" fill="#64748b">"실제 정답" 중 찾아낸 비율</text>
+    <rect x="440" y="234" width="340" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="460" y="258" font-weight="700" fill="#1e3a8a">F1 = 2·(정밀도·재현율)/(정밀도+재현율)</text>
+    <text x="460" y="278" font-size="12" fill="#64748b">정밀도와 재현율의 조화 평균</text>
+  </g>
+  <!-- accuracy trap -->
+  <rect x="810" y="110" width="350" height="176" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="985" y="140" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">정확도의 함정</text>
+  <g font-size="14" fill="#334155">
+    <text x="832" y="172">NER은 대부분의 토큰이 'O'</text>
+    <text x="832" y="200">→ 아무 개체도 못 찾아도</text>
+    <text x="832" y="228">   정확도(Accuracy) 74%!</text>
+    <text x="832" y="262" fill="#b91c1c" font-weight="700">그래서 F1으로 평가해야 한다</text>
+  </g>
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">클래스 불균형이 심한 태깅에서는 정확도가 성능을 과대평가한다</text>
+  <text x="600" y="360" font-size="13" fill="#64748b" text-anchor="middle">sklearn.metrics.classification_report 로 클래스별 정밀도·재현율·F1을 확인</text>
+</svg>

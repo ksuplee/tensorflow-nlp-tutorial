@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">스케일드 점곱 셀프 어텐션과 멀티 헤드</text>
+  <defs><marker id="sa10" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- Q K V from input -->
+  <rect x="60" y="90" width="150" height="50" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="135" y="121" font-size="13" fill="#1e3a8a" text-anchor="middle">입력 단어 벡터</text>
+  <g font-size="13" text-anchor="middle" font-weight="700">
+    <rect x="60" y="180" width="150" height="44" rx="8" fill="#2563eb"/><text x="135" y="207" fill="#fff">Query (Q)</text>
+    <rect x="60" y="234" width="150" height="44" rx="8" fill="#1e3a8a"/><text x="135" y="261" fill="#fff">Key (K)</text>
+    <rect x="60" y="288" width="150" height="44" rx="8" fill="#2563eb"/><text x="135" y="315" fill="#fff">Value (V)</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="1.5" marker-end="url(#sa10)"><line x1="135" y1="140" x2="135" y2="178"/></g>
+  <text x="135" y="360" font-size="12" fill="#64748b" text-anchor="middle">각각 WQ·WK·WV로 생성</text>
+  <!-- formula path -->
+  <rect x="270" y="150" width="200" height="60" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="370" y="176" font-size="13" fill="#1e3a8a" text-anchor="middle">① Q·Kᵀ (유사도)</text><text x="370" y="196" font-size="11" fill="#64748b" text-anchor="middle">√dₖ로 스케일링</text>
+  <rect x="270" y="230" width="200" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0"/><text x="370" y="256" font-size="13" fill="#1e3a8a" text-anchor="middle">② softmax → 가중치</text>
+  <rect x="270" y="302" width="200" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="370" y="328" font-size="13" fill="#1e3a8a" text-anchor="middle">③ 가중치 · V</text>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#sa10)"><line x1="210" y1="202" x2="266" y2="180"/><line x1="370" y1="210" x2="370" y2="228"/><line x1="370" y1="282" x2="370" y2="300"/></g>
+  <!-- formula banner -->
+  <rect x="510" y="150" width="320" height="70" rx="10" fill="#1e3a8a"/>
+  <text x="670" y="182" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">Attention(Q,K,V)</text>
+  <text x="670" y="206" font-size="14" fill="#dbeafe" text-anchor="middle">= softmax(QKᵀ/√dₖ) V</text>
+  <line x1="470" y1="185" x2="506" y2="185" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sa10)"/>
+  <!-- multihead -->
+  <rect x="510" y="250" width="650" height="140" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="835" y="280" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">멀티 헤드 어텐션 (num_heads = 8)</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="540" y="300" width="90" height="50" rx="6" fill="#2563eb"/><text x="585" y="322" fill="#fff">head 1</text><text x="585" y="340" fill="#dbeafe" font-size="10">관점 A</text>
+    <rect x="640" y="300" width="90" height="50" rx="6" fill="#2563eb"/><text x="685" y="322" fill="#fff">head 2</text><text x="685" y="340" fill="#dbeafe" font-size="10">관점 B</text>
+    <text x="760" y="330" font-size="16" fill="#94a3b8">· · ·</text>
+    <rect x="790" y="300" width="90" height="50" rx="6" fill="#2563eb"/><text x="835" y="322" fill="#fff">head 8</text>
+    <rect x="920" y="300" width="200" height="50" rx="8" fill="#1e3a8a"/><text x="1020" y="322" fill="#fff" font-weight="700">concat + 선형변환</text><text x="1020" y="340" fill="#dbeafe" font-size="10">(seq_len, d_model)</text>
+  </g>
+  <text x="835" y="376" font-size="12" fill="#64748b" text-anchor="middle">여러 헤드가 서로 다른 관계(문법·의미 등)를 동시에 포착</text>
+  <text x="1130" y="330" font-size="0"> </text>
+  <text x="600" y="410" font-size="0"> </text>
+</svg>

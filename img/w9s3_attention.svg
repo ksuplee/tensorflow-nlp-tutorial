@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">점곱 어텐션(Dot-Product Attention)의 4단계</text>
+  <text x="600" y="68" font-size="14" fill="#64748b" text-anchor="middle">Q = 디코더 은닉상태 sₜ,  K·V = 모든 인코더 은닉상태 h₁…h_N</text>
+  <defs><marker id="at9" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <!-- step boxes -->
+  <rect x="40" y="100" width="260" height="240" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="170" y="130" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">① 어텐션 스코어</text>
+  <text x="170" y="158" font-size="13" fill="#334155" text-anchor="middle">eₜ = sₜ · hᵢ (내적)</text>
+  <g font-size="12">
+    <rect x="70" y="180" width="200" height="24" rx="4" fill="#1e3a8a"/><rect x="70" y="180" width="150" height="24" rx="4" fill="#1e3a8a"/>
+    <rect x="70" y="210" width="200" height="24" rx="4" fill="#e2e8f0"/><rect x="70" y="210" width="80" height="24" rx="4" fill="#2563eb"/>
+    <rect x="70" y="240" width="200" height="24" rx="4" fill="#e2e8f0"/><rect x="70" y="240" width="180" height="24" rx="4" fill="#2563eb"/>
+    <rect x="70" y="270" width="200" height="24" rx="4" fill="#e2e8f0"/><rect x="70" y="270" width="50" height="24" rx="4" fill="#2563eb"/>
+  </g>
+  <text x="170" y="318" font-size="12" fill="#64748b" text-anchor="middle">각 hᵢ와의 유사도</text>
+  <line x1="300" y1="220" x2="336" y2="220" stroke="#2563eb" stroke-width="2.5" marker-end="url(#at9)"/>
+  <rect x="340" y="100" width="260" height="240" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="470" y="130" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">② 어텐션 분포</text>
+  <text x="470" y="158" font-size="13" fill="#334155" text-anchor="middle">αₜ = softmax(eₜ)</text>
+  <g font-size="12">
+    <rect x="370" y="180" width="70" height="130" rx="4" fill="#1e3a8a"/><text x="405" y="330" text-anchor="middle" fill="#64748b">0.6</text>
+    <rect x="450" y="230" width="70" height="80" rx="4" fill="#2563eb"/><text x="485" y="330" text-anchor="middle" fill="#64748b">0.3</text>
+    <rect x="530" y="280" width="50" height="30" rx="4" fill="#93c5fd"/><text x="555" y="330" text-anchor="middle" fill="#64748b">0.1</text>
+  </g>
+  <text x="470" y="352" font-size="12" fill="#64748b" text-anchor="middle">합=1인 가중치</text>
+  <line x1="600" y1="220" x2="636" y2="220" stroke="#2563eb" stroke-width="2.5" marker-end="url(#at9)"/>
+  <rect x="640" y="100" width="260" height="240" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="770" y="130" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">③ 어텐션 값</text>
+  <text x="770" y="158" font-size="13" fill="#334155" text-anchor="middle">cₜ = Σ αᵢ · hᵢ</text>
+  <text x="770" y="190" font-size="13" fill="#334155" text-anchor="middle">(가중합)</text>
+  <rect x="700" y="215" width="140" height="60" rx="10" fill="#2563eb"/>
+  <text x="770" y="242" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">컨텍스트</text>
+  <text x="770" y="262" font-size="12" fill="#dbeafe" text-anchor="middle">벡터 cₜ</text>
+  <text x="770" y="308" font-size="12" fill="#64748b" text-anchor="middle">주목한 정보의 요약</text>
+  <line x1="900" y1="220" x2="936" y2="220" stroke="#2563eb" stroke-width="2.5" marker-end="url(#at9)"/>
+  <rect x="940" y="100" width="220" height="240" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1050" y="130" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">④ 결합·예측</text>
+  <text x="1050" y="160" font-size="13" fill="#334155" text-anchor="middle">[cₜ ; sₜ] 연결</text>
+  <rect x="970" y="180" width="160" height="40" rx="8" fill="#dbeafe" stroke="#93c5fd"/><text x="1050" y="205" font-size="12" fill="#1e3a8a" text-anchor="middle">concat</text>
+  <rect x="970" y="235" width="160" height="40" rx="8" fill="#1e3a8a"/><text x="1050" y="260" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">출력 단어 예측</text>
+  <text x="1050" y="308" font-size="12" fill="#64748b" text-anchor="middle">softmax로 다음 단어</text>
+  <text x="600" y="388" font-size="14" fill="#334155" text-anchor="middle">디코더가 각 단어를 낼 때 입력 전체를 다시 보고 중요한 곳에 가중치를 준다 → 긴 문장에 강함</text>
+</svg>

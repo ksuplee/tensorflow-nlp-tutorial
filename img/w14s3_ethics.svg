@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="420" viewBox="0 0 1150 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="420" fill="#ffffff"/>
+  <text x="575" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">책임 있는 AI의 핵심 쟁점</text>
+  <g text-anchor="middle">
+    <rect x="40" y="72" width="540" height="150" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="310" y="106" font-size="19" font-weight="700" fill="#1e3a8a">① 편향·공정성</text>
+    <text x="310" y="140" font-size="14.5" fill="#475569">학습 데이터의 사회적 편향이 출력에 반영</text>
+    <text x="310" y="166" font-size="14.5" fill="#475569">→ 성별·인종·지역 등 차별적 결과 위험</text>
+    <text x="310" y="196" font-size="13" fill="#64748b">대응: 데이터 점검·편향 측정·완화 기법</text>
+
+    <rect x="600" y="72" width="540" height="150" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="870" y="106" font-size="19" font-weight="700" fill="#1e3a8a">② 프라이버시</text>
+    <text x="870" y="140" font-size="14.5" fill="#475569">개인정보가 학습·출력에 노출될 위험</text>
+    <text x="870" y="166" font-size="14.5" fill="#475569">→ 민감정보 유출·기억(memorization)</text>
+    <text x="870" y="196" font-size="13" fill="#64748b">대응: 비식별화·데이터 최소화·접근 통제</text>
+
+    <rect x="40" y="238" width="540" height="150" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="310" y="272" font-size="19" font-weight="700" fill="#1e3a8a">③ 저작권·출처</text>
+    <text x="310" y="306" font-size="14.5" fill="#475569">학습·생성물의 저작권 귀속 문제</text>
+    <text x="310" y="332" font-size="14.5" fill="#475569">→ 무단 사용·표절 논란</text>
+    <text x="310" y="362" font-size="13" fill="#64748b">대응: 출처 표기(RAG)·라이선스 확인</text>
+
+    <rect x="600" y="238" width="540" height="150" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="870" y="272" font-size="19" font-weight="700" fill="#1e3a8a">④ 안전성·오남용</text>
+    <text x="870" y="306" font-size="14.5" fill="#475569">유해·허위 정보 생성, 악용 가능성</text>
+    <text x="870" y="332" font-size="14.5" fill="#475569">→ 환각·딥페이크·자동화된 오남용</text>
+    <text x="870" y="362" font-size="13" fill="#64748b">대응: 안전장치·검증·사람 감독(HITL)</text>
+  </g>
+</svg>
