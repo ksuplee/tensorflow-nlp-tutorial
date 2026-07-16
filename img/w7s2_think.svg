@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 단어끼리 더하고 빼면?</text>
+  <!-- equation -->
+  <rect x="180" y="80" width="840" height="70" rx="12" fill="#1e3a8a"/>
+  <text x="600" y="125" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">king  −  man  +  woman  ≈  queen</text>
+  <!-- vector space -->
+  <rect x="180" y="175" width="500" height="150" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <g stroke="#334155" stroke-width="1.5"><line x1="210" y1="300" x2="640" y2="300"/><line x1="210" y1="300" x2="210" y2="195"/></g>
+  <circle cx="300" cy="270" r="7" fill="#1e3a8a"/><text x="285" y="262" font-size="13" fill="#1e3a8a" text-anchor="end">man</text>
+  <circle cx="360" cy="230" r="7" fill="#2563eb"/><text x="345" y="222" font-size="13" fill="#2563eb" text-anchor="end">woman</text>
+  <circle cx="500" cy="255" r="7" fill="#1e3a8a"/><text x="515" y="252" font-size="13" fill="#1e3a8a">king</text>
+  <circle cx="560" cy="215" r="7" fill="#2563eb"/><text x="575" y="212" font-size="13" fill="#2563eb">queen</text>
+  <line x1="300" y1="270" x2="360" y2="230" stroke="#ef4444" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="500" y1="255" x2="560" y2="215" stroke="#ef4444" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="425" y="320" font-size="12" fill="#ef4444" text-anchor="middle">두 '성별 벡터'가 평행</text>
+  <!-- note -->
+  <rect x="710" y="175" width="310" height="150" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="865" y="205" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">단어 유추(analogy)</text>
+  <g font-size="14" fill="#334155">
+    <text x="732" y="238">임베딩이 의미 관계를</text>
+    <text x="732" y="264">벡터의 방향으로 담아,</text>
+    <text x="732" y="290">덧셈·뺄셈으로 유추가 된다</text>
+  </g>
+  <text x="600" y="348" font-size="14" fill="#334155" text-anchor="middle">이런 벡터를 어떻게 학습할까? → Word2Vec (CBOW · Skip-gram)</text>
+</svg>

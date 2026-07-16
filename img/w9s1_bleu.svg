@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">번역 평가 지표: BLEU score</text>
+  <!-- example -->
+  <rect x="40" y="70" width="560" height="130" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="66" y="100" font-size="14" fill="#64748b">기계 번역(candidate)</text>
+  <rect x="66" y="110" width="500" height="30" rx="6" fill="#dbeafe"/><text x="82" y="131" font-size="14" fill="#1e3a8a">the cat is on the mat</text>
+  <text x="66" y="165" font-size="14" fill="#64748b">사람 번역(reference)</text>
+  <rect x="66" y="172" width="500" height="24" rx="6" fill="#eff6ff"/><text x="82" y="189" font-size="13" fill="#334155">the cat is sitting on the mat</text>
+  <!-- steps -->
+  <rect x="640" y="70" width="520" height="130" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="900" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">계산 과정</text>
+  <g font-size="14" fill="#334155">
+    <text x="662" y="130">① n-gram 정밀도 pₙ (n=1~4): 겹치는 n-gram 비율</text>
+    <text x="662" y="158">② 중복 단어 보정(clipping)</text>
+    <text x="662" y="186">③ 짧은 번역에 길이 페널티(Brevity Penalty)</text>
+  </g>
+  <!-- formula -->
+  <rect x="40" y="230" width="1120" height="70" rx="12" fill="#1e3a8a"/>
+  <text x="600" y="275" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">BLEU = BP × exp( Σ wₙ · log pₙ )   (n-gram 정밀도의 기하 평균 × 길이 페널티)</text>
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">0~1 값, 1에 가까울수록 좋은 번역 · 전체 문장 집합에서 유용(단일 문장·다양한 표현엔 한계)</text>
+  <text x="600" y="358" font-size="13" fill="#64748b" text-anchor="middle">보통 N=4, 가중치 wₙ = 0.25 (동일 가중치)</text>
+</svg>

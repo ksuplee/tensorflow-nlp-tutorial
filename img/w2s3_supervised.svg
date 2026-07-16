@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="420" fill="#ffffff"/>
+  <text x="550" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">지도 학습 데이터 — 스팸 메일 분류 예시</text>
+  <g>
+    <text x="70" y="82" font-size="16" font-weight="700" fill="#1e3a8a">훈련 데이터 (Training)</text>
+    <rect x="60" y="98" width="640" height="150" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <line x1="520" y1="98" x2="520" y2="248" stroke="#93c5fd" stroke-width="2"/>
+    <text x="290" y="126" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">텍스트(메일 내용) = X_train</text>
+    <text x="610" y="126" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">레이블 = y_train</text>
+    <g font-size="13" fill="#334155">
+      <text x="80" y="158">당신에게 드리는 마지막 혜택!  ...</text>
+      <text x="610" y="158" text-anchor="middle" fill="#b91c1c">스팸</text>
+      <text x="80" y="188">내일 뵐 수 있을지 확인 부탁 ...</text>
+      <text x="610" y="188" text-anchor="middle" fill="#15803d">정상</text>
+      <text x="80" y="218">(광고) 멋있어질 수 있는 ...</text>
+      <text x="610" y="218" text-anchor="middle" fill="#b91c1c">스팸</text>
+    </g>
+
+    <text x="760" y="82" font-size="16" font-weight="700" fill="#1e3a8a">테스트 데이터 (Test)</text>
+    <rect x="750" y="98" width="300" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="900" y="130" font-size="14" fill="#334155" text-anchor="middle">X_test (시험지)</text>
+    <text x="900" y="165" font-size="14" fill="#334155" text-anchor="middle">y_test (시험 정답)</text>
+    <text x="900" y="210" font-size="12" fill="#64748b" text-anchor="middle">학습에 쓰지 않은 데이터로</text>
+    <text x="900" y="228" font-size="12" fill="#64748b" text-anchor="middle">최종 성능 평가</text>
+
+    <text x="550" y="300" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">지도 학습 절차</text>
+    <text x="550" y="332" font-size="14" fill="#334155" text-anchor="middle">데이터 수집 → 전처리 → 모델 학습 → 모델 평가 → 모델 튜닝</text>
+    <text x="550" y="368" font-size="13" fill="#64748b" text-anchor="middle">분류(Classification): 범주 예측 (스팸 여부)   ·   회귀(Regression): 연속값 예측 (주택 가격)</text>
+  </g>
+</svg>

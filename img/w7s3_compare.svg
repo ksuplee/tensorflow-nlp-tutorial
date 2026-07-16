@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="400" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">다양한 임베딩 비교</text>
+  <!-- header -->
+  <rect x="40" y="66" width="200" height="48" rx="8" fill="#1e3a8a"/><text x="140" y="96" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">임베딩</text>
+  <rect x="245" y="66" width="470" height="48" rx="8" fill="#2563eb"/><text x="480" y="96" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">핵심 아이디어</text>
+  <rect x="720" y="66" width="440" height="48" rx="8" fill="#1e3a8a"/><text x="940" y="96" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">강점</text>
+  <g font-size="14">
+    <rect x="40" y="120" width="1120" height="62" fill="#eff6ff"/>
+    <text x="60" y="147" font-weight="700" fill="#1e3a8a">Word2Vec</text><text x="60" y="169" font-size="12" fill="#64748b">CBOW/Skip-gram</text>
+    <text x="265" y="147" fill="#334155">주변 단어 예측(예측 기반)</text><text x="265" y="169" font-size="12" fill="#64748b">SGNS로 효율화</text>
+    <text x="740" y="158" fill="#334155">단어 유추·유사도, 빠른 학습</text>
+    <rect x="40" y="184" width="1120" height="62" fill="#f8fafc"/>
+    <text x="60" y="211" font-weight="700" fill="#1e3a8a">GloVe</text><text x="60" y="233" font-size="12" fill="#64748b">2014, Stanford</text>
+    <text x="265" y="211" fill="#334155">전역 동시등장 행렬 + 예측 결합</text><text x="265" y="233" font-size="12" fill="#64748b">동시등장 확률의 비(ratio) 활용</text>
+    <text x="740" y="222" fill="#334155">전역 통계 반영, 안정적 유추</text>
+    <rect x="40" y="248" width="1120" height="62" fill="#eff6ff"/>
+    <text x="60" y="275" font-weight="700" fill="#1e3a8a">FastText</text><text x="60" y="297" font-size="12" fill="#64748b">Facebook</text>
+    <text x="265" y="275" fill="#334155">단어를 문자 n-gram의 합으로 표현</text><text x="265" y="297" font-size="12" fill="#64748b">한국어는 자모 단위(ㅁㅗㄹ)</text>
+    <text x="740" y="286" fill="#334155">OOV·형태학 강건(활용형 처리)</text>
+    <rect x="40" y="312" width="1120" height="62" fill="#f8fafc"/>
+    <text x="60" y="339" font-weight="700" fill="#1e3a8a">ELMo</text><text x="60" y="361" font-size="12" fill="#64748b">2018, 문맥</text>
+    <text x="265" y="339" fill="#334155">양방향 언어모델(biLM) 기반</text><text x="265" y="361" font-size="12" fill="#64748b">문맥에 따라 임베딩이 달라짐</text>
+    <text x="740" y="350" fill="#334155">다의어 처리 → BERT·GPT로 발전</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1"><line x1="40" y1="184" x2="1160" y2="184"/><line x1="40" y1="248" x2="1160" y2="248"/><line x1="40" y1="312" x2="1160" y2="312"/><line x1="245" y1="120" x2="245" y2="374"/><line x1="720" y1="120" x2="720" y2="374"/></g>
+</svg>

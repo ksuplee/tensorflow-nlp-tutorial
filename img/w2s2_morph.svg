@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="470" fill="#ffffff"/>
+  <text x="600" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">한국어 형태소 분석: 어절에서 형태소·품사로</text>
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- sentence -->
+  <text x="70" y="95" font-size="15" fill="#64748b">입력 문장</text>
+  <rect x="70" y="108" width="1060" height="48" rx="8" fill="#1e3a8a"/>
+  <text x="600" y="139" font-size="19" font-weight="700" fill="#fff" text-anchor="middle">민수가 참고 교재를 읽었다</text>
+  <!-- 어절 -->
+  <text x="70" y="196" font-size="15" fill="#64748b">어절(띄어쓰기 단위)</text>
+  <g font-size="16" fill="#1e3a8a" font-weight="700">
+    <rect x="70" y="208" width="150" height="44" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="145" y="236" text-anchor="middle">민수가</text>
+    <rect x="240" y="208" width="150" height="44" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="315" y="236" text-anchor="middle">참고</text>
+    <rect x="410" y="208" width="150" height="44" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="485" y="236" text-anchor="middle">교재를</text>
+    <rect x="580" y="208" width="150" height="44" rx="8" fill="#eff6ff" stroke="#bfdbfe"/><text x="655" y="236" text-anchor="middle">읽었다</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#a2)">
+    <line x1="145" y1="252" x2="145" y2="286"/>
+    <line x1="315" y1="252" x2="315" y2="286"/>
+    <line x1="485" y1="252" x2="485" y2="286"/>
+    <line x1="655" y1="252" x2="655" y2="286"/>
+  </g>
+  <!-- 형태소 + 품사 -->
+  <text x="70" y="308" font-size="15" fill="#64748b">형태소 + 품사</text>
+  <g font-size="14">
+    <rect x="70" y="292" width="150" height="80" rx="8" fill="#ffffff" stroke="#dbeafe"/>
+    <text x="145" y="320" text-anchor="middle" fill="#1e3a8a" font-weight="700">민수</text><text x="145" y="340" text-anchor="middle" fill="#64748b">명사(자립)</text>
+    <text x="145" y="362" text-anchor="middle" fill="#334155">가 · 조사(의존)</text>
+    <rect x="240" y="292" width="150" height="80" rx="8" fill="#ffffff" stroke="#dbeafe"/>
+    <text x="315" y="330" text-anchor="middle" fill="#1e3a8a" font-weight="700">참고</text><text x="315" y="352" text-anchor="middle" fill="#64748b">명사(자립)</text>
+    <rect x="410" y="292" width="150" height="80" rx="8" fill="#ffffff" stroke="#dbeafe"/>
+    <text x="485" y="320" text-anchor="middle" fill="#1e3a8a" font-weight="700">교재</text><text x="485" y="340" text-anchor="middle" fill="#64748b">명사(자립)</text>
+    <text x="485" y="362" text-anchor="middle" fill="#334155">를 · 조사(의존)</text>
+    <rect x="580" y="292" width="150" height="80" rx="8" fill="#ffffff" stroke="#dbeafe"/>
+    <text x="655" y="318" text-anchor="middle" fill="#1e3a8a" font-weight="700">읽</text><text x="655" y="337" text-anchor="middle" fill="#64748b">동사어간</text>
+    <text x="655" y="360" text-anchor="middle" fill="#334155">었·다 · 어미</text>
+  </g>
+  <!-- right note -->
+  <rect x="770" y="208" width="360" height="164" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="950" y="240" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">교착어의 특성</text>
+  <g font-size="14" fill="#334155">
+    <text x="792" y="272">· 자립형태소: 홀로 쓰임(명사 등)</text>
+    <text x="792" y="300">· 의존형태소: 조사·어미(붙어 쓰임)</text>
+    <text x="792" y="328">· 같은 표기, 다른 품사: "못"(명사/부사)</text>
+    <text x="792" y="356">→ 공백 분리로 부족, 형태소 분석 필요</text>
+  </g>
+  <text x="600" y="452" font-size="13" fill="#94a3b8" text-anchor="middle">KoNLPy(Okt·Mecab·Komoran) 등 형태소 분석기가 이 과정을 자동화한다</text>
+</svg>

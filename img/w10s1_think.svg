@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="350" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · RNN 없이 어텐션만으로 번역할 수 있을까?</text>
+  <!-- RNN limits -->
+  <rect x="60" y="80" width="520" height="220" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="320" y="110" font-size="16" font-weight="700" fill="#b91c1c" text-anchor="middle">RNN·LSTM의 한계</text>
+  <g font-size="14" fill="#334155">
+    <text x="86" y="146">· 앞 단어를 처리해야 다음 단어 처리</text>
+    <text x="104" y="168" font-size="13" fill="#64748b">→ 순차적이라 병렬화 불가(느림)</text>
+    <text x="86" y="202">· 긴 시퀀스에서 정보 손실·흐려짐</text>
+    <text x="104" y="224" font-size="13" fill="#64748b">→ 장기 의존성 처리 한계</text>
+    <text x="86" y="258">· 컨텍스트 벡터 병목(9주차)</text>
+  </g>
+  <!-- transformer -->
+  <rect x="620" y="80" width="520" height="220" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="880" y="110" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">트랜스포머(2017)</text>
+  <g font-size="14" fill="#334155">
+    <text x="646" y="146">· RNN을 <tspan font-weight="700" fill="#1e3a8a">완전히 제거</tspan>, 어텐션이 핵심</text>
+    <text x="646" y="180">· <tspan font-weight="700" fill="#1e3a8a">셀프 어텐션</tspan>: 모든 단어가 서로 참조</text>
+    <text x="664" y="202" font-size="13" fill="#64748b">→ 문맥을 깊이 이해</text>
+    <text x="646" y="236">· 시퀀스 전체를 <tspan font-weight="700" fill="#1e3a8a">동시에(병렬)</tspan> 처리</text>
+    <text x="664" y="258" font-size="13" fill="#64748b">→ 학습 속도 대폭 향상</text>
+  </g>
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">"Attention Is All You Need" — 이후 BERT·GPT·T5로 이어지는 현대 NLP의 토대</text>
+</svg>

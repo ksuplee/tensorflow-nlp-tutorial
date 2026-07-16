@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">퍼셉트론에서 다층 퍼셉트론(MLP)으로</text>
+  <defs>
+    <marker id="p5" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+  </defs>
+  <!-- left: single perceptron -->
+  <rect x="40" y="70" width="540" height="340" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="310" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">단층 퍼셉트론 (뉴런 1개)</text>
+  <circle cx="120" cy="170" r="26" fill="#dbeafe" stroke="#93c5fd"/><text x="120" y="176" font-size="15" fill="#1e3a8a" text-anchor="middle">x₁</text>
+  <circle cx="120" cy="260" r="26" fill="#dbeafe" stroke="#93c5fd"/><text x="120" y="266" font-size="15" fill="#1e3a8a" text-anchor="middle">x₂</text>
+  <circle cx="330" cy="215" r="34" fill="#1e3a8a"/><text x="330" y="210" font-size="13" fill="#fff" text-anchor="middle">Σ w·x</text><text x="330" y="228" font-size="12" fill="#dbeafe" text-anchor="middle">+ b</text>
+  <rect x="410" y="188" width="120" height="54" rx="8" fill="#2563eb"/><text x="470" y="212" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">계단 함수</text><text x="470" y="230" font-size="11" fill="#dbeafe" text-anchor="middle">임계치 → 0/1</text>
+  <g stroke="#2563eb" stroke-width="2" marker-end="url(#p5)">
+    <line x1="146" y1="178" x2="300" y2="205"/><line x1="146" y1="252" x2="300" y2="225"/>
+    <line x1="364" y1="215" x2="406" y2="215"/>
+  </g>
+  <text x="200" y="165" font-size="12" fill="#64748b">w₁</text><text x="200" y="258" font-size="12" fill="#64748b">w₂</text>
+  <text x="310" y="320" font-size="13" fill="#334155" text-anchor="middle">AND · OR · NAND 게이트는 가능</text>
+  <text x="310" y="344" font-size="13" fill="#ef4444" text-anchor="middle">XOR은 직선 하나로 나눌 수 없음 (불가)</text>
+  <!-- right: MLP -->
+  <rect x="620" y="70" width="540" height="340" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="890" y="100" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">다층 퍼셉트론 (은닉층 추가)</text>
+  <g>
+    <circle cx="700" cy="175" r="20" fill="#dbeafe" stroke="#93c5fd"/><circle cx="700" cy="255" r="20" fill="#dbeafe" stroke="#93c5fd"/>
+    <circle cx="890" cy="150" r="20" fill="#bfdbfe" stroke="#60a5fa"/><circle cx="890" cy="215" r="20" fill="#bfdbfe" stroke="#60a5fa"/><circle cx="890" cy="280" r="20" fill="#bfdbfe" stroke="#60a5fa"/>
+    <circle cx="1080" cy="215" r="20" fill="#1e3a8a"/>
+  </g>
+  <g stroke="#93c5fd" stroke-width="1.3">
+    <line x1="720" y1="175" x2="870" y2="150"/><line x1="720" y1="175" x2="870" y2="215"/><line x1="720" y1="175" x2="870" y2="280"/>
+    <line x1="720" y1="255" x2="870" y2="150"/><line x1="720" y1="255" x2="870" y2="215"/><line x1="720" y1="255" x2="870" y2="280"/>
+    <line x1="910" y1="150" x2="1060" y2="215"/><line x1="910" y1="215" x2="1060" y2="215"/><line x1="910" y1="280" x2="1060" y2="215"/>
+  </g>
+  <text x="700" y="315" font-size="13" fill="#64748b" text-anchor="middle">입력층</text>
+  <text x="890" y="325" font-size="13" fill="#64748b" text-anchor="middle">은닉층(hidden)</text>
+  <text x="1080" y="255" font-size="13" fill="#64748b" text-anchor="middle">출력층</text>
+  <text x="890" y="360" font-size="13" fill="#334155" text-anchor="middle">은닉층을 두면 XOR도 해결 가능</text>
+  <text x="890" y="384" font-size="13" fill="#334155" text-anchor="middle">은닉층 2개 이상 = 심층 신경망(DNN) → 딥 러닝</text>
+</svg>

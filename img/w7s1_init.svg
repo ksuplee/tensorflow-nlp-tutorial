@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">워드 임베딩의 두 가지 초기화</text>
+  <!-- random init -->
+  <rect x="40" y="70" width="540" height="250" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="40" y="70" width="540" height="48" rx="12" fill="#2563eb"/>
+  <text x="310" y="101" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">① 랜덤 초기화 임베딩</text>
+  <text x="66" y="150" font-size="15" fill="#334155">임베딩 테이블을 무작위 값으로 시작</text>
+  <text x="66" y="182" font-size="15" fill="#334155">→ 태스크(분류·NER 등)를 학습하며</text>
+  <text x="86" y="208" font-size="15" fill="#334155">   역전파로 임베딩이 함께 최적화</text>
+  <rect x="66" y="234" width="488" height="66" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="86" y="262" font-size="13" fill="#64748b" font-family="monospace">nn.Embedding(vocab, 256)</text>
+  <text x="86" y="286" font-size="12" fill="#94a3b8">해당 태스크 데이터에 특화되지만, 데이터가 적으면 불리</text>
+  <!-- pretrained -->
+  <rect x="620" y="70" width="540" height="250" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="620" y="70" width="540" height="48" rx="12" fill="#1e3a8a"/>
+  <text x="890" y="101" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">② 사전 훈련된 임베딩</text>
+  <text x="646" y="150" font-size="15" fill="#334155">방대한 코퍼스로 미리 학습된 벡터를 로드</text>
+  <text x="646" y="182" font-size="15" fill="#334155">→ Word2Vec · GloVe · FastText</text>
+  <text x="646" y="214" font-size="15" fill="#334155">→ 그대로 쓰거나(freeze) 미세조정</text>
+  <rect x="646" y="234" width="488" height="66" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="666" y="262" font-size="13" fill="#64748b" font-family="monospace">gensim.models.KeyedVectors 로드</text>
+  <text x="666" y="286" font-size="12" fill="#16a34a">적은 데이터에서도 좋은 출발점 → 성능 향상</text>
+</svg>

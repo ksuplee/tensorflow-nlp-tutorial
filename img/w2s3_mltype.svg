@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="390" viewBox="0 0 1100 390" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="390" fill="#ffffff"/>
+  <text x="550" y="40" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle">머신러닝 학습 방법의 유형</text>
+  <g text-anchor="middle">
+    <text x="120" y="95" font-size="14" font-weight="700" fill="#64748b" text-anchor="start">구분</text>
+    <text x="120" y="160" font-size="14" fill="#64748b" text-anchor="start">여건</text>
+    <text x="120" y="230" font-size="14" fill="#64748b" text-anchor="start">학습</text>
+    <text x="120" y="300" font-size="14" fill="#64748b" text-anchor="start">활용</text>
+
+    <rect x="220" y="70" width="270" height="270" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="355" y="100" font-size="16" font-weight="700" fill="#1e3a8a">지도 학습</text>
+    <text x="355" y="120" font-size="12" fill="#64748b">Supervised</text>
+    <text x="355" y="162" font-size="14" fill="#334155">Labeled Data</text>
+    <text x="355" y="225" font-size="14" fill="#334155">모델 학습</text>
+    <text x="355" y="245" font-size="12" fill="#64748b">(Model Training)</text>
+    <text x="355" y="300" font-size="14" fill="#334155">예측 모델</text>
+
+    <rect x="510" y="70" width="270" height="270" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="645" y="100" font-size="16" font-weight="700" fill="#1e3a8a">비지도 학습</text>
+    <text x="645" y="120" font-size="12" fill="#64748b">Unsupervised</text>
+    <text x="645" y="162" font-size="14" fill="#334155">Unlabeled Data</text>
+    <text x="645" y="225" font-size="14" fill="#334155">패턴 발견</text>
+    <text x="645" y="245" font-size="12" fill="#64748b">(Pattern Discovery)</text>
+    <text x="645" y="300" font-size="14" fill="#334155">군집·패턴</text>
+
+    <rect x="800" y="70" width="270" height="270" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="935" y="100" font-size="16" font-weight="700" fill="#1e3a8a">강화 학습</text>
+    <text x="935" y="120" font-size="12" fill="#64748b">Reinforcement</text>
+    <text x="935" y="162" font-size="14" fill="#334155">Environment</text>
+    <text x="935" y="220" font-size="14" fill="#334155">행동 / 보상</text>
+    <text x="935" y="240" font-size="12" fill="#64748b">(Action / Reward)</text>
+    <text x="935" y="300" font-size="14" fill="#334155">에이전트·상태</text>
+  </g>
+</svg>

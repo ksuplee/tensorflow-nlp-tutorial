@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="480" viewBox="0 0 1100 480" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1100" height="480" fill="#ffffff"/>
+  <text x="550" y="42" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">스케일링 법칙과 창발 능력</text>
+  <!-- axes -->
+  <line x1="120" y1="400" x2="1020" y2="400" stroke="#334155" stroke-width="2"/>
+  <line x1="120" y1="400" x2="120" y2="90" stroke="#334155" stroke-width="2"/>
+  <text x="570" y="440" font-size="16" fill="#475569" text-anchor="middle">모델·데이터·연산 규모 (로그 스케일) →</text>
+  <text x="70" y="245" font-size="16" fill="#475569" text-anchor="middle" transform="rotate(-90 70 245)">성능 →</text>
+  <!-- smooth scaling curve -->
+  <path d="M120 380 Q400 340 620 250 T1000 120" stroke="#2563eb" stroke-width="4" fill="none"/>
+  <text x="330" y="330" font-size="15" fill="#2563eb">손실 감소(예측 가능한 개선)</text>
+  <!-- emergence jump -->
+  <path d="M620 360 L620 250" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 4"/>
+  <circle cx="620" cy="250" r="7" fill="#ef4444"/>
+  <text x="700" y="215" font-size="16" font-weight="700" fill="#b91c1c">창발 능력(emergent)</text>
+  <text x="700" y="240" font-size="13" fill="#64748b">일정 규모 이상에서</text>
+  <text x="700" y="260" font-size="13" fill="#64748b">추론·ICL 능력이 갑자기 출현</text>
+  <!-- annotations -->
+  <g font-size="13" fill="#64748b" text-anchor="middle">
+    <text x="220" y="395" transform="translate(0,20)">소형</text>
+    <text x="620" y="395" transform="translate(0,20)">중형</text>
+    <text x="980" y="395" transform="translate(0,20)">대형(LLM)</text>
+  </g>
+  <text x="550" y="468" font-size="14" fill="#64748b" text-anchor="middle">※ Kaplan et al.(2020)의 스케일링 법칙: 규모를 키우면 성능이 멱법칙으로 개선된다. 일부 능력은 특정 규모에서 창발한다.</text>
+</svg>

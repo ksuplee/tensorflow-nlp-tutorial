@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 순전파와 역전파</text>
+  <defs>
+    <marker id="f5" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="b5" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/></marker>
+  </defs>
+  <!-- layers -->
+  <g>
+    <rect x="120" y="140" width="130" height="80" rx="10" fill="#dbeafe" stroke="#93c5fd"/><text x="185" y="175" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">입력층</text><text x="185" y="197" font-size="12" fill="#64748b" text-anchor="middle">x</text>
+    <rect x="380" y="140" width="130" height="80" rx="10" fill="#bfdbfe" stroke="#60a5fa"/><text x="445" y="175" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">은닉층</text><text x="445" y="197" font-size="12" fill="#64748b" text-anchor="middle">h</text>
+    <rect x="640" y="140" width="130" height="80" rx="10" fill="#1e3a8a"/><text x="705" y="175" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">출력층</text><text x="705" y="197" font-size="12" fill="#dbeafe" text-anchor="middle">예측 ŷ</text>
+    <rect x="900" y="140" width="180" height="80" rx="10" fill="#fee2e2" stroke="#fca5a5"/><text x="990" y="170" font-size="15" font-weight="700" fill="#b91c1c" text-anchor="middle">오차(손실)</text><text x="990" y="196" font-size="12" fill="#ef4444" text-anchor="middle">ŷ vs 정답 y</text>
+  </g>
+  <!-- forward arrows -->
+  <g stroke="#2563eb" stroke-width="3" marker-end="url(#f5)">
+    <line x1="250" y1="165" x2="376" y2="165"/><line x1="510" y1="165" x2="636" y2="165"/><line x1="770" y1="165" x2="896" y2="165"/>
+  </g>
+  <text x="445" y="120" font-size="14" font-weight="700" fill="#2563eb" text-anchor="middle">순전파 (Forward) — 예측 생성 →</text>
+  <!-- backward arrows -->
+  <g stroke="#ef4444" stroke-width="3" stroke-dasharray="7 4" marker-end="url(#b5)">
+    <line x1="896" y1="205" x2="772" y2="205"/><line x1="636" y1="205" x2="512" y2="205"/><line x1="376" y1="205" x2="252" y2="205"/>
+  </g>
+  <text x="560" y="255" font-size="14" font-weight="700" fill="#ef4444" text-anchor="middle">← 역전파 (Backward) — 오차로 가중치 조정</text>
+  <text x="600" y="312" font-size="14" fill="#334155" text-anchor="middle">예측을 만든 뒤(순전파), 오차를 거꾸로 흘려보내 가중치를 갱신한다(역전파). 이 순환이 곧 "학습"이다.</text>
+</svg>

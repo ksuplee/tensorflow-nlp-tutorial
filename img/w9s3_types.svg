@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="380" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">어텐션 함수의 유형</text>
+  <g>
+    <rect x="40" y="80" width="360" height="130" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="40" y="80" width="360" height="42" rx="12" fill="#1e3a8a"/><text x="220" y="108" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">바다나우 (Bahdanau)</text>
+    <text x="62" y="150" font-size="14" fill="#334155">· Additive(가산) 어텐션</text>
+    <text x="62" y="176" font-size="14" fill="#334155">· 쿼리 = 디코더 t-1 은닉 상태</text>
+    <text x="62" y="200" font-size="12" fill="#64748b">Global Attention, 유연하나 연산 큼</text>
+    <rect x="420" y="80" width="360" height="130" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="420" y="80" width="360" height="42" rx="12" fill="#2563eb"/><text x="600" y="108" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">루옹 (Luong)</text>
+    <text x="442" y="150" font-size="14" fill="#334155">· Dot-Product(점곱) 어텐션</text>
+    <text x="442" y="176" font-size="14" fill="#334155">· 쿼리 = 디코더 t 은닉 상태</text>
+    <text x="442" y="200" font-size="12" fill="#64748b">Local Attention, 계산 효율적</text>
+    <rect x="800" y="80" width="360" height="130" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="800" y="80" width="360" height="42" rx="12" fill="#1e3a8a"/><text x="980" y="108" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">셀프 어텐션 (Self)</text>
+    <text x="822" y="150" font-size="14" fill="#334155">· 시퀀스 내부 단어 간 관계 학습</text>
+    <text x="822" y="176" font-size="14" fill="#334155">· 문맥 정보를 잘 반영</text>
+    <text x="822" y="200" font-size="12" fill="#64748b">트랜스포머·BERT·GPT의 핵심(10주)</text>
+  </g>
+  <!-- bottom row -->
+  <rect x="230" y="230" width="360" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="230" y="230" width="360" height="42" rx="12" fill="#2563eb"/><text x="410" y="258" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">Scaled Dot-Product</text>
+  <text x="252" y="300" font-size="14" fill="#334155">· 점곱을 √dₖ로 스케일링</text>
+  <text x="252" y="326" font-size="13" fill="#64748b">병렬화 쉬움 → 트랜스포머 표준</text>
+  <rect x="610" y="230" width="360" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="610" y="230" width="360" height="42" rx="12" fill="#1e3a8a"/><text x="790" y="258" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">멀티 헤드 (Multi-Head)</text>
+  <text x="632" y="300" font-size="14" fill="#334155">· 여러 어텐션을 병렬 적용</text>
+  <text x="632" y="326" font-size="13" fill="#64748b">서로 다른 관점 → 표현력↑ (10주)</text>
+</svg>

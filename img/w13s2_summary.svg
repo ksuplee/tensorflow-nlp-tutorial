@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">문서 요약의 두 방식</text>
+  <defs><marker id="s1" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#2563eb"/></marker></defs>
+  <!-- 원문 -->
+  <rect x="40" y="80" width="300" height="260" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="190" y="110" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">원문</text>
+  <g font-size="13" fill="#334155"><text x="60" y="146">① NLP는 AI의 한 분야다.</text><text x="60" y="176">② 최근 LLM이 등장했다.</text><text x="60" y="206">③ 트랜스포머가 기반이다.</text><text x="60" y="236">④ 응용이 매우 넓다.</text><text x="60" y="266">⑤ 윤리 문제도 중요하다.</text></g>
+  <!-- 추출 -->
+  <path d="M345 160 L400 160" stroke="#2563eb" stroke-width="2.5" marker-end="url(#s1)"/>
+  <rect x="405" y="80" width="360" height="120" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="585" y="108" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">추출 요약 (Extractive)</text>
+  <text x="425" y="140" font-size="13" fill="#64748b">원문에서 중요 문장을 그대로 선택</text>
+  <g font-size="13" fill="#1e3a8a" font-weight="700"><text x="425" y="168">② 최근 LLM이 등장했다.</text><text x="425" y="190">③ 트랜스포머가 기반이다.</text></g>
+  <!-- 추상 -->
+  <path d="M345 260 L400 260" stroke="#2563eb" stroke-width="2.5" marker-end="url(#s1)"/>
+  <rect x="405" y="220" width="360" height="120" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="585" y="248" font-size="17" font-weight="700" fill="#1e3a8a" text-anchor="middle">추상 요약 (Abstractive)</text>
+  <text x="425" y="280" font-size="13" fill="#64748b">새로운 문장으로 재작성(생성)</text>
+  <text x="425" y="312" font-size="14" fill="#1e3a8a" font-weight="700">"트랜스포머 기반 LLM이 등장하며</text>
+  <text x="425" y="332" font-size="14" fill="#1e3a8a" font-weight="700"> NLP 응용이 크게 넓어졌다."</text>
+  <!-- 비교 -->
+  <rect x="800" y="80" width="360" height="260" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="980" y="110" font-size="17" font-weight="700" fill="#b45309" text-anchor="middle">비교</text>
+  <g font-size="14" fill="#475569"><text x="820" y="150">추출형</text><text x="820" y="176" font-size="13">+ 사실 왜곡 적음</text><text x="820" y="198" font-size="13">− 문장이 어색할 수 있음</text><text x="820" y="240">추상형</text><text x="820" y="266" font-size="13">+ 자연스럽고 간결</text><text x="820" y="288" font-size="13">− 환각·사실오류 위험</text><text x="820" y="320" font-size="12.5" fill="#64748b">평가: ROUGE, BERTScore</text></g>
+</svg>

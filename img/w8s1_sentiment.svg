@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">감성 분류 파이프라인 (LSTM, 다 대 일)</text>
+  <text x="600" y="68" font-size="14" fill="#64748b" text-anchor="middle">네이버 영화 리뷰(NSMC): 리뷰 텍스트 → 긍정(1)/부정(0)</text>
+  <defs><marker id="se8" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <g>
+    <rect x="40" y="130" width="150" height="90" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="115" y="162" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">리뷰</text>
+    <text x="115" y="186" font-size="12" fill="#64748b" text-anchor="middle">"연기가 정말</text>
+    <text x="115" y="203" font-size="12" fill="#64748b" text-anchor="middle">최고였어요"</text>
+    <rect x="230" y="130" width="170" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="315" y="158" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">전처리</text>
+    <text x="315" y="182" font-size="11" fill="#64748b" text-anchor="middle">정제·토큰화·</text>
+    <text x="315" y="199" font-size="11" fill="#64748b" text-anchor="middle">정수인코딩·패딩</text>
+    <rect x="440" y="130" width="150" height="90" rx="10" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="515" y="170" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">임베딩</text>
+    <text x="515" y="194" font-size="11" fill="#64748b" text-anchor="middle">단어 → 벡터</text>
+    <rect x="630" y="130" width="170" height="90" rx="10" fill="#1e3a8a"/>
+    <text x="715" y="162" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">LSTM</text>
+    <text x="715" y="186" font-size="11" fill="#dbeafe" text-anchor="middle">문장 전체 읽고</text>
+    <text x="715" y="203" font-size="11" fill="#dbeafe" text-anchor="middle">마지막 은닉상태</text>
+    <rect x="840" y="130" width="150" height="90" rx="10" fill="#2563eb"/>
+    <text x="915" y="170" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">시그모이드</text>
+    <text x="915" y="194" font-size="11" fill="#dbeafe" text-anchor="middle">0~1 확률</text>
+    <rect x="1030" y="130" width="130" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="1095" y="168" font-size="14" font-weight="700" fill="#16a34a" text-anchor="middle">긍정 (1)</text>
+    <text x="1095" y="194" font-size="12" fill="#64748b" text-anchor="middle">0.5 이상</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#se8)">
+    <line x1="190" y1="175" x2="226" y2="175"/><line x1="400" y1="175" x2="436" y2="175"/><line x1="590" y1="175" x2="626" y2="175"/><line x1="800" y1="175" x2="836" y2="175"/><line x1="990" y1="175" x2="1026" y2="175"/>
+  </g>
+  <text x="600" y="270" font-size="14" fill="#334155" text-anchor="middle">이진 분류이므로 출력은 시그모이드 1개, 손실은 binary_crossentropy</text>
+  <text x="600" y="300" font-size="13" fill="#64748b" text-anchor="middle">통계 머신러닝(로지스틱 회귀·나이브 베이즈)부터 딥러닝(LSTM·CNN), 사전학습(BERT)까지 사용 가능</text>
+</svg>

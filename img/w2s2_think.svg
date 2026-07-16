@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · "아버지가방에들어가신다"를 어떻게 나눌까?</text>
+  <defs>
+    <marker id="tb22" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <!-- input -->
+  <rect x="350" y="66" width="500" height="50" rx="10" fill="#1e3a8a"/>
+  <text x="600" y="99" font-size="21" font-weight="700" fill="#fff" text-anchor="middle">아버지가방에들어가신다</text>
+  <line x1="500" y1="116" x2="360" y2="150" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#tb22)"/>
+  <line x1="700" y1="116" x2="840" y2="150" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#tb22)"/>
+  <!-- parse 1 -->
+  <rect x="80" y="156" width="480" height="120" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="320" y="185" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">해석 1</text>
+  <g font-size="16" fill="#334155" text-anchor="middle">
+    <text x="320" y="220">아버지가 · 방에 · 들어가신다</text>
+  </g>
+  <text x="320" y="252" font-size="13" fill="#64748b" text-anchor="middle">아버지가 방으로 들어가신다</text>
+  <!-- parse 2 -->
+  <rect x="640" y="156" width="480" height="120" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="880" y="185" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">해석 2</text>
+  <g font-size="16" fill="#334155" text-anchor="middle">
+    <text x="880" y="220">아버지 · 가방에 · 들어가신다</text>
+  </g>
+  <text x="880" y="252" font-size="13" fill="#64748b" text-anchor="middle">(가방에 들어간다? — 어색)</text>
+  <text x="600" y="322" font-size="14" fill="#334155" text-anchor="middle">"교재를 → 교재 + 를"처럼 조사·어미가 붙는 교착어, 공백만으로 나눌 수 없다면?</text>
+</svg>

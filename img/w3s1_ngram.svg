@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="440" fill="#ffffff"/>
+  <text x="600" y="40" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">N-gram 언어모델</text>
+  <!-- chain rule -->
+  <rect x="60" y="70" width="1080" height="90" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="85" y="100" font-size="16" font-weight="700" fill="#1e3a8a">① 연쇄법칙: 문장의 확률 = 각 단어의 조건부확률 곱</text>
+  <text x="600" y="140" font-size="20" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">P(w₁,w₂,…,wₙ) = P(w₁)·P(w₂|w₁)·P(w₃|w₁w₂) ··· P(wₙ|w₁…wₙ₋₁)</text>
+  <!-- approximation -->
+  <rect x="60" y="180" width="1080" height="110" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="210" font-size="16" font-weight="700" fill="#1e3a8a">② N-gram 근사: 직전 (N−1)개 단어만 조건으로 사용 (마르코프 가정)</text>
+  <text x="330" y="252" font-size="18" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">bigram: P(wᵢ|w₁…wᵢ₋₁) ≈ P(wᵢ|wᵢ₋₁)</text>
+  <text x="870" y="252" font-size="18" fill="#334155" text-anchor="middle" font-family="'Times New Roman',serif">trigram: ≈ P(wᵢ|wᵢ₋₂wᵢ₋₁)</text>
+  <text x="600" y="280" font-size="15" fill="#64748b" text-anchor="middle">예) P("먹었다" | "밥을") ≈ count("밥을 먹었다") / count("밥을")</text>
+  <!-- issues -->
+  <rect x="60" y="310" width="530" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="85" y="338" font-size="16" font-weight="700" fill="#1e3a8a">희소성 문제 · 평활화(smoothing)</text>
+  <text x="85" y="366" font-size="14" fill="#475569">본 적 없는 N-gram → 확률 0</text>
+  <text x="85" y="390" font-size="14" fill="#475569">→ 라플라스·백오프 등으로 보정</text>
+  <rect x="610" y="310" width="530" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="635" y="338" font-size="16" font-weight="700" fill="#1e3a8a">평가: 퍼플렉시티(perplexity)</text>
+  <text x="635" y="366" font-size="14" fill="#475569">테스트 문장을 얼마나 잘 예측하는가</text>
+  <text x="635" y="390" font-size="14" fill="#475569">낮을수록 좋은 언어모델</text>
+</svg>
