@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="450" viewBox="0 0 1150 450" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="450" fill="#ffffff"/>
+  <text x="575" y="38" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">질의응답(QA)의 두 방식 — 추출형 vs 생성형</text>
+  <defs><marker id="q14" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker></defs>
+
+  <!-- question + passage -->
+  <rect x="415" y="66" width="320" height="76" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="575" y="92" font-size="14" font-weight="700" fill="#334155" text-anchor="middle">질문 + 지문(passage)</text>
+  <text x="575" y="116" font-size="12" fill="#64748b" text-anchor="middle">Q: "트랜스포머는 언제 발표되었나?"</text>
+  <text x="575" y="133" font-size="12" fill="#64748b" text-anchor="middle">지문: "…트랜스포머는 2017년 발표된…"</text>
+
+  <path d="M470 142 L300 178" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#q14)"/>
+  <path d="M680 142 L850 178" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#q14)"/>
+
+  <!-- extractive -->
+  <rect x="70" y="185" width="440" height="215" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="290" y="214" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle">추출형 (Extractive)</text>
+  <text x="290" y="238" font-size="13" fill="#334155" text-anchor="middle">지문에서 정답 구간(span)을 그대로 추출</text>
+  <rect x="100" y="255" width="380" height="40" rx="8" fill="#fff" stroke="#bfdbfe"/>
+  <text x="290" y="280" font-size="13" fill="#334155" text-anchor="middle">…트랜스포머는 <tspan font-weight="700" fill="#1d4ed8">2017년</tspan> 발표된…</text>
+  <text x="290" y="322" font-size="13" fill="#166534" text-anchor="middle">✔ 근거 명확 · 검증 용이</text>
+  <text x="290" y="345" font-size="13" fill="#b91c1c" text-anchor="middle">✘ 정답이 지문 안에 있어야 함</text>
+  <text x="290" y="378" font-size="12" fill="#64748b" text-anchor="middle">모델: BERT 기반 MRC (KorQuAD) · 지표: EM·F1</text>
+
+  <!-- generative -->
+  <rect x="640" y="185" width="440" height="215" rx="14" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="860" y="214" font-size="18" font-weight="700" fill="#166534" text-anchor="middle">생성형 (Generative)</text>
+  <text x="860" y="238" font-size="13" fill="#334155" text-anchor="middle">모델이 답을 새 문장으로 생성</text>
+  <rect x="670" y="255" width="380" height="40" rx="8" fill="#fff" stroke="#bbf7d0"/>
+  <text x="860" y="280" font-size="13" fill="#334155" text-anchor="middle">"트랜스포머는 <tspan font-weight="700" fill="#15803d">2017년</tspan>에 발표되었습니다."</text>
+  <text x="860" y="322" font-size="13" fill="#166534" text-anchor="middle">✔ 유연 · 자연스러움</text>
+  <text x="860" y="345" font-size="13" fill="#b91c1c" text-anchor="middle">✘ 환각(Hallucination) 위험 → 검증 필요</text>
+  <text x="860" y="378" font-size="12" fill="#64748b" text-anchor="middle">모델: LLM + RAG · 근거 문서로 사실성 보강</text>
+
+  <text x="575" y="432" font-size="14" fill="#64748b" text-anchor="middle">※ 근거가 중요하면 추출형, 자연스러운 답이 필요하면 생성형(+RAG)을 택한다.</text>
+</svg>

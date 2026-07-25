@@ -1,21 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
-  <rect width="1200" height="340" fill="#ffffff"/>
-  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · 사전학습 모델을 몇 줄로 불러 응용을 만들려면?</text>
-  <defs><marker id="im13" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
-  <!-- pipeline -->
-  <rect x="440" y="90" width="320" height="70" rx="12" fill="#1e3a8a"/>
-  <text x="600" y="120" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Hugging Face pipeline</text>
-  <text x="600" y="144" font-size="12" fill="#dbeafe" text-anchor="middle">사전학습 모델을 몇 줄로 사용</text>
-  <!-- two branches -->
-  <rect x="120" y="210" width="440" height="100" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
-  <text x="340" y="238" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">추출형 (BERT 계열)</text>
-  <text x="142" y="266" font-size="13" fill="#334155">지문에서 정답 구간을 찾음</text>
-  <text x="142" y="290" font-size="12" fill="#64748b">근거가 명확 · 지문에 답이 있어야 함</text>
-  <rect x="640" y="210" width="440" height="100" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
-  <text x="860" y="238" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">생성형 (LLM)</text>
-  <text x="662" y="266" font-size="13" fill="#334155">답을 문장으로 생성</text>
-  <text x="662" y="290" font-size="12" fill="#64748b">유연·자연스러움 · 환각 위험(검증 필요)</text>
-  <g stroke="#2563eb" stroke-width="2.5" marker-end="url(#im13)"><line x1="520" y1="160" x2="360" y2="206"/><line x1="680" y1="160" x2="840" y2="206"/></g>
-  <text x="600" y="196" font-size="12" fill="#64748b" text-anchor="middle">같은 입력에 두 방식을 적용해 비교</text>
-  <text x="600" y="330" font-size="13" fill="#94a3b8" text-anchor="middle">결과는 ROUGE·EM/F1 같은 지표와 오류 분석으로 평가한다</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1200" height="360" fill="#ffffff"/>
+  <text x="600" y="40" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle">생각해보기 · LLM이 스스로 도구를 써서 여러 단계를 해낸다면?</text>
+  <defs><marker id="t13" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,4 L0,8 Z" fill="#2563eb"/></marker></defs>
+
+  <!-- complex goal -->
+  <rect x="50" y="120" width="260" height="130" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="180" y="150" font-size="15" font-weight="700" fill="#b91c1c" text-anchor="middle">복잡한 목표</text>
+  <text x="180" y="182" font-size="13" fill="#334155" text-anchor="middle">"A사 최근 매출을 찾아</text>
+  <text x="180" y="204" font-size="13" fill="#334155" text-anchor="middle">그래프로 그려줘"</text>
+  <text x="180" y="234" font-size="12" fill="#94a3b8" text-anchor="middle">한 번의 답으로 끝나지 않음</text>
+
+  <!-- agent loop -->
+  <rect x="360" y="90" width="470" height="190" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="595" y="118" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">LLM 에이전트 루프</text>
+  <rect x="386" y="140" width="128" height="46" rx="8" fill="#fff" stroke="#93c5fd"/><text x="450" y="162" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">사고</text><text x="450" y="179" font-size="11" fill="#64748b" text-anchor="middle">다음 행동 계획</text>
+  <rect x="533" y="140" width="128" height="46" rx="8" fill="#2563eb"/><text x="597" y="162" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">행동(도구)</text><text x="597" y="179" font-size="11" fill="#dbeafe" text-anchor="middle">검색·계산·코드</text>
+  <rect x="680" y="140" width="128" height="46" rx="8" fill="#fff" stroke="#93c5fd"/><text x="744" y="162" font-size="13" font-weight="700" fill="#1e3a8a" text-anchor="middle">관찰</text><text x="744" y="179" font-size="11" fill="#64748b" text-anchor="middle">결과 확인</text>
+  <line x1="514" y1="163" x2="531" y2="163" stroke="#2563eb" stroke-width="2" marker-end="url(#t13)"/>
+  <line x1="661" y1="163" x2="678" y2="163" stroke="#2563eb" stroke-width="2" marker-end="url(#t13)"/>
+  <path d="M744 188 Q744 232 597 232 Q450 232 450 190" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#t13)"/>
+  <text x="597" y="252" font-size="12" fill="#64748b" text-anchor="middle">목표 달성까지 반복 (ReAct)</text>
+
+  <!-- result -->
+  <rect x="880" y="120" width="270" height="130" rx="12" fill="#dcfce7" stroke="#86efac"/>
+  <text x="1015" y="150" font-size="15" font-weight="700" fill="#166534" text-anchor="middle">결과 완성</text>
+  <text x="1015" y="182" font-size="13" fill="#334155" text-anchor="middle">검색 → 계산 → 시각화</text>
+  <text x="1015" y="204" font-size="13" fill="#334155" text-anchor="middle">여러 단계를 자율 수행</text>
+  <text x="1015" y="234" font-size="12" fill="#64748b" text-anchor="middle">스스로 계획하고 도구를 선택</text>
+
+  <line x1="310" y1="185" x2="356" y2="185" stroke="#94a3b8" stroke-width="2" marker-end="url(#t13)"/>
+  <line x1="830" y1="185" x2="876" y2="185" stroke="#94a3b8" stroke-width="2" marker-end="url(#t13)"/>
+
+  <text x="600" y="330" font-size="14" fill="#334155" text-anchor="middle">한 번 답하고 끝이 아니라 — 스스로 계획을 세우고 도구를 골라 쓰며 목표를 달성한다면 어떨까?</text>
 </svg>

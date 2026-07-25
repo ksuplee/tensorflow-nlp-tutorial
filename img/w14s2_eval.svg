@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="440" viewBox="0 0 1150 440" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <rect width="1150" height="440" fill="#ffffff"/>
+  <text x="575" y="38" font-size="23" font-weight="700" fill="#1e3a8a" text-anchor="middle">LLM 평가의 여러 접근법</text>
+
+  <!-- 4 method cards -->
+  <g text-anchor="middle">
+    <!-- benchmark -->
+    <rect x="45" y="70" width="255" height="185" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="172" y="102" font-size="17" font-weight="700" fill="#1e3a8a">벤치마크</text>
+    <text x="172" y="124" font-size="12" fill="#64748b">MMLU · KLUE · HellaSwag</text>
+    <text x="172" y="150" font-size="12" fill="#334155">표준 문제 집합으로 채점</text>
+    <text x="172" y="188" font-size="12" fill="#166534">✔ 객관적·재현 가능</text>
+    <text x="172" y="212" font-size="12" fill="#b91c1c">✘ 데이터 오염 위험</text>
+    <text x="172" y="236" font-size="11" fill="#94a3b8">자동 · 빠름 · 저비용</text>
+
+    <!-- LLM as judge -->
+    <rect x="315" y="70" width="255" height="185" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="442" y="102" font-size="17" font-weight="700" fill="#1e3a8a">LLM-as-a-judge</text>
+    <text x="442" y="124" font-size="12" fill="#64748b">강한 LLM이 출력을 채점</text>
+    <text x="442" y="150" font-size="12" fill="#334155">사람 평가를 근사</text>
+    <text x="442" y="188" font-size="12" fill="#166534">✔ 빠르고 저렴</text>
+    <text x="442" y="212" font-size="12" fill="#b91c1c">✘ 심판 모델의 편향</text>
+    <text x="442" y="236" font-size="11" fill="#94a3b8">반자동 · 확장 용이</text>
+
+    <!-- human eval -->
+    <rect x="585" y="70" width="255" height="185" rx="14" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="712" y="102" font-size="17" font-weight="700" fill="#166534">사람 평가</text>
+    <text x="712" y="124" font-size="12" fill="#64748b">Human Evaluation</text>
+    <text x="712" y="150" font-size="12" fill="#334155">사람이 품질·적절성 판단</text>
+    <text x="712" y="188" font-size="12" fill="#166534">✔ 가장 신뢰성 높음</text>
+    <text x="712" y="212" font-size="12" fill="#b91c1c">✘ 비용·시간↑</text>
+    <text x="712" y="236" font-size="11" fill="#94a3b8">수동 · 소규모</text>
+
+    <!-- arena -->
+    <rect x="855" y="70" width="250" height="185" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="980" y="102" font-size="17" font-weight="700" fill="#1e3a8a">Arena (투표)</text>
+    <text x="980" y="124" font-size="12" fill="#64748b">두 출력 비교·투표</text>
+    <text x="980" y="150" font-size="12" fill="#334155">사용자 선호로 순위화</text>
+    <text x="980" y="188" font-size="12" fill="#166534">✔ 실사용 반영</text>
+    <text x="980" y="212" font-size="12" fill="#b91c1c">✘ 대규모 수집 느림</text>
+    <text x="980" y="236" font-size="11" fill="#94a3b8">크라우드 · 상대평가</text>
+  </g>
+
+  <!-- axis: automatic <-> reliable -->
+  <text x="172" y="300" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">자동·저비용</text>
+  <text x="980" y="300" font-size="13" font-weight="700" fill="#166534" text-anchor="middle">신뢰성·고비용</text>
+  <line x1="250" y1="295" x2="900" y2="295" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- contamination warning -->
+  <rect x="150" y="330" width="850" height="70" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="575" y="358" font-size="14" font-weight="700" fill="#b91c1c" text-anchor="middle">⚠ 데이터 오염(Data Contamination)</text>
+  <text x="575" y="382" font-size="13" fill="#334155" text-anchor="middle">벤치마크 문제가 학습 데이터에 포함되면 점수가 부풀려진다 → 벤치마크 점수만 맹신 금지</text>
+</svg>
